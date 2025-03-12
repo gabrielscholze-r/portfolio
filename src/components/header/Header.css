@@ -1,0 +1,17 @@
+.header{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+    background-color: #3f8bfa;
+}
+.navlink {
+    text-decoration: none;
+    color: #F2F6D0;
+}
+.logo-text {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-weight: 400;
+    color: #F2F6D0;
+}
