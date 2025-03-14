@@ -9,10 +9,23 @@
     background-color: #3f8bfa;
 }
 .navlink {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
     text-decoration: none;
     color: #F2F6D0;
+    transition: 0.2s;
+}
+.navlink:hover {
+    scale: 1.1;
+    opacity: 0.8;
 }
 .logo-text {
     font-weight: 600;
     color: #F2F6D0;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.logo-text:hover {
+    scale: 1.1;
+    opacity: 0.8;
 }

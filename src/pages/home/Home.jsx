@@ -3,8 +3,8 @@ import './Home.css'
 import { Col, Row } from 'react-bootstrap'
 export default function Home() {
   return (
-    <div className=''>
-      <div className="intro text-center w-75 mx-auto">
+    <div>
+      <div className="intro text-center w-75 mx-auto py-5">
         <h2 className='py-4'>
           Gabriel Scholze Rosa
         </h2>
