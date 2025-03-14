@@ -5,13 +5,11 @@ import { Route, Routes } from 'react-router-dom'
 
 export default function AppRoutes() {
     return (
-        <>
-
+        <div style={{ paddingTop: "80px", }}>
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/projects' element={<Projects />} />
             </Routes>
-
-        </>
+        </div>
     )
 }

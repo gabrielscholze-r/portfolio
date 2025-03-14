@@ -1,8 +1,10 @@
 .header{
+    position: fixed;
     align-items: center;
     display: flex;
     justify-content: space-between;
-    height: 70px;
+    min-height: 70px;
+    width: 100vw;
     align-items: center;
     background-color: #3f8bfa;
 }
@@ -11,7 +13,6 @@
     color: #F2F6D0;
 }
 .logo-text {
-    font-family: 'Atkinson Hyperlegible', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     color: #F2F6D0;
 }

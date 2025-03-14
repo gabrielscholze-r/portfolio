@@ -1,0 +1,20 @@
+.intro {
+    padding: 10rem;
+}
+.intro h2{
+    font-weight: bolder;
+    font-size: 4rem;
+}
+.intro h3{
+    font-weight: bold;
+    font-size: 2rem;
+}
+.intro p{
+    font-weight: regular;
+    font-size: 2rem;
+    text-align: justify;
+    text-indent: 3rem;
+}
+.techs i {
+    font-size: 5rem;
+}
