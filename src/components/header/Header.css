@@ -6,11 +6,10 @@
     min-height: 70px;
     width: 100vw;
     align-items: center;
-    background-color: #3f8bfa;
+    background-color: #023e8a;
 }
 
 .navlink {
-    font-family: 'Helvetica', sans-serif;
     font-weight: bold;
     text-decoration: none;
     color: #F2F6D0;

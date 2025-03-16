@@ -17,7 +17,7 @@ export default function Header() {
                 <div className="d-flex align-items-center px-3">
 
                     <div className="px-1">
-                        <i className="bi bi-sun-fill theme-icon"></i>
+                        <i className="bi bi-sun-fill theme-icon" style={(theme==="dark") ?  {opacity:0.6, color:"white"}:{background: "linear-gradient(180deg, #FFD700, #FFA500, #FF8C00)", WebkitBackgroundClip: "text", color: "transparent"}}></i>
                     </div>
                     <div className="px-1">
                         <label className="theme-switch">
@@ -31,7 +31,7 @@ export default function Header() {
                         </label>
                     </div>
                     <div className="px-1">
-                        <i className="bi bi-moon-fill theme-icon"></i>
+                        <i className="bi bi-moon-fill theme-icon" style={(theme==="dark") ?  {background: "linear-gradient(180deg, #b0b0b0, #8c8c8c, #6e6e6e)", WebkitBackgroundClip: "text", color: "transparent"}:{opacity:0.6, color:"white"}}></i>
                     </div>
                 </div>
                 <NavLink className="px-3 navlink" to="/">

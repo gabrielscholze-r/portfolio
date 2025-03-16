@@ -1,0 +1,20 @@
+.hide {
+    scale: 1 0;
+    height: 0;
+    transition-duration: .2s;
+    z-index: 10;
+    width: 100%;
+}
+
+.show {
+    z-index: 10;
+    width: 100%;
+    scale: 1 1;
+}
+
+.tooltip {
+    transition: 0.2s;
+    background-color: var(--titles);
+    color: var(--text-color);
+    border-radius: 16px;
+}

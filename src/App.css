@@ -1,197 +1,40 @@
 /* Helvetica */
 .App {
   background-color: var(--background-color);
+  font-family: 'JetBrains Mono', monospace;
 }
 
 @font-face {
   font-family: 'Helvetica';
   src: url('./assets/fonts/Helvetica.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
-  font-family: 'Helvetica';
+  font-family: 'Helvetica Bold';
   src: url('./assets/fonts/Helvetica-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
 }
 
 @font-face {
-  font-family: 'Helvetica';
-  src: url('./assets/fonts/Helvetica-BoldOblique.ttf') format('truetype');
-  font-weight: bold;
-  font-style: oblique;
-}
-
-@font-face {
-  font-family: 'Helvetica';
-  src: url('./assets/fonts/helvetica-light-587ebe5a59211.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Helvetica';
+  font-family: 'Helvetica Oblique';
   src: url('./assets/fonts/Helvetica-Oblique.ttf') format('truetype');
-  font-weight: normal;
-  font-style: oblique;
 }
 
 @font-face {
-  font-family: 'Helvetica';
-  src: url('./assets/fonts/helvetica-compressed-5871d14b6903a.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'JetBrains Mono';
+  src: url('./assets/fonts/JetBrainsMono-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Helvetica';
-  src: url('./assets/fonts/helvetica-rounded-bold-5871d05ead8de.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
+  font-family: 'JetBrains Mono Bold';
+  src: url('./assets/fonts/JetBrainsMono-Bold.ttf') format('truetype');
 }
 
-/* Oswald */
 @font-face {
   font-family: 'Oswald';
   src: url('./assets/fonts/Oswald-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
-  font-family: 'Oswald';
+  font-family: 'Oswald Bold';
   src: url('./assets/fonts/Oswald-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Oswald';
-  src: url('./assets/fonts/Oswald-ExtraLight.ttf') format('truetype');
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Oswald';
-  src: url('./assets/fonts/Oswald-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Oswald';
-  src: url('./assets/fonts/Oswald-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Oswald';
-  src: url('./assets/fonts/Oswald-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
-
-/* MonaspaceArgon */
-@font-face {
-  font-family: 'Monaspace Argon';
-  src: url('./assets/fonts/MonaspaceArgon-Regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Monaspace Argon';
-  src: url('./assets/fonts/MonaspaceArgon-Bold.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Monaspace Argon';
-  src: url('./assets/fonts/MonaspaceArgon-BoldItalic.otf') format('opentype');
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Monaspace Argon';
-  src: url('./assets/fonts/MonaspaceArgon-ExtraBold.otf') format('opentype');
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Monaspace Argon';
-  src: url('./assets/fonts/MonaspaceArgon-ExtraBoldItalic.otf') format('opentype');
-  font-weight: 800;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Monaspace Argon';
-  src: url('./assets/fonts/MonaspaceArgon-ExtraLight.otf') format('opentype');
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Monaspace Argon';
-  src: url('./assets/fonts/MonaspaceArgon-ExtraLightItalic.otf') format('opentype');
-  font-weight: 200;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Monaspace Argon';
-  src: url('./assets/fonts/MonaspaceArgon-Light.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Monaspace Argon';
-  src: url('./assets/fonts/MonaspaceArgon-LightItalic.otf') format('opentype');
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Monaspace Argon';
-  src: url('./assets/fonts/MonaspaceArgon-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Monaspace Argon';
-  src: url('./assets/fonts/MonaspaceArgon-MediumItalic.otf') format('opentype');
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Monaspace Argon';
-  src: url('./assets/fonts/MonaspaceArgon-SemiBold.otf') format('opentype');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Monaspace Argon';
-  src: url('./assets/fonts/MonaspaceArgon-SemiBoldItalic.otf') format('opentype');
-  font-weight: 600;
-  font-style: italic;
-}
-
-/* Variante variável */
-@font-face {
-  font-family: 'Monaspace Argon Variable';
-  src: url('./assets/fonts/MonaspaceArgonVarVF[wght,wdth,slnt].ttf') format('truetype');
-  font-weight: 200 800;
-  font-stretch: 75% 125%;
-  font-style: oblique -10deg 0deg;
 }
