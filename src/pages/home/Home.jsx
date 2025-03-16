@@ -16,8 +16,8 @@ export default function Home() {
         </p>
       </div>
       <hr className='mx-5' />
-      <div className="techs text-center w-100 px-5">
-        <Row className='mx-auto'>
+      <div className="techs text-center w-100 p-5 ">
+        <Row className='mx-auto d-flex'>
           <Col>
             <i class="devicon-react-original-wordmark"></i>
           </Col>

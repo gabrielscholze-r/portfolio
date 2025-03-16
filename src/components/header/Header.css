@@ -1,4 +1,4 @@
-.header{
+.header {
     position: fixed;
     align-items: center;
     display: flex;
@@ -8,6 +8,7 @@
     align-items: center;
     background-color: #3f8bfa;
 }
+
 .navlink {
     font-family: 'Helvetica', sans-serif;
     font-weight: bold;
@@ -15,17 +16,71 @@
     color: #F2F6D0;
     transition: 0.2s;
 }
+
 .navlink:hover {
     scale: 1.1;
     opacity: 0.8;
 }
+
 .logo-text {
     font-weight: 600;
     color: #F2F6D0;
     transition: 0.2s;
     cursor: pointer;
 }
+
 .logo-text:hover {
     scale: 1.1;
     opacity: 0.8;
 }
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #222;
+}
+
+input:checked+.slider:before {
+    transform: translateX(24px);
+}
+
+.theme-icon {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+

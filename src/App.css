@@ -1,4 +1,8 @@
 /* Helvetica */
+.App {
+  background-color: var(--background-color);
+}
+
 @font-face {
   font-family: 'Helvetica';
   src: url('./assets/fonts/Helvetica.ttf') format('truetype');
