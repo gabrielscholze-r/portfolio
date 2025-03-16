@@ -35,7 +35,7 @@
     flex-direction: column;
 }
 
-.devicon-col:hover {
+.devicon-col:hover i{
     transform: rotate(3deg);
     scale: 1.1;
     opacity: 0.9;

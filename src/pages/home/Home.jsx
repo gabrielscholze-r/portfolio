@@ -21,7 +21,12 @@ export default function Home() {
       <div>
         <div className="row techs text-center w-75 p-5 mx-auto justify-content-center">
           <h2 className='pt-2 pb-5 techs-title'>Skills</h2>
-          <div className='col-sm-auto devicon-col d-flex react' onMouseOver={() => { setHover([true, "react"]) }} onMouseOut={() => { setHover([false, '']) }} >
+          <div
+            className='col-sm-auto devicon-col d-flex react'
+            style={{ position: 'relative' }}
+            onMouseOver={() => setHover([true, "react"])}
+            onMouseOut={() => setHover([false, ''])}
+          >
             <i className="devicon-react-original-wordmark devicon"></i>
             <Tooltip hover={hover} title={"React.js"} list={["Construção de SPAs"]} name={'react'} />
           </div>
@@ -33,10 +38,6 @@ export default function Home() {
           </div>
         </div>
         <div className="row techs text-center w-75 p-5 mx-auto justify-content-center">
-          <div className='col-sm-auto devicon-col d-flex react' onMouseOver={() => { setHover([true, "react"]) }} onMouseOut={() => { setHover([false, '']) }} >
-            <i className="devicon-react-original-wordmark devicon"></i>
-            <Tooltip hover={hover} title={"React.js"} list={["Construção de SPAs"]} name={'react'} />
-          </div>
           <div className='col-sm-auto devicon-col'>
             <i className="devicon-csharp-plain-wordmark devicon"></i>
           </div>
