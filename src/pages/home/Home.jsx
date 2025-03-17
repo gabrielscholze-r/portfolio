@@ -28,7 +28,7 @@ export default function Home() {
             onMouseOut={() => setHover([false, ''])}
           >
             <i className="devicon-react-original-wordmark devicon"></i>
-            <Tooltip hover={hover} title={"React.js"} list={["Construção de SPAs"]} name={'react'} />
+            <Tooltip hover={hover} title={"React.js"} list={["Construção de SPAs"]} name={'react'} exp={80}/>
           </div>
           <div className='col-sm-auto devicon-col'>
             <i className="devicon-csharp-plain-wordmark devicon"></i>
