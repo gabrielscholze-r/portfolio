@@ -1,10 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { useTheme } from "../../Theme.jsx"; // Importa o contexto do tema
+import { useTheme } from "../../Theme.jsx";
 import "./Header.css";
 
 export default function Header() {
-    const { theme, toggleTheme } = useTheme(); // Obtém o tema e a função para alternar
+    const { theme, toggleTheme } = useTheme();
 
     return (
         <div className="header px-5">

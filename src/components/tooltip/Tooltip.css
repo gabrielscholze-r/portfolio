@@ -1,5 +1,6 @@
 .tooltip {
     position: absolute;
+    width: max-content;
     top: calc(100% + 5px); /* Garante que fique logo abaixo */
     left: 50%;
     transform: translateX(-50%) translateY(0); /* Remove rotação */
@@ -8,10 +9,10 @@
     background-color: var(--titles);
     color: var(--text-color);
     border-radius: 8px;
-    padding: 8px 12px;
+    /* padding: 8px 12px; */
     opacity: 0;
     visibility: hidden;
-    white-space: nowrap;
+    white-space: normal;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     pointer-events: none;
 }
@@ -19,4 +20,18 @@
 .show {
     opacity: 1;
     visibility: visible;
+}
+.progress-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden; 
+}
+
+.progress-bar {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    height: 20px; 
+    transition: width 0.3s ease-in-out;
 }
