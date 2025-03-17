@@ -1,6 +1,6 @@
 :root {
     --primary-color: #3f8bfa;
-    --secondary-color: #84d0a4;
+    --secondary-color: #023e8a;
     --background-color: #ffffff;
     --text-color: #000000;
     --titles: #1B4F72;
@@ -8,7 +8,7 @@
 
 [data-theme="dark"] {
     --primary-color: #3f8bfa;
-    --secondary-color: #27ae60;
+    --secondary-color: #3f8bfa;
     --background-color: #070d21;
     --text-color: #F2F6D0;
     --titles: #5DADE2;

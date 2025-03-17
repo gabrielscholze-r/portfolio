@@ -6,7 +6,7 @@
     min-height: 70px;
     width: 100vw;
     align-items: center;
-    background-color: #023e8a;
+    background-color: var(--secondary-color);
 }
 
 .navlink {
