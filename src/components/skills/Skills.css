@@ -1,0 +1,31 @@
+.techs i {
+    font-size: 5.3rem;
+}
+.techs {
+    padding: 5rem;
+}
+
+.devicon-col {
+    display: flex;
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+    transition: 0.2s;
+    flex-direction: column;
+}
+
+.devicon-col:hover i{
+    transform: rotate(3deg);
+    scale: 1.1;
+    opacity: 0.9;
+    color: var(--titles);
+}
+.devicon {
+    color: var(--secondary-color);
+    transition: 0.2s;
+}
+.techs-title {
+    color: var(--titles);
+    font-weight:bolder;
+    font-size: 3rem;
+}

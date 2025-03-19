@@ -1,0 +1,30 @@
+.title {
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 1.8rem;
+}
+
+.place {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: bolder;
+    background-color: var(--primary-color);
+    width: fit-content;
+    padding: 0.4rem;
+}
+
+.description {
+    text-align: left;
+    color: var(--text-color);
+    font-weight: normal;
+}
+
+.sector {
+    color: var(--titles);
+    font-weight: bolder;
+    font-size: 3rem;
+}
+.date {
+    color: var(--text-color);
+    font-size: 1rem;
+}
