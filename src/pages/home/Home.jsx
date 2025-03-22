@@ -1,11 +1,11 @@
 import React from 'react'
 import './Home.css'
-import Tooltip from '../../components/tooltip/Tooltip'
 import Skills from '../../components/skills/Skills'
 import Professional from '../../components/professional/Professional'
+import Education from '../../components/education/Education'
 export default function Home() {
 
-  
+
   return (
     <div>
       <div className="intro text-center w-75 mx-auto py-5">
@@ -20,9 +20,12 @@ export default function Home() {
         </p>
       </div>
       <hr className='mx-5' style={{ color: "var(--text-color)" }} />
-      <Skills/>
+      <Skills />
       <hr className='mx-5' style={{ color: "var(--text-color)" }} />
-      <Professional/>
+      
+      <Professional />
+      <hr className='mx-5' style={{ color: "var(--text-color)" }} />
+      <Education/>
     </div >
   )
 }
