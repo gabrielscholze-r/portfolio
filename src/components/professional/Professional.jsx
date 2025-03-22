@@ -8,9 +8,9 @@ export default function Professional() {
             <div className="w-50 d-flex justify-content-evenly mx-auto align-items-center d-flex flex-column">
                 <DetailItem title={"Estagiário de Administração"} date={"01/2019 - 12/2019"} place={"Tribunal de Justiça do Paraná"} description={"Gerenciamento de inventário, comunicação entre setores e emissão de ofícios."} />
                 <DetailItem title={"Estagiário Backend"} date={"06/2022 - 02/2023"} place={"Celepar"} description={"Desenvolvimento Backend em Java (JSP)"} />
-                <DetailItem title={"Estagiário Fullstack"} date={"03/2023 - 02/2024"} place={"Sumersoft"} description={"Estágio em Desenvolvimento Fullstack .NET e React.js"}/>
-                <DetailItem title={"Desenvolvedor Fullstack"} date={"03/2024 - Atualmente"} place={"Sumersoft"} description={"Desenvolvimento Fullstack .NET e React.js"}/>
-\            </div>
+                <DetailItem title={"Estagiário Fullstack"} date={"03/2023 - 02/2024"} place={"Sumersoft"} description={"Estágio em Desenvolvimento Fullstack .NET e React.js"} />
+                <DetailItem title={"Desenvolvedor Fullstack"} date={"03/2024 - Atualmente"} place={"Sumersoft"} description={"Desenvolvimento Fullstack .NET e React.js"} />
+            </div>
         </div>
     )
 }
