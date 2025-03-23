@@ -19,11 +19,7 @@
     font-weight: normal;
 }
 
-.sector {
-    color: var(--titles);
-    font-weight: bolder;
-    font-size: 3rem;
-}
+
 .date {
     color: var(--text-color);
     font-size: 1rem;

@@ -1,22 +1,22 @@
 import React from 'react'
 import './Tooltip.css'
 
-export default function Tooltip(props) {
+export default function Tooltip({hover, title, list, exp, name}) {
     return (
         <div
-            className={`tooltip ${(props.hover[0] && props.hover[1] === props.name) ? 'show' : 'hide'}`}
+            className={`tooltip ${(hover[0] && hover[1] === name) ? 'show' : 'hide'}`}
         >
             <div className="px-3 py-2">
-                <h2 style={{ color: "var(--background-color)" }}>{props.title}</h2>
+                <h2 style={{ color: "var(--background-color)" }}>{title}</h2>
                 <ul>
-                    {props.list.map((text, index) => (
+                    {list.map((text, index) => (
                         <li key={index} style={{ color: "var(--background-color)" }} className='py-1'>{text}</li>
                     ))}
                 </ul>
                 <p style={{ color: "var(--background-color)" }}>Experiência:</p>
                 <div className="progress">
                     <div className="progress-container">
-                        <div className="progress-bar" style={{width: `${props.exp}%`}}></div> 
+                        <div className="progress-bar" style={{width: `${exp}%`}}></div> 
                     </div>
                 </div>
             </div>

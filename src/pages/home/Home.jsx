@@ -3,6 +3,7 @@ import './Home.css'
 import Skills from '../../components/skills/Skills'
 import Professional from '../../components/professional/Professional'
 import Education from '../../components/education/Education'
+import Certifications from '../../components/certifications/Certifications'
 export default function Home() {
 
 
@@ -26,6 +27,8 @@ export default function Home() {
       <Professional />
       <hr className='mx-5' style={{ color: "var(--text-color)" }} />
       <Education/>
+      <hr className='mx-5' style={{ color: "var(--text-color)" }} />
+      <Certifications/>
     </div >
   )
 }

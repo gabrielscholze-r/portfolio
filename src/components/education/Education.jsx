@@ -3,7 +3,6 @@ import DetailItem from '../detailItem/DetailItem'
 
 export default function Education() {
   return (
-    <div>
       <div className="w-100 text-center pt-5">
         <h1 className='sector py-5'>Formação Acadêmica</h1>
         <div className="w-50 d-flex justify-content-evenly mx-auto align-items-center d-flex flex-column">
@@ -12,6 +11,6 @@ export default function Education() {
           <DetailItem title={"Desenvolvimento de Aplicativos Móveis"} date={"Em andamento"} place={"PUC-PR"} description={"Pós-Graduação em Desenvolvimento de Aplicativos Móveis"} />
         </div>
       </div>
-    </div>
+
   )
 }

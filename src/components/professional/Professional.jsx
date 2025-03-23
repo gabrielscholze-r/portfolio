@@ -1,6 +1,8 @@
 import React from 'react'
-import './Professional.css'
 import DetailItem from '../detailItem/DetailItem'
+
+import './Professional.css'
+
 export default function Professional() {
     return (
         <div className="w-100 text-center pt-5">

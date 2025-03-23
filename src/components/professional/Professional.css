@@ -1,0 +1,5 @@
+.sector {
+    color: var(--titles);
+    font-weight: bolder;
+    font-size: 3rem;
+}
