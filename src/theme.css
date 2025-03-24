@@ -4,6 +4,7 @@
     --background-color: #ffffff;
     --text-color: #000000;
     --titles: #1B4F72;
+    --boxshadow: rgba(0,0,0,0.53);
 }
 
 [data-theme="dark"] {
@@ -11,5 +12,6 @@
     --secondary-color: #3f8bfa;
     --background-color: #070d21;
     --text-color: #F2F6D0;
-    --titles: #5DADE2;
+    --titles: rgb(93, 173, 226);
+    --boxshadow: rgb(120, 200, 253);
 }
