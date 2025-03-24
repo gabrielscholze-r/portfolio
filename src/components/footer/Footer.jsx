@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 export default function Footer() {
     function copyMail() {
         navigator.clipboard.writeText("gabrielscholze24@gmail.com")
@@ -11,10 +11,9 @@ export default function Footer() {
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: false,
-            draggable: false,    
+            draggable: false,
             progress: undefined,
-          });
-
+        });
     }
     return (
         <footer className='footer py-4 align-items-center d-flex w-100'>

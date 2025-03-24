@@ -4,7 +4,7 @@ import './Certificate.css'
 
 export default function Certificate({ title, org, link }) {
     return (
-        <div className='w-50 d-flex align-items-center mx-auto flex-column justify-content-between certificate p-3 rounded'>
+        <div className='d-flex align-items-center mx-auto flex-column justify-content-between certificate p-3 rounded'>
             <div className='d-flex flex-column align-items-center gap-2'>
                 <h2 className='my-auto title text-center'>{title}</h2>
                 <h3 className='org rounded'>{org}</h3>

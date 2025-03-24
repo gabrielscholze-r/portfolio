@@ -1,5 +1,12 @@
-.sector {
+.sector-profession {
     color: var(--titles);
     font-weight: bolder;
     font-size: 2rem;
+}
+
+
+@media (max-width: 800px) {
+    .sector-profession {
+        font-size:1.3rem;
+    }
 }

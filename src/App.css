@@ -2,6 +2,13 @@
 .App {
   background-color: var(--background-color);
   font-family: 'JetBrains Mono', monospace;
+  overflow-x: hidden;
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 @font-face {

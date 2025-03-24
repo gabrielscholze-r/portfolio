@@ -24,3 +24,20 @@
     text-indent: 1rem;
 }
 
+
+@media (max-width: 800px) {
+    .intro {
+        padding: 3rem;
+        text-align: center;
+    }
+    .intro h2 {
+        width: fit-content;
+        font-size: 1.8rem
+    }
+    .intro h3 {
+        font-size: 1rem
+    }
+    .intro p {
+        font-size: 0.6rem
+    }
+}

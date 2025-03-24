@@ -3,8 +3,41 @@
     font-weight: bolder;
     font-size: 2rem;
 }
+
 .certificate {
     -webkit-box-shadow: 0px 0px 6px -3px var(--boxshadow);
     -moz-box-shadow: 0px 0px 6px -3px var(--boxshadow);
     box-shadow: 0px 0px 6px -3px var(--boxshadow);
+    width: 300px;
+    margin: 0.5rem auto;
+}
+
+.certificates {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 0.3rem;
+}
+
+.certificate-section {
+    width: 80%;
+    text-align: center;
+    padding: 3rem;
+    margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+    .certificate-section {
+        width: 100%;
+        padding: 2rem;
+    }
+    .certificates {
+        flex-direction: column;
+    }
+    .sector {
+        color: var(--titles);
+        font-weight: bolder;
+        font-size: 1.4rem;
+    }
 }

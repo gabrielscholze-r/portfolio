@@ -1,3 +1,9 @@
+.certificate {
+    -webkit-box-shadow: 0px 0px 6px -3px var(--boxshadow);
+    -moz-box-shadow: 0px 0px 6px -3px var(--boxshadow);
+    box-shadow: 0px 0px 6px -3px var(--boxshadow);
+    min-height: 180px;
+}
 .icon-go {
     font-size: 2.5rem;
     color: var(--secondary-color);
@@ -23,3 +29,26 @@
     padding: 0.4rem;
 }
 
+.title {
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+@media (max-width: 800px) {
+    .certificate{
+        min-height: 140px;
+        padding: 1rem important;
+    }
+    .org {
+        padding: 0.3rem;
+        font-size: 0.8rem;
+    }
+    .icon-go {
+        font-size: 2rem;
+    }
+
+    .title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem !important;
+    }
+}

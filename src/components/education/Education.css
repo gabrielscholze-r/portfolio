@@ -3,3 +3,12 @@
     font-weight: bolder;
     font-size: 2rem;
 }
+
+
+@media (max-width: 800px) {
+    .sector {
+        font-size: 1.4rem;
+    }
+}
+
+
