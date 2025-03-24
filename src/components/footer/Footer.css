@@ -1,0 +1,26 @@
+.footer {
+    -webkit-box-shadow: 0px -1px 3px 0px var(--boxshadow);
+    -moz-box-shadow: 0px -1px 3px 0px var(--boxshadow);
+    box-shadow: 0px -1px 3px 0px var(--boxshadow);
+}
+.icon-footer{
+    font-size: 2rem;
+}
+.footer-link {
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    
+}
+.footer-link:hover {
+    scale: 1.2;
+    opacity:0.8;
+}
+.custom-toast {
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 8px;
+  }
+  
+  .custom-toast-body {
+    font-size: 1rem;
+  }

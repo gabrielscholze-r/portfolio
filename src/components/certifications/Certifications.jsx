@@ -20,7 +20,7 @@ export default function Certifications() {
             <div className='d-flex w-50 mx-auto justify-content-center gap-3 py-1'>
                 <Certificate link={"https://drive.google.com/drive/folders/1N-NJwDdqM0J7F4s-yhGefXPNEQzZhmnr?usp=sharing"} title="C++" org={"Alura"} />
                 <Certificate link={"https://drive.google.com/drive/folders/1-htZ7H8fQMAgsD4oVLjmbCdbTfHVx3uF?usp=sharing"} title="React.js" org={"Alura"} />
-                <Certificate link={"https://drive.google.com/file/d/17NC7Hx25VmdI6OvYMnc9mqn-tA0mTaGM/view?usp=sharing"} title="Node" org={"Alura"} />
+                <Certificate link={"https://drive.google.com/file/d/17NC7Hx25VmdI6OvYMnc9mqn-tA0mTaGM/view?usp=sharing"} title="Node.js" org={"Alura"} />
             </div>
             <div className='d-flex w-50 mx-auto justify-content-center gap-3 py-1'>
             </div>

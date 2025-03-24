@@ -1,4 +1,6 @@
+import { ToastContainer } from 'react-toastify'
 import './App.css'
+import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
 import AppRoutes from './routes/AppRoutes'
 import './theme.css'
@@ -11,6 +13,10 @@ function App() {
         <Header/>
       </header>
       <AppRoutes/>
+      <footer>
+        <Footer/>
+      </footer>
+      <ToastContainer/>
     </div>
   )
 }

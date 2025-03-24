@@ -1,10 +1,10 @@
 import React from 'react'
 import './Tooltip.css'
 
-export default function Tooltip({hover, title, list, exp, name}) {
+export default function Tooltip({hover, title, list, exp}) {
     return (
         <div
-            className={`tooltip ${(hover[0] && hover[1] === name) ? 'show' : 'hide'}`}
+            className={`tooltip ${(hover) ? 'show' : 'hide'}`}
         >
             <div className="px-3 py-2">
                 <h2 style={{ color: "var(--background-color)" }}>{title}</h2>
