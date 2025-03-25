@@ -1,9 +1,9 @@
 import React from 'react'
 import './Home.css'
-import Skills from '../../components/skills/Skills'
-import Professional from '../../components/professional/Professional'
-import Education from '../../components/education/Education'
-import Certifications from '../../components/certifications/Certifications'
+import Skills from '../../components/home/skills/Skills'
+import Professional from '../../components/home/professional/Professional'
+import Education from '../../components/home/education/Education'
+import Certifications from '../../components/home/certifications/Certifications'
 export default function Home() {
 
 

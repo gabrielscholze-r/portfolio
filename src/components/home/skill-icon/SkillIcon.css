@@ -1,0 +1,20 @@
+
+.devicon-col {
+    display: flex;
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+    transition: 0.2s;
+    flex-direction: column;
+}
+
+.devicon-col:hover .devicon{
+    transform: rotate(3deg);
+    scale: 1.1;
+    opacity: 0.9;
+    color: var(--titles);
+}
+.devicon {
+    color: var(--secondary-color);
+    transition: 0.2s;
+}

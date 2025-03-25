@@ -1,0 +1,50 @@
+[
+    {
+        "title": "AppNotas",
+        "imgPath": "notes",
+        "videoPath": "",
+        "initialDescription": "",
+        "github": "",
+        "advancedDescription": ""
+    },
+    {
+        "title": "CodeCracker",
+        "imgPath": "codecracker",
+        "videoPath": "",
+        "initialDescription": "",
+        "github": "",
+        "advancedDescription": ""
+    },
+    {
+        "title": "Exoplanet Finder",
+        "imgPath": "exoplanet",
+        "videoPath": "",
+        "initialDescription": "",
+        "github": "",
+        "advancedDescription": ""
+    },
+    {
+        "title": "GamerTag",
+        "imgPath": "gamertag",
+        "videoPath": "",
+        "initialDescription": "",
+        "github": "",
+        "advancedDescription": ""
+    },
+    {
+        "title": "Imóveis",
+        "imgPath": "imoveis",
+        "videoPath": "",
+        "initialDescription": "",
+        "github": "",
+        "advancedDescription": ""
+    },
+    {
+        "title": "TapTake E-Sports",
+        "imgPath": "taptake",
+        "videoPath": "",
+        "initialDescription": "",
+        "github": "",
+        "advancedDescription": ""
+    }
+]

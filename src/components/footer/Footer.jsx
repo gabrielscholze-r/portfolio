@@ -19,10 +19,10 @@ export default function Footer() {
         <footer className='footer py-4 align-items-center d-flex w-100'>
             <div className='d-flex justify-content-center align-items-center mx-auto'>
                 <a className='px-3 footer-link' target='_blank' href='https://www.linkedin.com/in/gabriel-scholze-rosa-28b9ab1b2/'>
-                    <i class="bi bi-linkedin icon-footer"></i>
+                    <i className="bi bi-linkedin icon-footer"></i>
                 </a>
                 <a target="_blank" className='px-3 footer-link' onClick={() => { copyMail() }}>
-                    <i class="bi bi-envelope-fill icon-footer"></i>
+                    <i className="bi bi-envelope-fill icon-footer"></i>
                 </a>
             </div>
         </footer>
