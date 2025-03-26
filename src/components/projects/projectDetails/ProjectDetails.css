@@ -1,0 +1,38 @@
+.projectDetails {
+    width: 80vw;
+    height: 80vh;
+    aspect-ratio: 16/9;
+    background-color: var(--background-color); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    overflow: auto; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px; 
+    z-index: 100000;
+    overflow-x: hidden;
+    -webkit-box-shadow: 0px 0px 2px 0.2px var(--boxshadow);
+    -moz-box-shadow: 0px 0px 2px 0.2px var(--boxshadow);
+    box-shadow: 0px 0px 2px 0.2px var(--boxshadow);
+}
+.close-modal{
+    font-size: 3rem;
+    width: min-content;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: var(--text-color);
+}
+.close-modal:hover{
+    scale: 1.2;
+}
+.image-details{
+    width: 50%;
+}
+.image-details img {
+    width: 100%;
+    -webkit-box-shadow: 2px 2px 2px 0.2px var(--boxshadow);
+    -moz-box-shadow: 2px 2px 2px 0.2px var(--boxshadow);
+    box-shadow: 2px 2px 2px 0.2px var(--boxshadow);
+}

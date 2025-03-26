@@ -1,5 +1,27 @@
 .projectList {
     display: grid;
-    justify-content: space-evenly;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
 }
+
+
+.projetos {
+    color: var(--titles);
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+
+@media (max-width: 800px) {
+    .projetos {
+        font-size: 1.4rem;
+    }
+    .projectList{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+    }
+}
+
+

@@ -5,11 +5,11 @@ import './Projects.css'
 export default function Projects() {
   
   return (
-    <div className='w-100'>
+    <div className='w-100 py-5'>
       <div className='text-center'>
         <h2 className='projetos'>Projetos</h2>
       </div>
-      <div className='projectList w-100'>
+      <div className='projectList w-75 mx-auto'>
         {data.map(item => {
           return (
             <ProjectItem data={item}/>

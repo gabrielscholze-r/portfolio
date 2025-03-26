@@ -1,8 +1,23 @@
 /* Helvetica */
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: var(--background-color);
   font-family: 'JetBrains Mono', monospace;
   overflow-x: hidden;
+}
+
+header {
+  flex-shrink: 0;
+}
+
+main {
+  flex: 1; /* Ocupa o espaço restante */
+}
+
+footer {
+  flex-shrink: 0;
 }
 html {
   box-sizing: border-box;

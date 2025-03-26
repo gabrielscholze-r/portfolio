@@ -6,19 +6,21 @@ import AppRoutes from './routes/AppRoutes'
 import './theme.css'
 
 function App() {
-
   return (
     <div className='App'>
       <header>
-        <Header/>
+        <Header />
       </header>
-      <AppRoutes/>
+      <main>
+        <AppRoutes />
+      </main>
       <footer>
-        <Footer/>
+        <Footer />
       </footer>
-      <ToastContainer/>
+      <ToastContainer />
     </div>
-  )
+  );
 }
+
 
 export default App

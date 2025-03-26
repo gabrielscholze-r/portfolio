@@ -3,48 +3,48 @@
         "title": "AppNotas",
         "imgPath": "notes",
         "videoPath": "",
-        "initialDescription": "",
-        "github": "",
+        "initialDescription": "Aplicativo minimalista de notas com editor de texto, criado em React (frontend), Node.js (backend) e MongoDB.",
+        "github": "https://github.com/gabrielscholze-r/AppNotas/tree/master",
         "advancedDescription": ""
     },
     {
-        "title": "CodeCracker",
+        "title": "CodeCracker (SwiftUI)",
         "imgPath": "codecracker",
         "videoPath": "",
-        "initialDescription": "",
-        "github": "",
+        "initialDescription": "Jogo de Trivia para iOS para iniciantes na programação, desenvolvido em SwiftUI usando abordagem reativa.",
+        "github": "https://github.com/gabrielscholze-r/Codecracker-SwiftUI/tree/master",
         "advancedDescription": ""
     },
     {
         "title": "Exoplanet Finder",
         "imgPath": "exoplanet",
         "videoPath": "",
-        "initialDescription": "",
-        "github": "",
+        "initialDescription": "Trabalho em grupo realizado para conclusão do Bacharelado em Ciência da Computação, desenvolvido em Angular (frontend) com Flask (backend) para análise de dados de possíveis exoplanetas.",
+        "github": "https://github.com/gabrielscholze-r/Exoplanet-Finder-Web",
         "advancedDescription": ""
     },
     {
         "title": "GamerTag",
         "imgPath": "gamertag",
         "videoPath": "",
-        "initialDescription": "",
-        "github": "",
+        "initialDescription": "Rede social gamer com filtros por estilo de jogo, sistema de amizades e feed em tempo real, desenvolvida em React + Firebase.",
+        "github": "https://github.com/gabrielscholze-r/gamertag-React-/tree/master",
         "advancedDescription": ""
     },
     {
-        "title": "Imóveis",
+        "title": "iMóveis",
         "imgPath": "imoveis",
         "videoPath": "",
-        "initialDescription": "",
-        "github": "",
+        "initialDescription": "Sistema administrativo para lojas de móveis com catálogo, carrinho de compras e relatórios em tempo real, desenvolvido em React (frontend), Node.js (backend) e MongoDB.",
+        "github": "https://github.com/gabrielscholze-r/FurnitureAdministrationSystem/tree/master",
         "advancedDescription": ""
     },
     {
         "title": "TapTake E-Sports",
         "imgPath": "taptake",
         "videoPath": "",
-        "initialDescription": "",
-        "github": "",
+        "initialDescription": "Projeto acadêmico desenvolvido para estudar métodos de criptografia em Java, utilizando um sistema de pontuação baseado em resultados de partidas de e-sports.",
+        "github": "https://github.com/gabrielscholze-r/TapTakeE-Sports",
         "advancedDescription": ""
     }
 ]
