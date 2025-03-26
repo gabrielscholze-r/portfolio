@@ -10,9 +10,9 @@ export default function Projects() {
         <h2 className='projetos'>Projetos</h2>
       </div>
       <div className='projectList w-75 mx-auto'>
-        {data.map(item => {
+        {data.map((item,index) => {
           return (
-            <ProjectItem data={item}/>
+            <ProjectItem data={item} key={index}/>
           )
         })}
       </div>

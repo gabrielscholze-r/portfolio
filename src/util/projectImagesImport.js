@@ -7,7 +7,6 @@ import imoveis from "../assets/projects/img/imoveis.png"
 import taptake from "../assets/projects/img/taptakee-sports.png"
 
 const imageMapper = (imgPath) => {
-    console.log(imgPath)
     switch (imgPath) {
         case "notes":
             return notes;

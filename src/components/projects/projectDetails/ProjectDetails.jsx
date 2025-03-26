@@ -1,11 +1,11 @@
 import React from 'react'
 import './ProjectDetails.css'
 
-export default function ProjectDetails({ data, onClose, image}) {
+export default function ProjectDetails({ data, onClose, image, modal}) {
 
 
     return (
-        <div className='projectDetails'>
+        <div className={`projectDetails ${modal ? "open":""}`}>
                 <div onClick={onClose} className='close-modal ms-auto mx-4'>
                     <p>✕</p>
                 </div>

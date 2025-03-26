@@ -15,12 +15,8 @@ export default function ProjectItem({ data }) {
                 <div className="title">{data.title}</div>
                 <div className="description">{data.initialDescription}</div>
             </div>
-            {modal && (
-                <div className="modal-overlay">
-                    <ProjectDetails data={data} image={image} onClose={() => setModal(false)} />
-                </div>
-            )
-            }
+            <ProjectDetails data={data} image={image} onClose={() => setModal(false)} modal={modal} />
+
         </>
     )
 }
