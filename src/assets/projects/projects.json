@@ -5,12 +5,12 @@
         "videoPath": "",
         "initialDescription": "Aplicativo minimalista de notas com editor de texto, criado em React (frontend), Node.js (backend) e MongoDB.",
         "github": "https://github.com/gabrielscholze-r/AppNotas/tree/master",
-        "advancedDescription": ""
+        "advancedDescription": "O AppNotas é um aplicativo full-stack para gerenciamento de notas que utiliza React no frontend, Node.js com Express no backend e MongoDB para armazenamento de dados. Oferece funcionalidades como criação, edição e exclusão de notas, busca inteligente, organização por categorias, autenticação segura e um editor de texto integrado. Destaca-se pela implementação de uma API RESTful, gerenciamento de estado com Context API, arquitetura modular e atualizações em tempo real. O projeto está disponível no GitHub para contribuições da comunidade."
     },
     {
         "title": "CodeCracker (SwiftUI)",
         "imgPath": "codecracker",
-        "videoPath": "",
+        "videoPath": "https://youtu.be/CteMBizjayQ",
         "initialDescription": "Jogo de Trivia para iOS para iniciantes na programação, desenvolvido em SwiftUI usando abordagem reativa.",
         "github": "https://github.com/gabrielscholze-r/Codecracker-SwiftUI/tree/master",
         "advancedDescription": ""

@@ -16,7 +16,6 @@ export default function ProjectItem({ data }) {
                 <div className="description">{data.initialDescription}</div>
             </div>
             <ProjectDetails data={data} image={image} onClose={() => setModal(false)} modal={modal} />
-
         </>
     )
 }
