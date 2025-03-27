@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import imageMapper from '../../../util/projectImagesImport'
 import './ProjectItem.css'
 import ProjectDetails from '../projectDetails/ProjectDetails'
-// import { ModalContext } from '../../../util/ModalContext'
 
 export default function ProjectItem({ data, anyOpen,setAny }) {
     const [modal, setModal] = useState(false)
