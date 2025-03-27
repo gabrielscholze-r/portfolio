@@ -5,7 +5,7 @@
         "videoPath": "",
         "initialDescription": "Aplicativo minimalista de notas com editor de texto, criado em React (frontend), Node.js (backend) e MongoDB.",
         "github": "https://github.com/gabrielscholze-r/AppNotas/tree/master",
-        "advancedDescription": "O AppNotas é um aplicativo full-stack para gerenciamento de notas que utiliza React no frontend, Node.js com Express no backend e MongoDB para armazenamento de dados. Oferece funcionalidades como criação, edição e exclusão de notas, busca inteligente, organização por categorias, autenticação segura e um editor de texto integrado. Destaca-se pela implementação de uma API RESTful, gerenciamento de estado com Context API, arquitetura modular e atualizações em tempo real. O projeto está disponível no GitHub para contribuições da comunidade."
+        "advancedDescription": "O AppNotas é um aplicativo full-stack para gerenciamento de notas que utiliza React no frontend, Node.js com Express no backend e MongoDB para armazenamento de dados. Oferece funcionalidades como criação, edição e exclusão de notas, busca inteligente, organização por categorias, autenticação segura e um editor de texto integrado. Destaca-se pela implementação de uma API RESTful, gerenciamento de estado com Context API, arquitetura modular e atualizações em tempo real. O projeto está disponível no GitHub para contribuições da comunidade"
     },
     {
         "title": "CodeCracker (SwiftUI)",
@@ -13,7 +13,7 @@
         "videoPath": "https://youtu.be/CteMBizjayQ",
         "initialDescription": "Jogo de Trivia para iOS para iniciantes na programação, desenvolvido em SwiftUI usando abordagem reativa.",
         "github": "https://github.com/gabrielscholze-r/Codecracker-SwiftUI/tree/master",
-        "advancedDescription": ""
+        "advancedDescription": "O CodeCracker é uma aplicação educacional desenvolvida para iOS que une trivia e desafios práticos de programação em um formato acessível para iniciantes. Focado em ensinar conceitos fundamentais de forma descontraída, o projeto apresenta exercícios básicos com operadores, variáveis e estruturas condicionais simples para introduzir sintaxe de maneira intuitiva. A plataforma inclui um sistema de pontuação com ranking persistente (via Core Data), um mapa interativo (usando MapKit) que localiza as origens históricas das linguagens de programação, e uma interface adaptativa construída com SwiftUI"
     },
     {
         "title": "Exoplanet Finder",
@@ -21,7 +21,7 @@
         "videoPath": "",
         "initialDescription": "Trabalho em grupo realizado para conclusão do Bacharelado em Ciência da Computação, desenvolvido em Angular (frontend) com Flask (backend) para análise de dados de possíveis exoplanetas.",
         "github": "https://github.com/gabrielscholze-r/Exoplanet-Finder-Web",
-        "advancedDescription": ""
+        "advancedDescription": "Trabalho para finalização do Bacharelado em Ciência da Computação. Foi feita uma análise de dados utilizando informações captadas por satélistes espaciais como TESS, Kepler e K2, investigando curvas de luz de estrelas com intúito de detectar possíveis exoplanetas. Foi desenvolvido um ambiente para visualização dos dados planetário em Angular, com uma interface responsiva e suporte a vários idiomas, e uma API em Flask integrado com modelos de machine learning que gerava gráficos com base na previsão feita pelo modelo conforme os dados passados a ele"
     },
     {
         "title": "GamerTag",
@@ -29,7 +29,7 @@
         "videoPath": "",
         "initialDescription": "Rede social gamer com filtros por estilo de jogo, sistema de amizades e feed em tempo real, desenvolvida em React + Firebase.",
         "github": "https://github.com/gabrielscholze-r/gamertag-React-/tree/master",
-        "advancedDescription": ""
+        "advancedDescription": "Trabalho para matéria de Programação WEB, onde foi me apresentado React.js. O projeto é uma rede social, onde os usuários podem conversar sobre seus inveresses no mundo dos jogos. O app tem integração com firebase para autenticação e persistência, onde o usuário pode adicionar outros usuários como amigos, adicionar seus estilos de jogos favoritos, faz publicações, curtir e comentar posts e filtrar as publicações que aparecem em sua timeline por estilo de jogo (FPS, RPG)"
     },
     {
         "title": "iMóveis",

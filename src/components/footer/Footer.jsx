@@ -1,6 +1,7 @@
 import React from 'react'
 import './Footer.css'
 import { toast } from 'react-toastify';
+
 export default function Footer() {
     function copyMail() {
         navigator.clipboard.writeText("gabrielscholze24@gmail.com")
