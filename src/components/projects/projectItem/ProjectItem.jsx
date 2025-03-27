@@ -2,20 +2,20 @@ import React, { useState } from 'react'
 import imageMapper from '../../../util/projectImagesImport'
 import './ProjectItem.css'
 import ProjectDetails from '../projectDetails/ProjectDetails'
+// import { ModalContext } from '../../../util/ModalContext'
 
-export default function ProjectItem({ data }) {
+export default function ProjectItem({ data, anyOpen,setAny }) {
     const [modal, setModal] = useState(false)
-
     const image = imageMapper(data.imgPath)
-
+    
     return (
         <>
-            <div className='item rounded' onClick={() => setModal(true)}>
+            <div className='item rounded' onClick={!anyOpen ? () => {setModal(true); setAny(true)}:null}>
                 <img src={image} alt={data.title} className='rounded' />
                 <div className="title">{data.title}</div>
                 <div className="description">{data.initialDescription}</div>
             </div>
-            <ProjectDetails data={data} image={image} onClose={() => setModal(false)} modal={modal} />
+            <ProjectDetails data={data} image={image} onClose={() => {setModal(false); setAny(false)}} modal={modal} />
         </>
     )
 }

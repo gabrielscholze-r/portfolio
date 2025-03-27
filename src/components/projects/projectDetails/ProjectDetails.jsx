@@ -20,6 +20,17 @@ export default function ProjectDetails({ data, onClose, image, modal }) {
                     {data.advancedDescription}
                 </p>
             </div>
+            <div className='d-flex justify-content-center icon-details'>
+                <div>
+                    <i class="bi bi-github github"></i>
+                </div>
+                {data.videoPath && (
+                    <a>
+                        <i class="bi bi-youtube youtube"></i>
+                    </a>
+                )
+                }
+            </div>
         </div>
     )
 }

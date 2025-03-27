@@ -52,3 +52,19 @@
     text-align: justify;
     width: 100%t;
 }
+.icon-details{
+    font-size: 3rem;
+}
+.icon-detail a i {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+.icon-detail a i{
+    transform: scale(1.1);
+}
+.youtube{
+    color: #FF0000;
+}
+.github {
+    color: var(--text-color);
+}
