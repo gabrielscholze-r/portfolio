@@ -1,22 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './ProjectDetails.css'
 
 export default function ProjectDetails({ data, onClose, image, modal }) {
-    useEffect(() => {
-        if (modal) {
-            const scrollY = window.scrollY;
-            document.body.style.position = 'fixed';
-            document.body.style.top = `-${scrollY}px`;
-            document.body.classList.add('body-no-scroll');
-            
-            return () => {
-                document.body.classList.remove('body-no-scroll');
-                document.body.style.position = '';
-                document.body.style.top = '';
-                window.scrollTo(0, scrollY);
-            };
-        }
-    }, [modal]);
+
     return (
         <div className={`projectDetails ${modal ? "open" : ""}`}>
             <div onClick={onClose} className='close-modal ms-auto mx-4'>

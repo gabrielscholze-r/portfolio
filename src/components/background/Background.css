@@ -1,0 +1,41 @@
+/* Background.css */
+.geometric-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .geometric-shape.square {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    opacity: 0.15;
+    border: 3px solid var(--text-color);
+    background: transparent;
+    animation: float 40s infinite linear;
+    filter: blur(1px);
+    top: 100%;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0) rotate(0deg) translateX(0);
+    }
+    25% {
+      transform: translateY(-25vh) rotate(90deg) translateX(10px);
+    }
+    50% {
+      transform: translateY(-50vh) rotate(180deg) translateX(-10px);
+    }
+    75% {
+      transform: translateY(-75vh) rotate(270deg) translateX(5px);
+    }
+    100% {
+      transform: translateY(-100vh) rotate(360deg) translateX(0);
+    }
+  }
