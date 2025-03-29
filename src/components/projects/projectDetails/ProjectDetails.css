@@ -74,8 +74,30 @@
 .project-link:hover {
     transform: scale(1.1);
 }
-.sector {
+.sector-project-details {
     color: var(--titles);
     font-weight: bolder;
     font-size: 2rem;
+}
+@media (max-width: 800px) {
+    .advanced-description {
+        color: var(--text-color);
+        font-size: 0.7rem;
+        width: 75%;
+        padding: 0 1rem;
+    }
+    .image-details{
+        width: 70%;
+    }
+    .image-details img {
+        width: 100%;
+        -webkit-box-shadow: 2px 2px 2px 0.2px var(--boxshadow);
+        -moz-box-shadow: 2px 2px 2px 0.2px var(--boxshadow);
+        box-shadow: 2px 2px 2px 0.2px var(--boxshadow);
+    }
+    .sector-project-details {
+        color: var(--titles);
+        font-weight: bolder;
+        font-size: 1rem;
+    }
 }

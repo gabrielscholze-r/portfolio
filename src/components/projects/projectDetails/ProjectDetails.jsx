@@ -8,8 +8,8 @@ export default function ProjectDetails({ data, onClose, image, modal }) {
             <div onClick={onClose} className='close-modal ms-auto mx-4'>
                 <p>✕</p>
             </div>
-            <div className='sector'>
-                <h2 className='text-center'>
+            <div>
+                <h2 className='text-center sector-project-details'>
                     {data.title}
                 </h2>
             </div>
