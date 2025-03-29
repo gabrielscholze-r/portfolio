@@ -1,6 +1,6 @@
 import React from 'react'
-import Home from '../pages/Home/Home'
-import Projects from '../pages/projects/Projects'
+import Home from '../pages/Home/Home.jsx'
+import Projects from '../pages/projects/Projects.jsx'
 import { Route, Routes } from 'react-router-dom'
 
 export default function AppRoutes() {
