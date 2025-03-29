@@ -11,9 +11,9 @@
     border-radius: 8px; 
     z-index: 100000;
     overflow-x: hidden;
-    -webkit-box-shadow: 0px 0px 2px 0.2px var(--boxshadow);
-    -moz-box-shadow: 0px 0px 2px 0.2px var(--boxshadow);
-    box-shadow: 0px 0px 2px 0.2px var(--boxshadow);
+    -webkit-box-shadow: 1px 1px 4px 1px var(--boxshadow);
+    -moz-box-shadow: 1px 1px 4px 1px var(--boxshadow);
+    box-shadow: 1px 1px 4px 1px var(--boxshadow);
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
@@ -44,8 +44,10 @@
     box-shadow: 2px 2px 2px 0.2px var(--boxshadow);
 }
 .advanced-description {
+    color: var(--text-color);
     font-size: 1rem;
     width: 75%;
+    padding: 0 4rem;
 }
 .advanced-description p{
     text-indent:2rem;
@@ -59,12 +61,16 @@
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
-.icon-detail a i{
-    transform: scale(1.1);
-}
 .youtube{
     color: #FF0000;
 }
 .github {
     color: var(--text-color);
+}
+.project-link{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.project-link:hover {
+    transform: scale(1.1);
 }

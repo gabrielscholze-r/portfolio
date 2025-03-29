@@ -1,4 +1,5 @@
 .projectList {
+    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
@@ -6,7 +7,10 @@
     width: 90%;
     margin: 0 auto;
 }
-
+.body-no-scroll {
+    width: 100%;
+    height: 100%;
+}
 
 .projetos {
     color: var(--titles);

@@ -5,7 +5,7 @@ import './Projects.css'
 export default function Projects() {
   const [anyOpen, setAny] = useState(false)
   return (
-    <div className='w-100 py-5'>
+    <div className='w-100 py-5 body-no-scroll'>
       <div className='text-center'>
         <h2 className='projetos'>Projetos</h2>
       </div>

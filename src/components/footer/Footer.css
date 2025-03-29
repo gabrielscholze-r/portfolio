@@ -10,24 +10,36 @@
     background-color: var(--background-color);
     z-index: 10000;
 }
-.icon-footer{
+
+.icon-footer {
     font-size: 2rem;
 }
+
 .footer-link {
     cursor: pointer;
     transition: 0.2s ease-in-out;
-    
+
 }
+
 .footer-link:hover {
     scale: 1.2;
-    opacity:0.8;
+    opacity: 0.8;
 }
+
 .custom-toast {
     background-color: var(--secondary-color);
     color: white;
     border-radius: 8px;
-  }
-  
-  .custom-toast-body {
+    z-index: 10001;
+    margin-bottom: 85px;
+}
+
+@media (max-width: 480px) {
+    .custom-toast {
+        margin-bottom: 65px;
+    }
+}
+
+.custom-toast-body {
     font-size: 1rem;
-  }
+}
