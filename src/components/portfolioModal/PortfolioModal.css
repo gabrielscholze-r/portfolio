@@ -1,0 +1,56 @@
+.portfolio-modal{
+    width: 60vw;
+    height: 40vh;
+    aspect-ratio: 16/9;
+    background-color: var(--background-color); 
+    overflow: auto; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    border-radius: 8px; 
+    z-index: 100000;
+    overflow-x: hidden;
+    -webkit-box-shadow: 1px 1px 4px 1px var(--boxshadow);
+    -moz-box-shadow: 1px 1px 4px 1px var(--boxshadow);
+    box-shadow: 1px 1px 4px 1px var(--boxshadow);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+.open {
+    visibility: visible;
+    opacity: 1;
+}
+.sector-portfolio {
+    text-align: justify;
+    text-wrap: pretty;
+    color: var(--text-color);
+    font-size: 1.8rem;
+}
+.info-content{
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+}
+.github-info{
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+.project-link-info{
+    display: inline-block;
+    transition: 0.2s ease-in-out;
+}
+.project-link-info:hover{
+    transform: scale(1.2);
+}
+@media (max-width: 800px) {
+    .portfolio-modal{
+        width: 80vw;
+        height: 80vh;
+    }
+    .sector-portfolio {
+        color: var(--text-color);
+        font-size: 1.2rem;
+    }
+}

@@ -74,3 +74,8 @@
 .project-link:hover {
     transform: scale(1.1);
 }
+.sector {
+    color: var(--titles);
+    font-weight: bolder;
+    font-size: 2rem;
+}

@@ -23,11 +23,11 @@ export default function ProjectDetails({ data, onClose, image, modal }) {
             </div>
             <div className='d-flex justify-content-evenly icon-details py-3 w-100'>
                 <a className='project-link' href={data.github} target='_blank'>
-                    <i class="bi bi-github github"></i>
+                    <i className="bi bi-github github"></i>
                 </a>
                 {data.videoPath && (
                     <a className='project-link' href={data.videoPath} target='_blank'>
-                        <i class="bi bi-youtube youtube"></i>
+                        <i className="bi bi-youtube youtube"></i>
                     </a>
                 )
                 }
