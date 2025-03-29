@@ -1,41 +1,59 @@
-/* Background.css */
 .geometric-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    z-index: 1;
-    pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.wave {
+  position: absolute;
+  width: 20vw;
+  height: 5px;
+  background: var(--primary-color);
+  opacity: 0.2;
+  animation: wave 10s linear infinite;
+  top: 50%;
+  left: -100%;
+  filter: blur(2px);
+}
+@keyframes wave {
+  0% {
+      transform: translateX(0);
   }
-  
-  .geometric-shape.square {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    opacity: 0.15;
-    border: 3px solid var(--text-color);
-    background: transparent;
-    animation: float 40s infinite linear;
-    filter: blur(1px);
-    top: 100%;
+  100% {
+      transform: translateX(100%);
   }
-  
-  @keyframes float {
-    0% {
-      transform: translateY(0) rotate(0deg) translateX(0);
-    }
-    25% {
-      transform: translateY(-25vh) rotate(90deg) translateX(10px);
-    }
-    50% {
-      transform: translateY(-50vh) rotate(180deg) translateX(-10px);
-    }
-    75% {
-      transform: translateY(-75vh) rotate(270deg) translateX(5px);
-    }
-    100% {
-      transform: translateY(-100vh) rotate(360deg) translateX(0);
-    }
+}
+
+.line {
+  position: absolute;
+  width: 200px;
+  height: 2px;
+  background: var(--primary-color);
+  opacity: 0.2;
+  animation: line 15s ease-in-out infinite;
+  top: 100%;
+  filter: blur(1px);
+}
+
+@keyframes line {
+  0% {
+      transform: translateY(0) rotate(0deg);
   }
+  25% {
+      transform: translateY(-25vh) rotate(45deg);
+  }
+  50% {
+      transform: translateY(-50vh) rotate(90deg);
+  }
+  75% {
+      transform: translateY(-75vh) rotate(135deg);
+  }
+  100% {
+      transform: translateY(-100vh) rotate(180deg);
+  }
+}
