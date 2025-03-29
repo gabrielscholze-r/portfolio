@@ -1,5 +1,5 @@
 import React from 'react'
-import Home from '../pages/Home/Home.jsx'
+import Home from '../pages/home/Home.jsx'
 import Projects from '../pages/projects/Projects.jsx'
 import { Route, Routes } from 'react-router-dom'
 
