@@ -1,9 +1,10 @@
 .portfolio-modal{
     width: 60vw;
-    height: 40vh;
+    height: 50vh;
     aspect-ratio: 16/9;
     background-color: var(--background-color); 
     overflow: auto; 
+    overflow-y: hidden;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -35,7 +36,7 @@
 }
 .github-info{
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 .project-link-info{
     display: inline-block;
@@ -43,6 +44,11 @@
 }
 .project-link-info:hover{
     transform: scale(1.2);
+    opacity: 0.8;
+    
+}
+.sector-portfolio2{
+    color: var(--text-color);
 }
 @media (max-width: 800px) {
     .portfolio-modal{
