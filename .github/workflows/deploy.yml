@@ -16,13 +16,13 @@ jobs:
     - name: Configuring SSH
       run: |
         mkdir -p ~/.ssh
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_deploy
+        chmod 600 ~/.ssh/id_deploy
         ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
     - name: Acessar o servidor e atualizar o código
       run: |
-        ssh -i ~/.ssh/id_rsa ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+        ssh -i ~/.ssh/id_deploy ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
           cd /var/www/react.gabrielscholze.tech/portfolio
           
           CADDY_HASH_BEFORE=\$(md5sum /etc/caddy/Caddyfile | awk '{print $1}')
