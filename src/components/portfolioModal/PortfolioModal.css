@@ -71,6 +71,9 @@
     margin: 0.5rem 0;
     padding-left: 0.5rem;
 }
+.infra-details{
+    color: var(--text-color);
+}
 
 .small {
     font-size: 0.85rem;
