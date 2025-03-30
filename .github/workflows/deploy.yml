@@ -28,7 +28,6 @@ jobs:
           CADDY_HASH_BEFORE=\$(md5sum /etc/caddy/Caddyfile | awk '{print $1}')
 
           git pull origin master
-
           npm install
           npm run build
 
