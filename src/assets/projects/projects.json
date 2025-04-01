@@ -24,6 +24,14 @@
         "advancedDescription": "Trabalho para finalização do Bacharelado em Ciência da Computação. Foi feita uma análise de dados utilizando informações captadas por satélistes espaciais como TESS, Kepler e K2, investigando curvas de luz de estrelas com intúito de detectar possíveis exoplanetas. Foi desenvolvido um ambiente para visualização dos dados planetário em Angular, com uma interface responsiva e suporte a vários idiomas, e uma API em Flask integrado com modelos de machine learning que gerava gráficos com base na previsão feita pelo modelo conforme os dados passados a ele"
     },
     {
+        "title": "Gestão Acadêmica",
+        "imgPath": "backend",
+        "videoPath": "https://youtu.be/RrrRUrWD8e8",
+        "initialDescription": "Sistema acadêmico em Kotlin (Spring Boot/JWT) com roles de admin/user e CRUD de cursos",
+        "github": "https://github.com/gabrielscholze-r/AuthserverKotlinSpring",
+        "advancedDescription": "Este projeto é um backend Kotlin para gestão acadêmica, desenvolvido com Spring Boot e autenticação JWT para a matéria de Desenvolvimento Backend em minha Pós-Graduação. Seu objetivo principal é gerenciar cursos, aulas e usuários de forma segura e escalável, seguindo princípios de clean architecture. A API oferece operações CRUD completas, relacionamentos entre entidades e consultas flexíveis com filtragem dinâmica. O sistema implementa segurança robusta com tokens JWT, criptografia SHA-256 e controle de acesso baseado em roles (admin para gestão total e user para operações básicas). A arquitetura organizada em camadas (controller, service, repository) facilita a manutenção e extensão do código. Entre os diferenciais estão: tratamento customizado de exceções, validação de dados em tempo real e documentação clara dos endpoints"
+    },
+    {
         "title": "GamerTag",
         "imgPath": "gamertag",
         "videoPath": "",
