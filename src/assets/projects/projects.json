@@ -54,5 +54,13 @@
         "initialDescription": "Projeto acadêmico desenvolvido para estudar métodos de criptografia em Java, utilizando um sistema de pontuação baseado em resultados de partidas de e-sports.",
         "github": "https://github.com/gabrielscholze-r/TapTakeE-Sports",
         "advancedDescription": "TapTake E-Sports é um projeto acadêmico desenvolvido em Java para explorar técnicas de criptografia aplicadas a sistemas de pontuação em competições de e-sports. O projeto inclui um painel para visualização de rankings e análise de desempenho, simulando um ambiente real onde dados sensíveis de jogos como CS:GO ou Valorant precisam de segurança."
+    },
+    {
+        "title": "Próximos projetos",
+        "imgPath": "next",
+        "videoPath": "",
+        "initialDescription": "",
+        "github": "",
+        "advancedDescription": "Atualmente estou trabalhando em aprender Golang, desenvolvendo um backend de uma aplicação para gerenciamento de finanças em um app que chamei de GastoZero. Provavelmente farei a parte visual com React.js, mas ainda estou no aprendizado da linguagem"
     }
 ]
