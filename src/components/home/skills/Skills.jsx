@@ -8,6 +8,7 @@ export default function Skills() {
         <div className='text-center w-100'>
             <h2 className='pt-2 pb-5 techs-title'>Skills</h2>
             <div className="techs">
+                <SkillIcon title={"Go"} list={["Praticando atualmente em meus projetos"]} exp={"50"} icon={"devicon-go-original-wordmark"} />
                 <SkillIcon title={"React.js"} list={["+2 anos de experiência com React.js", "Trabalhando atualmente"]} exp={"80"} icon={"devicon-react-original-wordmark"} />
                 <SkillIcon icon={"devicon-csharp-plain-wordmark"} title={"C#"} list={["+2 anos de experiência com C# (.NET)", "Trabalhando atualmente"]} exp={80} />
                 <SkillIcon icon={"devicon-java-plain-wordmark"} title={"Java"} list={["1 ano de experiência em desenvolvimento Java"]} exp={50} />
