@@ -4,7 +4,7 @@ import Skills from '../../components/home/skills/Skills'
 import Professional from '../../components/home/professional/Professional'
 import Education from '../../components/home/education/Education'
 import Certifications from '../../components/home/certifications/Certifications'
-import me from '../../assets/img/gabrielscholzerosa.png'
+import me from '../../assets/img/gabrielscholzerosa.jpg'
 export default function Home() {
 
 
