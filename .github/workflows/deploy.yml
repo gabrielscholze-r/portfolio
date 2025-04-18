@@ -10,42 +10,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-    - name: Setup Node
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Build project
-      run: npm run build
+      - name: Build project
+        run: npm run build
 
-    - name: Configuring SSH
-      run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_deploy
-        chmod 600 ~/.ssh/id_deploy
-        ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+      - name: Configuring SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
-    - name: Upload build via SCP
-      run: |
-        scp -r -i ~/.ssh/id_deploy ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/react.gabrielscholze.tech/portfolio
+      - name: Clean remote folder and upload build via SCP
+        run: |
+          ssh -i ~/.ssh/id_deploy ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "rm -rf /var/www/react.gabrielscholze.tech/portfolio/*"
+          scp -r -i ~/.ssh/id_deploy ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/react.gabrielscholze.tech/portfolio
 
-    - name: Reload Caddy if needed
-      run: |
-        ssh -i ~/.ssh/id_deploy ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
-          CADDY_HASH_BEFORE=$(md5sum /etc/caddy/Caddyfile | awk '{print $1}')
-
-          CADDY_HASH_AFTER=$(md5sum /etc/caddy/Caddyfile | awk '{print $1}')
-          
-          if [ "$CADDY_HASH_BEFORE" != "$CADDY_HASH_AFTER" ]; then
-            echo "Reloading Caddy..."
-            sudo caddy reload -c /etc/caddy/Caddyfile
-          else
-            echo "Caddy reload not needed."
-          fi
-        EOF
+      - name: Reload Caddy
+        run: |
+          ssh -i ~/.ssh/id_deploy ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "sudo caddy reload -c /etc/caddy/Caddyfile"
