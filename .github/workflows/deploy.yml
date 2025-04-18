@@ -10,32 +10,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v3
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
+    - name: Configuring SSH
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_deploy
+        chmod 600 ~/.ssh/id_deploy
+        ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Install dependencies
-        run: npm install
+    - name: Acessar o servidor e atualizar o código
+      run: |
+        ssh -i ~/.ssh/id_deploy ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+          cd /var/www/react.gabrielscholze.tech/portfolio
+          
+          CADDY_HASH_BEFORE=$(md5sum /etc/caddy/Caddyfile | awk '{print $1}')
 
-      - name: Build project
-        run: npm run build
+          git pull origin master
+          npm install
+          npm run build
 
-      - name: Configuring SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_deploy
-          chmod 600 ~/.ssh/id_deploy
-          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-
-      - name: Clean remote folder and upload build via SCP
-        run: |
-          ssh -i ~/.ssh/id_deploy ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "rm -rf /var/www/react.gabrielscholze.tech/portfolio/*"
-          scp -r -i ~/.ssh/id_deploy ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/react.gabrielscholze.tech/portfolio
-
-      - name: Reload Caddy
-        run: |
-          ssh -i ~/.ssh/id_deploy ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "sudo caddy reload -c /etc/caddy/Caddyfile"
+          CADDY_HASH_AFTER=$(md5sum /etc/caddy/Caddyfile | awk '{print $1}')
+          
+          if [ "$CADDY_HASH_BEFORE" != "$CADDY_HASH_AFTER" ]; then
+            echo "Reloading Caddy..."
+            sudo caddy reload -c /etc/caddy/Caddyfile
+          else
+            echo "Caddy reload not needed."
+          fi
+        EOF
