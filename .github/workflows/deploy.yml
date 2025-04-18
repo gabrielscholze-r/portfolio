@@ -10,33 +10,44 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+      - name: Checkout código
+        uses: actions/checkout@v3
 
-    - name: Configuring SSH
-      run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_deploy
-        chmod 600 ~/.ssh/id_deploy
-        ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+      - name: Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
-    - name: Acessar o servidor e atualizar o código
-      run: |
-        ssh -i ~/.ssh/id_deploy ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
-          cd /var/www/react.gabrielscholze.tech/portfolio
-          
-          CADDY_HASH_BEFORE=$(md5sum /etc/caddy/Caddyfile | awk '{print $1}')
-
-          git pull origin master
+      - name: Instalar dependências e buildar
+        run: |
           npm install
           npm run build
 
-          CADDY_HASH_AFTER=$(md5sum /etc/caddy/Caddyfile | awk '{print $1}')
-          
-          if [ "$CADDY_HASH_BEFORE" != "$CADDY_HASH_AFTER" ]; then
-            echo "Reloading Caddy..."
-            sudo caddy reload -c /etc/caddy/Caddyfile
-          else
-            echo "Caddy reload not needed."
-          fi
-        EOF
+      - name: Configurar SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Enviar dist/ para o servidor
+        run: |
+          rsync -avz --delete -e "ssh -i ~/.ssh/id_deploy" \
+            dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/react.gabrielscholze.tech/portfolio/dist/
+
+      - name: Rodar Caddy reload se necessário
+        run: |
+          ssh -i ~/.ssh/id_deploy ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+            CADDY_HASH_BEFORE=$(md5sum /etc/caddy/Caddyfile | awk '{print $1}')
+            
+            # Se precisar fazer algo extra no servidor antes do reload, insira aqui
+            
+            CADDY_HASH_AFTER=$(md5sum /etc/caddy/Caddyfile | awk '{print $1}')
+            
+            if [ "$CADDY_HASH_BEFORE" != "$CADDY_HASH_AFTER" ]; then
+              echo "Reloading Caddy..."
+              sudo caddy reload -c /etc/caddy/Caddyfile
+            else
+              echo "Caddy reload not needed."
+            fi
+          EOF
