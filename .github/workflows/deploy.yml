@@ -13,6 +13,17 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build project
+      run: npm run build
+
     - name: Configuring SSH
       run: |
         mkdir -p ~/.ssh
@@ -20,16 +31,14 @@ jobs:
         chmod 600 ~/.ssh/id_deploy
         ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
-    - name: Acessar o servidor e atualizar o código
+    - name: Upload build via SCP
+      run: |
+        scp -r -i ~/.ssh/id_deploy ./build/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/react.gabrielscholze.tech/portfolio
+
+    - name: Reload Caddy if needed
       run: |
         ssh -i ~/.ssh/id_deploy ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
-          cd /var/www/react.gabrielscholze.tech/portfolio
-          
           CADDY_HASH_BEFORE=$(md5sum /etc/caddy/Caddyfile | awk '{print $1}')
-
-          git pull origin master
-          npm install
-          npm run build
 
           CADDY_HASH_AFTER=$(md5sum /etc/caddy/Caddyfile | awk '{print $1}')
           
