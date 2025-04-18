@@ -33,7 +33,7 @@ jobs:
 
     - name: Upload build via SCP
       run: |
-        scp -r -i ~/.ssh/id_deploy ./build/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/react.gabrielscholze.tech/portfolio
+        scp -r -i ~/.ssh/id_deploy ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/react.gabrielscholze.tech/portfolio
 
     - name: Reload Caddy if needed
       run: |
