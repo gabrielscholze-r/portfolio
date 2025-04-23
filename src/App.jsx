@@ -12,10 +12,10 @@ function App() {
       <Background />
       <div className="content-wrapper">
 
-        <header>
+        <header className='fixed-top'>
           <Header />
         </header>
-        <main>
+        <main className='pt-5 mt-5'>
           <AppRoutes />
         </main>
         <footer>

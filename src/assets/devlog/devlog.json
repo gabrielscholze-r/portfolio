@@ -1,0 +1,25 @@
+[
+  {
+    "date": "2025-04-23",
+    "title": "Devlog tab",
+    "isPortfolioChange": true,
+    "tags": ["portfolio", "devlog"],
+    "description": "Aba nova com changelogs sobre o portfolio e um devlog sobre o que ando fazendo",
+    "paragraphs": [
+      "Decidi fazer uma aba nova para meu portfolio que vai descrever um pouco de como anda o desenvolvimento das minhas coisas, assim caso alguém queira dar uma olhada basta entrar nessa aba e terá essa informação.",
+      "Inicialmente o plano era fazer um backend em Go e puxar de um MongoDB os dados das publicações, juntamente com autenticação dentro do portfolio para dar a opção de publicação para mim, assim seria tranquilo adicionar mais eventos no devlog.",
+      "Porém, após fazer o backend e autenticação, acabei ficando sem tempo então fui para o caminho simples por enquanto, utilizando um .json para armazenar os dados"
+    ]
+  },
+  {
+    "date": "2025-04-17",
+    "title": "Deploy atualizado & mais",
+    "isPortfolioChange": true,
+    "tags": ["portfolio", "devlog"],
+    "description": "Updated deploy method",
+    "paragraphs": [
+      "Anteriormente o método utilizado para deploy era acessar o servidor onde esta o site, atualizar o repósitório local e realizar o build.",
+      "Porém, para deixar mais otimizado e não utilizar o processamento do servidor para isso atualizei o deploy. Agora, o build é realizado com o Github Actions e copiado via rsync para a pasta correta no servidor, substituindo os arquivos que tem lá pelos arquivos atuais do projeto"
+    ]
+  }
+]

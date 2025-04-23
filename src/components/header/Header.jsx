@@ -57,8 +57,11 @@ export default function Header() {
                 <NavLink className="navlink" to="/" onClick={closeMenu}>
                     Home
                 </NavLink>
-                <NavLink className="navlink" to="Projects" onClick={closeMenu}>
+                <NavLink className="navlink" to="projects" onClick={closeMenu}>
                     Projects
+                </NavLink>
+                <NavLink className="navlink" to="devlog" onClick={closeMenu}>
+                    Devlog
                 </NavLink>
             </>
         );
