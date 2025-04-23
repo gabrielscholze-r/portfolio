@@ -16,10 +16,34 @@
     "title": "Deploy atualizado & mais",
     "isPortfolioChange": true,
     "tags": ["portfolio", "devlog"],
-    "description": "Updated deploy method",
+    "description": "Método de deploy atualizado e pagina não encontrada",
     "paragraphs": [
       "Anteriormente o método utilizado para deploy era acessar o servidor onde esta o site, atualizar o repósitório local e realizar o build.",
-      "Porém, para deixar mais otimizado e não utilizar o processamento do servidor para isso atualizei o deploy. Agora, o build é realizado com o Github Actions e copiado via rsync para a pasta correta no servidor, substituindo os arquivos que tem lá pelos arquivos atuais do projeto"
+      "Porém, para deixar mais otimizado e não utilizar o processamento do servidor para isso atualizei o deploy. Agora, o build é realizado com o Github Actions e copiado via rsync para a pasta correta no servidor, substituindo os arquivos que tem lá pelos arquivos atuais do projeto",
+      "Além disso, construí uma pagina para rotas desconhecidas que chamei de NotFound.jsx. Esse arquivo é responsável por exibir uma mensagem de página não encontrada e redirecionar o usuário para a página inicial da aplicação após alguns segundos"
+    ]
+  },
+  {
+    "date": "2025-04-08",
+    "title": "GastoZero - Backend",
+    "isPortfolioChange": true,
+    "tags": ["projetos"],
+    "description": "Backend do GastoZero finalizado",
+    "paragraphs": [
+      "Terminei a implementação do backend do meu aplicativo GastoZero. Achei bem bacana como o Go traballha, utilizei uma biblioteca chamada bun que deixa a parte de mexer com o banco de dados bem interativo",
+      "Fiz o sistema de autênticação com JWT, pois é como estou acostumado a fazer essa parte nos sistemas que eu desenvolvo a parte de meu trabalho",
+      "Uma parte que achei bacana de fazer foi uma espécie de injeção de dependencia que fiz pra deixar o código menos poluído. Tudo funcionando, agora hora do frontend"
+    ]
+  },
+  {
+    "date": "2025-04-01",
+    "title": "GastoZero - Inicio",
+    "isPortfolioChange": true,
+    "tags": ["projetos"],
+    "description": "Inicio de um projeto novo - Go + React.js",
+    "paragraphs": [
+      "Quis iniciar um projeto novo para fazer um estudo mais sólido de Go em uma implementação de backend e estudar pela primeira vez a estilização de um app React.js utilizando Tailwind. Minha motivação veio da minha dificuldade de atualizar constantemente uma planilha do excel com meus gastos e quis fazer algo mais sólido e interativo pra poder me organizar financeiramente",
+      "A implementação será feita utilizando Go e React.js, fazendo persistência de dados em um database PostgreSQL"
     ]
   }
 ]
