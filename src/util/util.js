@@ -18,7 +18,7 @@ const imageMap = {
   next
 };
 
-const imageMapper = (imgPath) => {
+export const imageMapper = (imgPath) => {
   const image = imageMap[imgPath];
   
   if (!image) {
@@ -29,4 +29,17 @@ const imageMapper = (imgPath) => {
   return image;
 };
 
-export default imageMapper;
+
+
+export function formatDates(dataString) {
+  const meses = [
+    "janeiro", "fevereiro", "março", "abril", "maio", "junho",
+    "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
+  ];
+
+  const data = new Date(dataString);
+  const mes = meses[data.getMonth()];
+  const ano = data.getFullYear();
+
+  return `${mes} de ${ano}`;
+}
