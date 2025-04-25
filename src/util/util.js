@@ -29,8 +29,6 @@ export const imageMapper = (imgPath) => {
   return image;
 };
 
-
-
 export function formatDates(dataString) {
   const meses = [
     "janeiro", "fevereiro", "março", "abril", "maio", "junho",
@@ -42,4 +40,13 @@ export function formatDates(dataString) {
   const ano = data.getFullYear();
 
   return `${mes} de ${ano}`;
+}
+
+export function getTagClass(tag) {
+  const map = {
+    "Portfolio": "bg-primary-color text-white shadow-custom",
+    "Outros projetos": "bg-secondary-color text-white shadow-custom",
+  };
+
+  return map[tag] || "bg-primary-color text-color";
 }
