@@ -1,6 +1,9 @@
 import { createContext, useState, useContext, useEffect } from "react";
+import Cookie from "js-cookie";
 
-const ThemeContext = createContext();
+
+const ThemeContext = createContext(undefined);
+
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState("light");
@@ -8,11 +11,16 @@ export function ThemeProvider({ children }) {
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
+  const toggleTheme = (newTheme = null) => {
+    const updatedTheme = (newTheme === "light" || newTheme === "dark")
+        ? newTheme
+        : (theme === "light" ? "dark" : "light");
 
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-    
+    setTheme(updatedTheme);
+    Cookie.set("theme", updatedTheme, { expires: 365 });
   };
+
+
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

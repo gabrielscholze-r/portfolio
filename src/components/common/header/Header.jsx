@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { NavLink } from "react-router-dom";
 import { useTheme } from "../../../context/Theme.jsx";
 import "./Header.css";
-
+import Cookie from "js-cookie";
 export default function Header() {
     const { theme, toggleTheme } = useTheme();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    useEffect(() => {
+        var current = Cookie.get("theme");
+        if (current) {
+            toggleTheme(current);
+        }
+    }, []);
 
     return (
         <div className="header px-5">
