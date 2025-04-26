@@ -4,6 +4,7 @@
     "title": "Migração para Twailwind?",
     "isPortfolioChange": true,
     "tags": ["Portfolio"],
+    "isPublished": false,
     "description": "Futura migração de estilizaçã: Bootstrap + CSS ➡ Tailwind",
     "paragraphs": [
       "A estilização deste portfolio é feita por meio de bootstrap juntamente com arquivos CSS. Porém de uns tempos para cá venho pensando em alterar o jeito que faço os estilos somente para Tailwind, e isso tem motivos",
@@ -13,14 +14,16 @@
   },
   {
     "date": "2025-04-23",
-    "title": "Devlog tab",
+    "title": "Devlog tab & mais",
     "isPortfolioChange": true,
     "tags": ["Portfolio"],
+    "isPublished": true,
     "description": "Aba nova com changelogs sobre o portfolio e um devlog sobre o que ando fazendo",
     "paragraphs": [
       "Decidi fazer uma aba nova para meu portfolio que vai descrever um pouco de como anda o desenvolvimento das minhas coisas, assim caso alguém queira dar uma olhada basta entrar nessa aba e terá essa informação.",
       "Inicialmente o plano era fazer um backend em Go e puxar de um MongoDB os dados das publicações, juntamente com autenticação dentro do portfolio para dar a opção de publicação para mim, assim seria tranquilo adicionar mais eventos no devlog.",
-      "Porém, após fazer o backend e autenticação, acabei ficando sem tempo então fui para o caminho simples por enquanto, utilizando um .json para armazenar os dados"
+      "Porém, após fazer o backend e autenticação, acabei ficando sem tempo então fui para o caminho simples por enquanto, utilizando um .json para armazenar os dados",
+      "Além disso, alterei a implementação de dark mode. Anteriormente usava apenas o useState do react e passei a usar uma implementação por cookies, que deixa mais permantente"
     ]
   },
   {
@@ -28,6 +31,7 @@
     "title": "Deploy atualizado & mais",
     "isPortfolioChange": true,
     "tags": ["Portfolio"],
+    "isPublished": true,
     "description": "Método de deploy atualizado e pagina não encontrada",
     "paragraphs": [
       "Anteriormente o método utilizado para deploy era acessar o servidor onde esta o site, atualizar o repósitório local e realizar o build.",
@@ -40,6 +44,7 @@
     "title": "GastoZero - Backend",
     "isPortfolioChange": false,
     "tags": ["Outros projetos"],
+    "isPublished": true,
     "description": "Backend do GastoZero finalizado",
     "paragraphs": [
       "Terminei a implementação do backend do meu aplicativo GastoZero. Achei bem bacana como o Go traballha, utilizei uma biblioteca chamada bun que deixa a parte de mexer com o banco de dados bem interativo",
@@ -52,6 +57,7 @@
     "title": "GastoZero - Inicio",
     "isPortfolioChange": false,
     "tags": ["Outros projetos"],
+    "isPublished": true,
     "description": "Inicio de um projeto novo - Go + React.js",
     "paragraphs": [
       "Quis iniciar um projeto novo para fazer um estudo mais sólido de Go em uma implementação de backend e estudar pela primeira vez a estilização de um app React.js utilizando Tailwind. Minha motivação veio da minha dificuldade de atualizar constantemente uma planilha do excel com meus gastos e quis fazer algo mais sólido e interativo pra poder me organizar financeiramente",

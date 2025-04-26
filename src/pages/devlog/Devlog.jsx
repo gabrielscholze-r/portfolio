@@ -11,10 +11,9 @@ export default function Devlog() {
     };
 
     const filteredData = filter
-        ? data.filter((item) =>
-            item.tags.some((tag) => tag.toLowerCase().includes(filter.toLowerCase()))
-        )
-        : data;
+        ? data.filter((item) => item.isPublished && item.tags.some((tag) => tag.toLowerCase().includes(filter.toLowerCase())))
+        : data.filter((item) => item.isPublished);
+
 
     return (
         <section className="mt-5">
