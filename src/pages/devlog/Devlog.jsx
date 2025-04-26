@@ -24,7 +24,7 @@ export default function Devlog() {
                 id="category"
                 value={filter}
                 onChange={handleChange}
-                className="form-select w-auto mx-3 shadow-custom text-title-color mx-auto my-3"
+                className="form-select w-auto mx-3 shadow-custom text-title-color mx-auto my-3 bg-background-color"
             >
                 <option value="" disabled>Filtrar</option>
                 <option value="">Todos</option>

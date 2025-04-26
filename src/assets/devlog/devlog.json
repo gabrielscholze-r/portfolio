@@ -23,7 +23,7 @@
       "Decidi fazer uma aba nova para meu portfolio que vai descrever um pouco de como anda o desenvolvimento das minhas coisas, assim caso alguém queira dar uma olhada basta entrar nessa aba e terá essa informação.",
       "Inicialmente o plano era fazer um backend em Go e puxar de um MongoDB os dados das publicações, juntamente com autenticação dentro do portfolio para dar a opção de publicação para mim, assim seria tranquilo adicionar mais eventos no devlog.",
       "Porém, após fazer o backend e autenticação, acabei ficando sem tempo então fui para o caminho simples por enquanto, utilizando um .json para armazenar os dados",
-      "Além disso, alterei a implementação de dark mode. Anteriormente usava apenas o useState do react e passei a usar uma implementação por cookies, que deixa mais permantente"
+      "Além disso, alterei a implementação de dark mode. Anteriormente usava apenas o context do react e passei a usar uma implementação por cookies juntamente, para deixar no modo que o usuario prefere"
     ]
   },
   {
