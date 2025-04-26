@@ -28,7 +28,7 @@
     "date": "2025-04-17",
     "title": "Deploy atualizado & mais",
     "isPortfolioChange": true,
-    "tags": ["Portfolio"],
+    "tags": ["Infraestrutura", "Portfolio"],
     "description": "Método de deploy atualizado e pagina não encontrada",
     "paragraphs": [
       "Anteriormente o método utilizado para deploy era acessar o servidor onde esta o site, atualizar o repósitório local e realizar o build.",

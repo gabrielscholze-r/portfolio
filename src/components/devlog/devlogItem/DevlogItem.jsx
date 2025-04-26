@@ -21,7 +21,7 @@ export default function DevlogItem({data, anyOpen, setAny}) {
     return (
         <>
             <div
-                className="devlog-item mx-auto d-flex flex-column rounded px-3 py-2 shadow-custom"
+                className="devlog-item mx-auto d-flex flex-column rounded px-3 py-2 my-2 shadow-custom"
                 onClick={handleOpen}
             >
                 <div>

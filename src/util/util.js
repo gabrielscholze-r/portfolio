@@ -44,8 +44,9 @@ export function formatDates(dataString) {
 
 export function getTagClass(tag) {
   const map = {
-    "Portfolio": "bg-primary-color text-white shadow-custom",
-    "Outros projetos": "bg-secondary-color text-white shadow-custom",
+    "Portfolio": "bg-primary-color text-white",
+    "Outros projetos": "bg-secondary-color text-white",
+    "Infraestrutura": "bg-danger text-red",
   };
 
   return map[tag] || "bg-primary-color text-color";

@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import data from "../../assets/devlog/devlog.json";
+import './Devlog.css'
 import DevlogItem from "../../components/devlog/devlogItem/DevlogItem";
 
 export default function Devlog() {
@@ -27,12 +28,13 @@ export default function Devlog() {
                 id="category"
                 value={filter}
                 onChange={handleChange}
-                className="form-select w-auto mx-3 shadow-custom text-title-color mx-auto my-3 bg-background-color"
+                className="form-select w-auto mx-3 text-title-color mx-auto my-3 bg-background-color form-filter"
             >
                 <option value="" disabled>Filtrar</option>
                 <option value="">Todos</option>
                 <option value="Portfolio">Portfolio</option>
                 <option value="Outros projetos">Outros projetos</option>
+                <option value="Infraestrutura">Infraestrutura</option>
             </select>
             <div className="mt-3">
                 {filteredData.map((v, i) => (
