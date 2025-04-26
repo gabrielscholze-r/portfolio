@@ -5,8 +5,6 @@ import Header from "./components/common/header/Header";
 import AppRoutes from "./routes/AppRoutes";
 import "./theme.css";
 import Background from "./components/common/background/Background";
-import Cookie from "js-cookie"
-import {useTheme} from "./context/Theme.jsx";
 
 function App() {
 

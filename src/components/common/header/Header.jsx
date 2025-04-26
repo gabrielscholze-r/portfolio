@@ -11,7 +11,7 @@ export default function Header() {
         if (current) {
             toggleTheme(current);
         }
-    }, []);
+    }, [toggleTheme]);
 
     return (
         <div className="header px-5">
