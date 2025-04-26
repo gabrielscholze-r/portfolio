@@ -1,7 +1,8 @@
 import {useState} from "react";
 import "./DevlogItem.css";
 import DevlogDetail from "../devlogDetail/DevlogDetail";
-import DevlogTag from "../devlogTag/DevlogTag.jsx";
+import DevlogTag from "../devlogTag/DevlogTag.jsx"
+import {formatDates} from "../../../util/util.js";
 
 export default function DevlogItem({data, anyOpen, setAny}) {
     const [open, setOpen] = useState(false);
@@ -30,7 +31,7 @@ export default function DevlogItem({data, anyOpen, setAny}) {
                             <h2 className="text-color text-center text-md-start fs-5 fs-md-4 m-0">{data.title}</h2>
                             <DevlogTag tags={data.tags}/>
                         </div>
-                        <p className="text-color text-center text-md-end fs-6 m-0 mt-2 mt-md-0">{data.date}</p>
+                        <p className="text-color text-center text-md-end fs-6 m-0 mt-2 mt-md-0">{formatDates(data.date)}</p>
                     </div>
                 </div>
 

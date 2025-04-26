@@ -36,10 +36,11 @@ export function formatDates(dataString) {
   ];
 
   const data = new Date(dataString);
+  const dia = data.getDay()
   const mes = meses[data.getMonth()];
   const ano = data.getFullYear();
 
-  return `${mes} de ${ano}`;
+  return `${dia} de ${mes} de ${ano}`;
 }
 
 export function getTagClass(tag) {

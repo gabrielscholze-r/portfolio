@@ -1,6 +1,6 @@
 [
   {
-    "date": "2025-04-23",
+    "date": "2025-04-26",
     "title": "Migração para Twailwind?",
     "isPortfolioChange": true,
     "tags": ["Portfolio"],
@@ -12,8 +12,8 @@
     ]
   },
   {
-    "date": "2025-04-23",
-    "title": "Devlog tab & mais",
+    "date": "2025-04-26",
+    "title": "Devlog tab",
     "isPortfolioChange": true,
     "tags": ["Portfolio"],
     "description": "Aba nova com changelogs sobre o portfolio e um devlog sobre o que ando fazendo",
@@ -26,7 +26,7 @@
   },
   {
     "date": "2025-04-17",
-    "title": "Deploy atualizado & mais",
+    "title": "Deploy & mais",
     "isPortfolioChange": true,
     "tags": ["Infraestrutura", "Portfolio"],
     "description": "Método de deploy atualizado e pagina não encontrada",
