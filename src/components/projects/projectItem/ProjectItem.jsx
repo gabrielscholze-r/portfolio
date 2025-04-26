@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import imageMapper from '../../../util/projectImagesImport'
+import {imageMapper} from '../../../util/util'
 import './ProjectItem.css'
 import ProjectDetails from '../projectDetails/ProjectDetails'
 

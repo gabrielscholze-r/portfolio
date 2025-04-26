@@ -1,7 +1,7 @@
 .certificate {
-    -webkit-box-shadow: 0px 0px 6px -3px var(--boxshadow);
-    -moz-box-shadow: 0px 0px 6px -3px var(--boxshadow);
-    box-shadow: 0px 0px 6px -3px var(--boxshadow);
+    -webkit-box-shadow: 0 0 6px -3px var(--boxshadow);
+    -moz-box-shadow: 0 0 6px -3px var(--boxshadow);
+    box-shadow: 0 0 6px -3px var(--boxshadow);
     min-height: 180px;
 }
 .icon-go {
@@ -37,7 +37,7 @@
 @media (max-width: 800px) {
     .certificate{
         min-height: 140px;
-        padding: 1rem important;
+        padding: 1rem !important;
     }
     .org {
         padding: 0.3rem;

@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { NavLink } from "react-router-dom";
-import { useTheme } from "../../Theme.jsx";
+import { useTheme } from "../../../context/Theme.jsx";
 import "./Header.css";
-
+import Cookie from "js-cookie";
 export default function Header() {
     const { theme, toggleTheme } = useTheme();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    useEffect(() => {
+        var current = Cookie.get("theme");
+        if (current) {
+            toggleTheme(current);
+        }
+    }, [toggleTheme]);
 
     return (
         <div className="header px-5">
@@ -57,8 +63,11 @@ export default function Header() {
                 <NavLink className="navlink" to="/" onClick={closeMenu}>
                     Home
                 </NavLink>
-                <NavLink className="navlink" to="Projects" onClick={closeMenu}>
+                <NavLink className="navlink" to="projects" onClick={closeMenu}>
                     Projects
+                </NavLink>
+                <NavLink className="navlink" to="devlog" onClick={closeMenu}>
+                    Devlog
                 </NavLink>
             </>
         );

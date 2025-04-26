@@ -18,7 +18,7 @@ const imageMap = {
   next
 };
 
-const imageMapper = (imgPath) => {
+export const imageMapper = (imgPath) => {
   const image = imageMap[imgPath];
   
   if (!image) {
@@ -29,4 +29,26 @@ const imageMapper = (imgPath) => {
   return image;
 };
 
-export default imageMapper;
+export function formatDates(dataString) {
+  const meses = [
+    "janeiro", "fevereiro", "março", "abril", "maio", "junho",
+    "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
+  ];
+
+  const data = new Date(dataString);
+  const dia = data.getDay()
+  const mes = meses[data.getMonth()];
+  const ano = data.getFullYear();
+
+  return `${dia} de ${mes} de ${ano}`;
+}
+
+export function getTagClass(tag) {
+  const map = {
+    "Portfolio": "bg-primary-color text-white",
+    "Outros projetos": "bg-secondary-color text-white",
+    "Infraestrutura": "bg-danger text-red",
+  };
+
+  return map[tag] || "bg-primary-color text-color";
+}

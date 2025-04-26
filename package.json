@@ -13,6 +13,7 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "gabrielscholze": "file:",
+    "js-cookie": "^3.0.5",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.0.0",
@@ -28,6 +29,6 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
-    "vite": "^6.2.0"
+    "vite": "^6.3.3"
   }
 }

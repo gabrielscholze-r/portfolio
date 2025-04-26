@@ -4,7 +4,7 @@
     --background-color: #ffffff;
     --text-color: #000000;
     --titles: #1B4F72;
-    --boxshadow: rgba(0,0,0,0.53);
+    --boxshadow: rgba(0, 0, 0, 0.53);
 }
 
 [data-theme="dark"] {
@@ -14,4 +14,52 @@
     --text-color: #F2F6D0;
     --titles: rgb(93, 173, 226);
     --boxshadow: rgb(120, 200, 253);
+}
+
+.bg-background-color {
+    background-color: var(--background-color) !important;
+}
+
+.bg-primary-color {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-secondary-color {
+    background-color: var(--secondary-color) !important;
+}
+
+.text-color {
+    color: var(--text-color) !important;
+}
+
+.text-title-color {
+    color: var(--titles) !important;
+}
+
+.text-primary-color {
+    color: var(--primary-color) !important;
+}
+
+.text-secondary-color {
+    color: var(--secondary-color) !important;
+}
+
+.border-primary-color {
+    border-color: var(--primary-color) !important;
+}
+
+.border-secondary-color {
+    border-color: var(--secondary-color) !important;
+}
+
+.border-title-color {
+    border-color: var(--titles) !important;
+}
+
+.border-text-color {
+    border-color: var(--text-color) !important;
+}
+
+.shadow-custom {
+    box-shadow: 0 4px 8px var(--boxshadow) !important;
 }

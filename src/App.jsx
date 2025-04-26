@@ -1,21 +1,21 @@
-import { ToastContainer } from 'react-toastify'
-import './App.css'
-import Footer from './components/footer/Footer'
-import Header from './components/header/Header'
-import AppRoutes from './routes/AppRoutes'
-import './theme.css'
-import Background from './components/background/Background'
+import { ToastContainer } from "react-toastify";
+import "./App.css";
+import Footer from "./components/common/footer/Footer";
+import Header from "./components/common/header/Header";
+import AppRoutes from "./routes/AppRoutes";
+import "./theme.css";
+import Background from "./components/common/background/Background";
 
 function App() {
+
   return (
-    <div className='App'>
+    <div className="App">
       <Background />
       <div className="content-wrapper">
-
-        <header>
+        <header className="fixed-top">
           <Header />
         </header>
-        <main>
+        <main className="pt-5 mt-5">
           <AppRoutes />
         </main>
         <footer>
@@ -27,5 +27,4 @@ function App() {
   );
 }
 
-
-export default App
+export default App;
