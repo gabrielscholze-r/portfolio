@@ -5,7 +5,7 @@ import gamertag from "../assets/projects/img/gamertag.jpg";
 import imoveis from "../assets/projects/img/imoveis.jpg";
 import taptake from "../assets/projects/img/taptakee-sports.jpg";
 import backend from "../assets/projects/img/backend.jpg";
-import next from "../assets/projects/img/next.jpg";
+import spendzero from "../assets/projects/img/spendzero.jpg";
 
 const imageMap = {
   notes,
@@ -15,7 +15,7 @@ const imageMap = {
   imoveis,
   taptake,
   backend,
-  next
+  spendzero
 };
 
 export const imageMapper = (imgPath) => {
