@@ -1,11 +1,11 @@
 [
     {
-        "title": "GastoZero (Em Desenvolvimento)",
-        "imgPath": "next",
-        "videoPath": "",
-        "initialDescription": "Aplicação WEB de controle financeiro pessoal com autenticação segura e interface moderna",
-        "github": "https://github.com/gabrielscholze-r/GastoZero",
-        "advancedDescription": "Atualmente estou desenvolvendo um projeto pessoal chamado GastoZero, uma aplicação para gerenciamento de finanças. Já concluí a parte de backend utilizando Golang, com autenticação baseada em JWT, e agora estou focando no frontend com React.js. Estou me adaptando ao uso do Tailwind CSS para construir uma interface responsiva e moderna."
+        "title": "SpendZero",
+        "imgPath": "spendzero",
+        "videoPath": "https://youtu.be/khEkwbzHylA",
+        "initialDescription": "Aplicação WEB de controle financeiro pessoal com autenticação segura e interface moderna, feita em Go e React.js",
+        "github": "https://github.com/gabrielscholze-r/SpendZero",
+        "advancedDescription": "SpendZero é um aplicativo web para gestão de finanças pessoais, desenvolvido como um projeto de aprendizado em Golang e React.js. O aplicativo permite que os usuários registrem e acompanhem suas receitas e despesas de forma simples e segura, podendo visualizar seus gastos de uma forma intuitiva além da tabela de gastos com alguns tipos de gráficos feitos com a biblioteca recharts."
     },
     {
         "title": "AppNotas",
