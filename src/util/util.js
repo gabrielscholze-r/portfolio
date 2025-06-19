@@ -22,7 +22,7 @@ export const imageMapper = (imgPath) => {
   const image = imageMap[imgPath];
   
   if (!image) {
-    console.error(`Imagem não encontrada para: ${imgPath}`);
+    console.error(`Image not found: ${imgPath}`);
     return null;
   }
   
@@ -31,8 +31,8 @@ export const imageMapper = (imgPath) => {
 
 export function formatDates(dataString) {
   const meses = [
-    "janeiro", "fevereiro", "março", "abril", "maio", "junho",
-    "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
   ];
 
   const data = new Date(dataString);
@@ -46,8 +46,8 @@ export function formatDates(dataString) {
 export function getTagClass(tag) {
   const map = {
     "Portfolio": "bg-primary-color text-white",
-    "Outros projetos": "bg-secondary-color text-white",
-    "Infraestrutura": "bg-danger text-red",
+    "Personal Projects": "bg-secondary-color text-white",
+    "Infrastructure": "bg-danger text-red",
   };
 
   return map[tag] || "bg-primary-color text-color";

@@ -21,10 +21,10 @@ export default function Home() {
               Gabriel Scholze Rosa
             </h2>
             <h3 className='job py-4'>
-              Programador Fullstack
+              Fullstack Developer
             </h3>
             <p className='bio py-4'>
-              Sou desenvolvedor full-stack com cerca de três anos de experiência, atuando principalmente com C# (.NET) e React.js. Atualmente, trabalho na manutenção e evolução de um projeto para clientes nos Estados Unidos. Sou formado em Ciência da Computação (2024) e estou cursando uma pós-graduação em Desenvolvimento de Aplicativos Móveis para expandir meus conhecimentos e aprofundar minha atuação no mercado de tecnologia
+                Welcome! I'm a Full Stack Developer with three years of experience, primarily working with C# (.NET) and React.js. In my current role, I'm deeply involved in a crucial web-based loan management system for clients in the United States. I graduated with a degree in Computer Science in 2024 and I'm always looking to expand my horizons. That's why I'm also pursuing a postgraduate degree in Mobile Application Development—I'm excited to dive deeper into the tech market and explore new ways to build impactful solutions.
             </p>
           </div>
 

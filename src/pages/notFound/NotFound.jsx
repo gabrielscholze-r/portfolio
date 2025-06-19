@@ -6,7 +6,7 @@ export default function NotFound() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        toast.info('Você está sendo redirecionado para a página inicial...', {
+        toast.info('You are being redirected...', {
             position: "bottom-right",
             className: "custom-toast",
             autoClose: 3000,
@@ -37,7 +37,7 @@ export default function NotFound() {
                     Ops...
                 </h1>
                 <p className="h4 mb-4">
-                    Esta página não existe
+                    Page not found
                 </p>
                 <i className="bi bi-question-lg display-3"></i>
             </div>

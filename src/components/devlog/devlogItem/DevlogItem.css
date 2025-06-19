@@ -1,4 +1,5 @@
 .devlog-item {
+    background-color: var(--background-color);
     cursor: pointer;
     transition: 0.2s;
     width: 75%;

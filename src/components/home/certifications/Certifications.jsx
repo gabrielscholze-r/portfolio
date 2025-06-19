@@ -5,7 +5,7 @@ import './Certifications.css'
 export default function Certifications() {
     return (
         <div className='certificate-section p-5 mx-auto'>
-            <h1 className='sector py-5'>Certificados</h1>
+            <h1 className='sector py-5'>Cartifications</h1>
             <div className='mx-auto certificates'>
 
                 <Certificate link={"https://drive.google.com/drive/folders/15nOx8T03qNhsya07zfYaFcPzSVhzWmIR?usp=sharing"} title="C" org={"Alura"} />
@@ -14,8 +14,8 @@ export default function Certifications() {
             </div>
             <div className='mx-auto certificates'>
                 <Certificate link={"https://drive.google.com/drive/folders/1OMsfnUrNPfnZ-ofHPX8EoIf7PzAKxUoJ?usp=sharing"} title="SQL Server" org={"Alura"} />
-                <Certificate link={"https://drive.google.com/file/d/1ys7eibXIFNHoL4luYXu22hvxFLfc2v7S/view?usp=sharing"} title="UI e Mobile App Guidelines" org={"PUC-PR"} />
-                <Certificate link={"https://drive.google.com/file/d/1v5MVJuf3EPCNam2OXLAtuT6ecsuEVPlo/view?usp=sharing"} title="UX e Design de Interação" org={"PUC-PR"} />
+                <Certificate link={"https://drive.google.com/file/d/1ys7eibXIFNHoL4luYXu22hvxFLfc2v7S/view?usp=sharing"} title="UI and Mobile App Guidelines" org={"PUC-PR"} />
+                <Certificate link={"https://drive.google.com/file/d/1v5MVJuf3EPCNam2OXLAtuT6ecsuEVPlo/view?usp=sharing"} title="UX and Design de Interação" org={"PUC-PR"} />
             </div>
             <div className='mx-auto certificates'>
                 <Certificate link={"https://drive.google.com/drive/folders/1N-NJwDdqM0J7F4s-yhGefXPNEQzZhmnr?usp=sharing"} title="C++" org={"Alura"} />

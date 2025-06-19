@@ -20,7 +20,7 @@ export default function Devlog() {
         <section className="mt-5">
             <h1 className="text-center text-title-color display-4">Devlog</h1>
             <h3 className="text-center text-title-color fs-4 fs-md-3">
-                Atualizações, experimentos e ideias
+                Updates, experiments and ideas
             </h3>
             <hr className="w-50 mx-auto text-color border-3"/>
             <select
@@ -30,11 +30,11 @@ export default function Devlog() {
                 onChange={handleChange}
                 className="form-select w-auto mx-3 text-title-color mx-auto my-3 bg-background-color form-filter"
             >
-                <option value="" disabled>Filtrar</option>
-                <option value="">Todos</option>
+                <option value="" disabled>Filter</option>
+                <option value="">No Filter</option>
                 <option value="Portfolio">Portfolio</option>
-                <option value="Outros projetos">Outros projetos</option>
-                <option value="Infraestrutura">Infraestrutura</option>
+                <option value="Personal Projects">Personal Projects</option>
+                <option value="Infrastructure">Infrastructure</option>
             </select>
             <div className="mt-3">
                 {filteredData.map((v, i) => (
