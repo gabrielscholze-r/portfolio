@@ -27,14 +27,10 @@ export default function DetailItem({ title, date, place, description, advancedDe
                 )}
                 {
                     file.length > 0 && (
-                        <a href={`/assets/${file[0]}`} download className="btn btn-outline-primary">
+                        <a href={`/assets/${file[0]}`} download className="btn btn-outline-primary my-3">
                             <i className="bi bi-download me-2"></i>
                             {file[1]}
                         </a>
-                    // <a href="/assets/Cv.pdf" download className="btn btn-outline-primary">
-                        //                     <i className="bi bi-file-earmark-arrow-down me-2"></i>
-                        //                     Download CV
-                        //                 </a>
                     )
                 }
             </div>
