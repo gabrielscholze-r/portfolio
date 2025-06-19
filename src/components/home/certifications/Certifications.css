@@ -10,6 +10,7 @@
     box-shadow: 0px 0px 6px -3px var(--boxshadow);
     width: 300px;
     margin: 0.5rem auto;
+    background-color: var(--background-color);
 }
 
 .certificates {

@@ -13,7 +13,7 @@ export default function Tooltip({hover, title, list, exp}) {
                         <li key={index} style={{ color: "var(--background-color)" }} className='py-1'>{text}</li>
                     ))}
                 </ul>
-                <p style={{ color: "var(--background-color)" }}>Experiência:</p>
+                <p style={{ color: "var(--background-color)" }}>Experience:</p>
                 <div className="progress">
                     <div className="progress-container">
                         <div className="progress-bar" style={{width: `${exp}%`}}></div> 

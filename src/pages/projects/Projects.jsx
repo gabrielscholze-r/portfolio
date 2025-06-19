@@ -27,7 +27,7 @@ export default function Projects() {
         setAny={setAny}
       />
       <div className="text-center">
-        <h2 className="projetos">Projetos</h2>
+        <h2 className="projetos">Projects</h2>
         <div onClick={handleInfoOpen} className="openinfodiv">
           <i className="bi bi-question-circle-fill openmodal"></i>
         </div>

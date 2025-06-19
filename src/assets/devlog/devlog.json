@@ -1,14 +1,14 @@
 [
   {
-    "date": "2025-04-26",
-    "title": "Migração para Twailwind?",
+    "date": "2025-06-18",
+    "title": "English Website",
     "isPortfolioChange": true,
     "tags": ["Portfolio"],
-    "description": "Futura migração de estilizaçã: Bootstrap + CSS ➡ Tailwind",
+    "description": "Changing portfolio to English",
     "paragraphs": [
-      "A estilização deste portfolio é feita por meio de bootstrap juntamente com arquivos CSS. Porém de uns tempos para cá venho pensando em alterar o jeito que faço os estilos somente para Tailwind, e isso tem motivos",
-      "Algo que eu valorizo muito em um site é o quão dinâmico ele é e como ele reage ao usuário, então eu uso muito coisas como o hover para estilização. Porém, utilizando o bootstrap eu não tenho uma opção muito fácil de fazer essa estilização pois o bootstrap não fornece. Portanto, para cada vez que quis utilizar o hover acabei por ter que criar arquivos CSS a rodo, coisa que não gosto muito",
-      "Então, por isso, estou fazendo a migração dos estilos para tailwind. Provavelmente será um processo demorado pois tenho que refazer os estilos globais e me acostumar com o tailwind, porém logo mais estará no ar"
+      "For a while, I had been thinking about creating an English version of my personal portfolio — mainly because of my job, where I work with English speakers who know nothing about me. Having a website they could visit to learn more about who’s talking to them felt like a good idea.",
+      "I considered several ways to implement this change, including adding a language selection menu. But then I realized: most companies expect their employees to have at least some level of English proficiency, whether basic or advanced. So why not just make the entire website in English?",
+      "That’s exactly what I did. I started with my résumé, writing out every aspect of my professional background in English. I have to say — it’s been a really valuable experience. I do use translation tools sometimes, since I’m not fully used to writing in English yet, but I’ve definitely noticed improvements in my writing since I started."
     ]
   },
   {
@@ -16,47 +16,47 @@
     "title": "Devlog tab",
     "isPortfolioChange": true,
     "tags": ["Portfolio"],
-    "description": "Aba nova com changelogs sobre o portfolio e um devlog sobre o que ando fazendo",
+    "description": "New tab with portfolio changelogs and a devlog of ongoing work",
     "paragraphs": [
-      "Decidi fazer uma aba nova para meu portfolio que vai descrever um pouco de como anda o desenvolvimento das minhas coisas, assim caso alguém queira dar uma olhada basta entrar nessa aba e terá essa informação.",
-      "Inicialmente o plano era fazer um backend em Go e puxar de um MongoDB os dados das publicações, juntamente com autenticação dentro do portfolio para dar a opção de publicação para mim, assim seria tranquilo adicionar mais eventos no devlog.",
-      "Porém, após fazer o backend e autenticação, acabei ficando sem tempo então fui para o caminho simples por enquanto, utilizando um .json para armazenar os dados",
-      "Além disso, alterei a implementação de dark mode. Anteriormente usava apenas o context do react e passei a usar uma implementação por cookies juntamente, para deixar no modo que o usuario prefere"
+      "I decided to add a new tab to my portfolio to share some updates on what I’ve been developing. This way, if someone wants to check it out, they can just go to that tab and get the info.",
+      "Initially, the plan was to create a backend in Go and pull publication data from a MongoDB, along with authentication within the portfolio to allow myself to post updates easily. That way, it would be simple to add more devlog events.",
+      "However, after implementing the backend and authentication, I ran out of time. So for now, I’ve gone with a simpler approach — using a .json file to store the data.",
+      "In addition, I changed the dark mode implementation. Previously, it used only React context, but now it also uses cookies to preserve the user’s preference."
     ]
   },
   {
     "date": "2025-04-17",
-    "title": "Deploy & mais",
+    "title": "Deploy & more",
     "isPortfolioChange": true,
-    "tags": ["Infraestrutura", "Portfolio"],
-    "description": "Método de deploy atualizado e pagina não encontrada",
+    "tags": ["Infrastructure", "Portfolio"],
+    "description": "Updated deploy method and not found page",
     "paragraphs": [
-      "Anteriormente o método utilizado para deploy era acessar o servidor onde esta o site, atualizar o repósitório local e realizar o build.",
-      "Porém, para deixar mais otimizado e não utilizar o processamento do servidor para isso atualizei o deploy. Agora, o build é realizado com o Github Actions e copiado via rsync para a pasta correta no servidor, substituindo os arquivos que tem lá pelos arquivos atuais do projeto",
-      "Além disso, construí uma pagina para rotas desconhecidas que chamei de NotFound.jsx. Esse arquivo é responsável por exibir uma mensagem de página não encontrada e redirecionar o usuário para a página inicial da aplicação após alguns segundos"
+      "Previously, the deployment method involved accessing the server where the site is hosted, updating the local repository, and running the build there.",
+      "To optimize this and avoid using server processing power for builds, I updated the deployment process. Now, the build is done via GitHub Actions and copied using rsync to the correct folder on the server, replacing the previous project files with the updated ones.",
+      "Additionally, I created a page for unknown routes called NotFound.jsx. This file displays a 'page not found' message and redirects the user to the homepage after a few seconds."
     ]
   },
   {
     "date": "2025-04-08",
     "title": "GastoZero - Backend",
     "isPortfolioChange": false,
-    "tags": ["Outros projetos"],
-    "description": "Backend do GastoZero finalizado",
+    "tags": ["Personal Projects"],
+    "description": "GastoZero backend completed",
     "paragraphs": [
-      "Terminei a implementação do backend do meu aplicativo GastoZero. Achei bem bacana como o Go traballha, utilizei uma biblioteca chamada bun que deixa a parte de mexer com o banco de dados bem interativo",
-      "Fiz o sistema de autênticação com JWT, pois é como estou acostumado a fazer essa parte nos sistemas que eu desenvolvo a parte de meu trabalho",
-      "Uma parte que achei bacana de fazer foi uma espécie de injeção de dependencia que fiz pra deixar o código menos poluído. Tudo funcionando, agora hora do frontend"
+      "I finished implementing the backend for my GastoZero app. I really liked how Go works — I used a library called Bun that makes working with the database very interactive.",
+      "I implemented authentication using JWT, as that's the approach I'm used to for handling this part in the systems I develop outside of work.",
+      "One part I particularly enjoyed was setting up a kind of dependency injection to keep the code cleaner. Everything is working fine — now it’s time for the frontend."
     ]
   },
   {
     "date": "2025-04-01",
-    "title": "GastoZero - Inicio",
+    "title": "GastoZero - Getting started",
     "isPortfolioChange": false,
-    "tags": ["Outros projetos"],
-    "description": "Inicio de um projeto novo - Go + React.js",
+    "tags": ["Personal Projects"],
+    "description": "Starting a new project - Go + React.js",
     "paragraphs": [
-      "Quis iniciar um projeto novo para fazer um estudo mais sólido de Go em uma implementação de backend e estudar pela primeira vez a estilização de um app React.js utilizando Tailwind. Minha motivação veio da minha dificuldade de atualizar constantemente uma planilha do excel com meus gastos e quis fazer algo mais sólido e interativo pra poder me organizar financeiramente",
-      "A implementação será feita utilizando Go e React.js, fazendo persistência de dados em um database PostgreSQL"
+      "I wanted to start a new project to deepen my knowledge of Go by building a backend and to explore styling a React.js app using Tailwind for the first time. My motivation came from my struggle to keep an Excel spreadsheet updated with my expenses — I wanted to build something more solid and interactive to manage my finances better.",
+      "The implementation will be done using Go and React.js, with data persistence handled by a PostgreSQL database."
     ]
   }
 ]
