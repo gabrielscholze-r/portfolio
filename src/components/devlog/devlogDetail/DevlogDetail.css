@@ -1,14 +1,16 @@
 .devlog-detail-modal {
     width: 80vw;
+    max-width: 760px;
     height: 80vh;
-    aspect-ratio: 16 / 9;
-    background-color: var(--background-color);
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
     z-index: 100000;
     visibility: hidden;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.9);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-    box-shadow: 1px 1px 4px 1px var(--boxshadow);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    box-shadow: 0 16px 48px var(--boxshadow);
     cursor: auto;
 }
 
@@ -21,18 +23,29 @@
 .devlog-detail-close {
     cursor: pointer;
     transition: 0.2s;
+    color: var(--muted-color);
+    font-size: 1.8rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
 }
+.devlog-detail-close:hover { color: var(--text-color); background-color: var(--border-color); }
 
-.devlog-detail-close:hover {
-    scale: 1.1;
+.devlog-detail-modal h1 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.25rem;
+    color: var(--titles);
 }
 
 .devlog-paragraph {
-    text-indent: 20px;
+    text-indent: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    opacity: 0.88;
     transition: font-size 0.3s ease;
 }
 
-.devlog-detail-modal h1,
-.devlog-detail-modal p {
-    transition: font-size 0.3s ease;
+@media (max-width: 800px) {
+    .devlog-detail-modal { width: 92vw; height: 85vh; }
+    .devlog-paragraph { font-size: 0.82rem; }
 }

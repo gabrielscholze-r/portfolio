@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 export default function Footer() {
     function copyMail() {
         navigator.clipboard.writeText("gabrielscholze24@gmail.com").then(() => {
-            toast.success('Email copied to clipboard!', {
+            toast.success('Email copied!', {
                 position: "bottom-right",
                 className: "custom-toast",
                 autoClose: 2000,
@@ -13,24 +13,46 @@ export default function Footer() {
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
-                progress: undefined,
             });
-        })
-
+        });
     }
+
     return (
-        <footer className='footer py-4 align-items-center d-flex w-100'>
-            <div className='d-flex justify-content-center align-items-center mx-auto'>
-                <a className='px-3 footer-link' target='_blank' href='https://www.linkedin.com/in/gabriel-scholze-rosa-28b9ab1b2/'>
-                    <i className="bi bi-linkedin icon-footer"></i>
-                </a>
-                <a target="_blank" className='px-3 footer-link' onClick={() => { copyMail() }}>
-                    <i className="bi bi-envelope-fill icon-footer"></i>
-                </a>
-                <a href="/assets/Cv.pdf" download className="btn btn-outline-primary">
-                    <i className="bi bi-file-earmark-arrow-down me-2"></i>
-                    Download CV
-                </a>
+        <footer className="footer">
+            <div className="footer-inner">
+                <span className="footer-prompt">
+                    <span className="fp-user">gabriel@portfolio</span>
+                    <span className="fp-sep">:</span>
+                    <span className="fp-dir">~</span>
+                    <span className="fp-dollar">$</span>
+                </span>
+                <div className="footer-links">
+                    <a
+                        className="footer-link"
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://www.linkedin.com/in/gabriel-scholze-rosa-28b9ab1b2/"
+                        title="LinkedIn"
+                    >
+                        <i className="bi bi-linkedin"></i>
+                    </a>
+                    <button
+                        className="footer-link footer-link-btn"
+                        onClick={copyMail}
+                        title="Copy email"
+                    >
+                        <i className="bi bi-envelope-fill"></i>
+                    </button>
+                    <a
+                        href="/assets/Cv.pdf"
+                        download
+                        className="footer-cv-btn"
+                        title="Download CV"
+                    >
+                        <i className="bi bi-file-earmark-arrow-down"></i>
+                        <span>CV</span>
+                    </a>
+                </div>
             </div>
         </footer>
     )

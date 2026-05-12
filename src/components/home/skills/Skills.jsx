@@ -1,25 +1,31 @@
 import React from 'react'
 import './Skills.css'
-import SkillIcon from '../skill-icon/SkillIcon'
+import SkillBar from '../skill-icon/SkillIcon'
 
 export default function Skills() {
+    const skills = [
+        { icon: "devicon-java-plain-wordmark",           title: "Java",        exp: 70, list: ["1 year of experience in Java development"] },
+        { icon: "devicon-go-original-wordmark",          title: "Go",          exp: 50, list: ["Currently practicing in personal projects"] },
+        { icon: "devicon-react-original-wordmark",       title: "React.js",    exp: 80, list: ["Over 2 years of experience", "Currently working with it"] },
+        { icon: "devicon-csharp-plain-wordmark",         title: "C#",          exp: 80, list: ["Over 2 years of experience with C# (.NET)", "Currently working with it"] },
+        { icon: "devicon-microsoftsqlserver-plain",      title: "SQL Server",  exp: 80, list: ["2 years of experience", "Stored Procedures", "Currently working with it"] },
+        { icon: "devicon-docker-plain-wordmark",         title: "Docker",      exp: 40, list: ["Used in personal projects"] },
+        { icon: "devicon-spring-original",               title: "Spring Boot", exp: 50, list: ["Projects during university"] },
+        { icon: "devicon-python-plain",                  title: "Python",      exp: 60, list: ["Projects since early university", "Machine Learning", "Pandas"] },
+        { icon: "devicon-flutter-plain",                 title: "Flutter",     exp: 60, list: ["Used in postgraduate projects"] },
+    ]
 
     return (
-        <div className='text-center w-100'>
-            <h2 className='pt-2 pb-5 techs-title'>Skills</h2>
-            <div className="techs">
-                <SkillIcon title={"Go"} list={["Currently practicing in personal projects"]} exp={"50"} icon={"devicon-go-original-wordmark"} />
-                <SkillIcon title={"React.js"} list={["Over 2 years of experience with React.js", "Currently working with it"]} exp={"80"} icon={"devicon-react-original-wordmark"} />
-                <SkillIcon icon={"devicon-csharp-plain-wordmark"} title={"C#"} list={["Over 2 years of experience with C# (.NET)", "Currently working with it"]} exp={80} />
-                <SkillIcon icon={"devicon-java-plain-wordmark"} title={"Java"} list={["1 year of experience in Java development"]} exp={50} />
-                <SkillIcon icon={"devicon-microsoftsqlserver-plain"} title={"SQL Server"} list={["2 years of experience", "Stored Procedures", "Currently working with it"]} exp={80} />
+        <section className="skills-section">
+            <div className="section-cmd-header">
+                <span className="dollar">$</span>
+                <span className="cmd-text"> skill-scan --verbose</span>
             </div>
-            <div className="techs">
-                <SkillIcon icon={"devicon-docker-plain-wordmark"} title={"Docker"} list={["Used in personal projects"]} exp={40} />
-                <SkillIcon icon={"devicon-spring-original"} title={"Spring Boot"} list={["Projects during university"]} exp={50} />
-                <SkillIcon icon={"devicon-python-plain"} title={"Python"} list={["Projects since early university years", "Machine Learning", "Pandas"]} exp={60} />
-                <SkillIcon icon={"devicon-flutter-plain"} title={"Flutter"} list={["Used in projects during postgraduate studies"]} exp={60} />
+            <div className="skills-grid">
+                {skills.map((s, i) => (
+                    <SkillBar key={i} icon={s.icon} title={s.title} exp={s.exp} list={s.list} />
+                ))}
             </div>
-        </div>
+        </section>
     )
 }

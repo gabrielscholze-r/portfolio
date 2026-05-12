@@ -1,11 +1,11 @@
-import notes from "../assets/projects/img/appnotas.jpg";
-import codecracker from "../assets/projects/img/codecracker.jpg";
-import exoplanet from "../assets/projects/img/exoplanetFinder.jpg";
-import gamertag from "../assets/projects/img/gamertag.jpg";
-import imoveis from "../assets/projects/img/imoveis.jpg";
-import taptake from "../assets/projects/img/taptakee-sports.jpg";
-import backend from "../assets/projects/img/backend.jpg";
-import spendzero from "../assets/projects/img/spendzero.jpg";
+import notes from "../assets/projects/img/appnotas.avif";
+import codecracker from "../assets/projects/img/codecracker.avif";
+import exoplanet from "../assets/projects/img/exoplanetFinder.avif";
+import gamertag from "../assets/projects/img/gamertag.avif";
+import imoveis from "../assets/projects/img/imoveis.avif";
+import taptake from "../assets/projects/img/taptakee-sports.avif";
+import backend from "../assets/projects/img/backend.avif";
+import spendzero from "../assets/projects/img/spendzero.avif";
 
 const imageMap = {
   notes,

@@ -3,22 +3,18 @@ import data from "../../assets/projects/projects.json";
 import ProjectItem from "../../components/projects/projectItem/ProjectItem";
 import "./Projects.css";
 import PortfolioModal from "../../components/portfolioModal/PortfolioModal";
+
 export default function Projects() {
   const [anyOpen, setAny] = useState(false);
   const [openInfo, setInfo] = useState(false);
 
   const handleInfoOpen = () => {
-    if (!anyOpen) {
-      setInfo(true);
-      setAny(true);
-    }
+    if (!anyOpen) { setInfo(true); setAny(true); }
   };
-  const handleInfoClose = () => {
-    setInfo(false);
-    setAny(false);
-  };
+  const handleInfoClose = () => { setInfo(false); setAny(false); };
+
   return (
-    <div className="w-100 py-5 body-no-scroll">
+    <div className="projects-page">
       <PortfolioModal
         info={openInfo}
         setInfo={setInfo}
@@ -26,23 +22,29 @@ export default function Projects() {
         anyOpen={anyOpen}
         setAny={setAny}
       />
-      <div className="text-center">
-        <h2 className="projetos">Projects</h2>
-        <div onClick={handleInfoOpen} className="openinfodiv">
-          <i className="bi bi-question-circle-fill openmodal"></i>
+      <div className="projects-header">
+        <div className="projects-title-row">
+          <span className="explorer-icon">
+            <i className="bi bi-folder2-open"></i>
+          </span>
+          <h1 className="projects-title">projects/</h1>
+          <button onClick={handleInfoOpen} className="info-btn" title="About this portfolio">
+            <i className="bi bi-info-circle"></i>
+          </button>
         </div>
+        <p className="projects-subtitle">
+          <span className="dollar">$</span> find . -name "*.project" | sort
+        </p>
       </div>
-      <div className="projectList w-75 mx-auto">
-        {data.map((item, index) => {
-          return (
-            <ProjectItem
-              data={item}
-              key={index}
-              anyOpen={anyOpen}
-              setAny={setAny}
-            />
-          );
-        })}
+      <div className="projectList">
+        {data.map((item, index) => (
+          <ProjectItem
+            data={item}
+            key={index}
+            anyOpen={anyOpen}
+            setAny={setAny}
+          />
+        ))}
       </div>
     </div>
   );

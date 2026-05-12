@@ -1,49 +1,67 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import data from "../../assets/devlog/devlog.json";
 import './Devlog.css'
 import DevlogItem from "../../components/devlog/devlogItem/DevlogItem";
+
+const filterOptions = [
+    { value: "",                 label: "all branches" },
+    { value: "Portfolio",        label: "portfolio" },
+    { value: "Personal Projects", label: "personal-projects" },
+    { value: "Infrastructure",   label: "infrastructure" },
+]
 
 export default function Devlog() {
     const [anyOpen, setAny] = useState(false);
     const [filter, setFilter] = useState("");
 
-    const handleChange = (e) => {
-        setFilter(e.target.value);
-    };
-
     const filteredData = filter
-        ? data.filter((item) => item.tags.some((tag) => tag.toLowerCase().includes(filter.toLowerCase())))
+        ? data.filter(item => item.tags.some(tag => tag.toLowerCase().includes(filter.toLowerCase())))
         : data;
 
-
     return (
-        <section className="mt-5">
-            <h1 className="text-center text-title-color display-4">Devlog</h1>
-            <h3 className="text-center text-title-color fs-4 fs-md-3">
-                Updates, experiments and ideas
-            </h3>
-            <hr className="w-50 mx-auto text-color border-3"/>
-            <select
-                name="category"
-                id="category"
-                value={filter}
-                onChange={handleChange}
-                className="form-select w-auto mx-3 text-title-color mx-auto my-3 bg-background-color form-filter"
-            >
-                <option value="" disabled>Filter</option>
-                <option value="">No Filter</option>
-                <option value="Portfolio">Portfolio</option>
-                <option value="Personal Projects">Personal Projects</option>
-                <option value="Infrastructure">Infrastructure</option>
-            </select>
-            <div className="mt-3">
+        <div className="devlog-page">
+            <div className="devlog-header">
+                <div className="devlog-title-row">
+                    <span className="devlog-icon"><i className="bi bi-journal-code"></i></span>
+                    <h1 className="devlog-title">devlog</h1>
+                </div>
+                <p className="devlog-subtitle">Updates, experiments and ideas</p>
+            </div>
+
+            <div className="git-log-cmd">
+                <span className="dollar">$</span>
+                <span className="git-cmd-text"> git log --oneline --graph</span>
+                {filter && (
+                    <span className="git-branch-filter"> {filterOptions.find(o => o.value === filter)?.label}</span>
+                )}
+            </div>
+
+            <div className="devlog-filter-row">
+                <span className="filter-label">branch:</span>
+                <div className="filter-tabs">
+                    {filterOptions.map(opt => (
+                        <button
+                            key={opt.value}
+                            className={`filter-tab${filter === opt.value ? " active" : ""}`}
+                            onClick={() => setFilter(opt.value)}
+                        >
+                            {opt.label}
+                        </button>
+                    ))}
+                </div>
+            </div>
+
+            <div className="devlog-list">
                 {filteredData.map((v, i) => (
-                    <div className="my-3" key={i}>
-                        <DevlogItem data={v} anyOpen={anyOpen} setAny={setAny}/>
-                        <hr className="w-50 mx-auto text-color border-3"/>
-                    </div>
+                    <DevlogItem
+                        key={i}
+                        data={v}
+                        anyOpen={anyOpen}
+                        setAny={setAny}
+                        isLast={i === filteredData.length - 1}
+                    />
                 ))}
             </div>
-        </section>
+        </div>
     );
 }

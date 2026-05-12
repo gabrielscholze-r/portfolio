@@ -1,106 +1,85 @@
 .projectDetails {
     width: 80vw;
+    max-width: 900px;
     height: 80vh;
-    aspect-ratio: 16/9;
-    background-color: var(--background-color); 
-    overflow: auto; 
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    overflow: auto;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.9);
-    border-radius: 8px; 
+    border-radius: 10px;
     z-index: 100000;
     overflow-x: hidden;
-    -webkit-box-shadow: 1px 1px 4px 1px var(--boxshadow);
-    -moz-box-shadow: 1px 1px 4px 1px var(--boxshadow);
-    box-shadow: 1px 1px 4px 1px var(--boxshadow);
+    box-shadow: 0 16px 48px var(--boxshadow);
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
 }
+
 .projectDetails.open {
     visibility: visible;
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
 }
-.close-modal{
-    font-size: 3rem;
+
+.close-modal {
+    font-size: 2rem;
     width: min-content;
-    border-radius: 30px;
+    border-radius: 6px;
     cursor: pointer;
     transition: 0.2s;
-    color: var(--text-color);
+    color: var(--muted-color);
+    padding: 0.25rem 0.5rem;
 }
-.close-modal:hover{
-    scale: 1.2;
+.close-modal:hover { color: var(--text-color); background-color: var(--border-color); }
+
+.sector-project-details {
+    color: var(--titles);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0 1rem;
 }
-.image-details{
-    width: 45%;
-}
+
+.image-details { width: 50%; margin: 0 auto; }
 .image-details img {
     width: 100%;
-    -webkit-box-shadow: 2px 2px 2px 0.2px var(--boxshadow);
-    -moz-box-shadow: 2px 2px 2px 0.2px var(--boxshadow);
-    box-shadow: 2px 2px 2px 0.2px var(--boxshadow);
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px var(--boxshadow);
 }
+
 .advanced-description {
     color: var(--text-color);
-    font-size: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.7;
     width: 75%;
-    padding: 0 4rem;
+    padding: 0 2rem;
+    opacity: 0.85;
 }
-.advanced-description p{
-    text-indent:2rem;
+.advanced-description p {
+    text-indent: 1.5rem;
     text-align: justify;
     width: 100%;
 }
-.icon-details{
-    font-size: 3rem;
-}
-.icon-detail a i {
+
+.icon-details { font-size: 2.5rem; }
+
+.github  { color: var(--text-color); }
+.youtube { color: #ff0000; }
+
+.project-link {
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease;
 }
-.youtube{
-    color: #FF0000;
-}
-.github {
-    color: var(--text-color);
-}
-.project-link{
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-.project-link:hover {
-    transform: scale(1.1);
-}
-.sector-project-details {
-    color: var(--titles);
-    font-weight: bolder;
-    font-size: 2rem;
-}
+.project-link:hover { transform: scale(1.15); }
+
 @media (max-width: 800px) {
-    .advanced-description {
-        color: var(--text-color);
-        font-size: 0.7rem;
-        width: 75%;
-        padding: 0 1rem;
-    }
-    .image-details{
-        width: 70%;
-    }
-    .image-details img {
-        width: 100%;
-        -webkit-box-shadow: 2px 2px 2px 0.2px var(--boxshadow);
-        -moz-box-shadow: 2px 2px 2px 0.2px var(--boxshadow);
-        box-shadow: 2px 2px 2px 0.2px var(--boxshadow);
-    }
-    .sector-project-details {
-        color: var(--titles);
-        font-weight: bolder;
-        font-size: 1rem;
-    }
-    .advanced-description p{
-        text-align: left;
-    }
+    .projectDetails { width: 92vw; height: 85vh; }
+    .advanced-description { font-size: 0.8rem; width: 85%; padding: 0 0.5rem; }
+    .image-details { width: 75%; }
+    .sector-project-details { font-size: 1.1rem; }
+    .advanced-description p { text-align: left; }
 }
