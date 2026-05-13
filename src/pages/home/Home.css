@@ -3,7 +3,6 @@
     flex-direction: column;
 }
 
-/* ── HERO ── */
 .hero-section {
     padding: 3rem 2rem 2rem;
     display: flex;
@@ -155,7 +154,6 @@
 [data-theme="dark"] .htag-green  { background: rgba(63,185,80,0.1);   color: #3fb950; border-color: rgba(63,185,80,0.3);   }
 [data-theme="dark"] .htag-red    { background: rgba(255,100,100,0.1); color: #ff6464; border-color: rgba(255,100,100,0.3); }
 
-/* ── Mobile ── */
 @media (max-width: 800px) {
     .hero-section { padding: 1.5rem 1rem 1rem; }
     .hero-content {

@@ -127,7 +127,6 @@ input:checked + .slider:before { transform: translateX(20px); }
     transition: color 0.2s;
 }
 
-/* ── Mobile ── */
 @media (max-width: 800px) {
     .desktop-nav { display: none; }
 

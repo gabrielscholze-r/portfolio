@@ -37,7 +37,6 @@ export default function DevlogDetail({ data, open, onClose }) {
             />
             <div className={`dd-window ${open ? "dd-window--open" : ""}`}>
 
-                {/* Title bar */}
                 <div className="dd-titlebar">
                     <div className="dd-dots">
                         <span className="dd-dot dd-dot-red" onClick={onClose} />
@@ -53,7 +52,6 @@ export default function DevlogDetail({ data, open, onClose }) {
                     <span className="dd-close-x" onClick={onClose}>✕</span>
                 </div>
 
-                {/* Editor body */}
                 <div className="dd-body">
                     {lines.map((line, i) => (
                         <div key={i} className="dd-editor-line">
@@ -83,7 +81,6 @@ export default function DevlogDetail({ data, open, onClose }) {
                     ))}
                 </div>
 
-                {/* Status bar */}
                 <div className="dd-statusbar">
                     <span className="dd-status-item">
                         <i className="bi bi-journal-code" />

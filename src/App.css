@@ -30,7 +30,6 @@ header { flex-shrink: 0; }
 main { flex: 1; }
 footer { flex-shrink: 0; }
 
-/* Section command prompt shared style */
 .section-prompt {
   display: flex;
   align-items: center;

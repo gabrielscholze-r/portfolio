@@ -22,7 +22,6 @@ export default function ProjectDetails({ data, onClose, image, modal, meta }) {
             />
             <div className={`pd-window ${modal ? 'pd-window--open' : ''}`}>
 
-                {/* ── Title bar ── */}
                 <div className="pd-titlebar">
                     <div className="ide-dots">
                         <span className="idot idot-red"  onClick={onClose} style={{ cursor: 'pointer' }} />
@@ -38,10 +37,8 @@ export default function ProjectDetails({ data, onClose, image, modal, meta }) {
                     <span className="pd-close-x" onClick={onClose}>✕</span>
                 </div>
 
-                {/* ── Body ── */}
                 <div className="pd-body">
 
-                    {/* Left – code view */}
                     <div className="pd-code-panel">
                         <div className="pd-line">
                             <span className="pd-kw">const</span>
@@ -87,7 +84,6 @@ export default function ProjectDetails({ data, onClose, image, modal, meta }) {
                         <div className="pd-line">{'}'}</div>
                     </div>
 
-                    {/* Right – preview */}
                     <div className="pd-preview-panel">
                         <span className="pd-preview-label">{'// preview'}</span>
                         <div className="pd-img-wrap" onClick={() => setLightbox(true)} title="Expand image">
@@ -117,7 +113,6 @@ export default function ProjectDetails({ data, onClose, image, modal, meta }) {
                     </div>
                 </div>
 
-                {/* ── Status bar ── */}
                 <div className="pd-statusbar">
                     <span className="pd-status-item">
                         <span className="lang-dot" style={{ background: meta?.color }} />
@@ -125,7 +120,6 @@ export default function ProjectDetails({ data, onClose, image, modal, meta }) {
                     </span>
                 </div>
             </div>
-            {/* ── Lightbox ── */}
             {lightbox && (
                 <div className="pd-lightbox" onClick={() => setLightbox(false)}>
                     <img src={image} alt={data.title} className="pd-lightbox-img" onClick={e => e.stopPropagation()} />
