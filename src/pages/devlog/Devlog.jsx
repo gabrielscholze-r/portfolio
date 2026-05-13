@@ -4,10 +4,11 @@ import './Devlog.css'
 import DevlogItem from "../../components/devlog/devlogItem/DevlogItem";
 
 const filterOptions = [
-    { value: "",                 label: "all branches" },
-    { value: "Portfolio",        label: "portfolio" },
+    { value: "",                  label: "all branches" },
+    { value: "portfolio-change",  label: "portfolio" },
     { value: "Personal Projects", label: "personal-projects" },
-    { value: "Infrastructure",   label: "infrastructure" },
+    { value: "Infrastructure",    label: "infrastructure" },
+    { value: "Academics",         label: "academics" },
 ]
 
 export default function Devlog() {
@@ -15,7 +16,9 @@ export default function Devlog() {
     const [filter, setFilter] = useState("");
 
     const filteredData = filter
-        ? data.filter(item => item.tags.some(tag => tag.toLowerCase().includes(filter.toLowerCase())))
+        ? filter === "portfolio-change"
+            ? data.filter(item => item.isPortfolioChange)
+            : data.filter(item => item.tags.includes(filter))
         : data;
 
     return (

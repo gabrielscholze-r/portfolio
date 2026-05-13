@@ -26,13 +26,18 @@ export default function DevlogItem({ data, anyOpen, setAny, isLast }) {
         <>
             <div className="commit-row" onClick={handleOpen}>
                 <div className="commit-gutter">
-                    <div className="commit-dot"></div>
+                    <div className={`commit-dot ${data.isPortfolioChange ? "commit-dot--portfolio" : ""}`}></div>
                     {!isLast && <div className="commit-line"></div>}
                 </div>
                 <div className="commit-content">
                     <div className="commit-meta">
                         <span className="commit-hash">{hash}</span>
                         <span className="commit-title-text">{data.title}</span>
+                        {data.isPortfolioChange && (
+                            <span className="commit-portfolio-badge">
+                                <i className="bi bi-globe2" /> portfolio
+                            </span>
+                        )}
                         <DevlogTag tags={data.tags} />
                         <span className="commit-date">{formatDates(data.date)}</span>
                     </div>

@@ -3,7 +3,7 @@
     "date": "2026-05-13",
     "title": "Design Renewal",
     "isPortfolioChange": true,
-    "tags": ["Personal Projects", "Portfolio"],
+    "tags": ["Personal Projects"],
     "description": "New all-in-one organizer app with notes, to-do lists, routines, and finance tracking",
     "paragraphs": [
       "I wasn't happy with how this website looked, so I decided to give it a new life. Hope you like it!"
@@ -40,7 +40,7 @@
     "date": "2025-06-18",
     "title": "English Website",
     "isPortfolioChange": true,
-    "tags": ["Portfolio"],
+    "tags": [],
     "description": "Changing portfolio to English",
     "paragraphs": [
       "For a while, I had been thinking about creating an English version of my personal portfolio — mainly because of my job, where I work with English speakers who know nothing about me. Having a website they could visit to learn more about who’s talking to them felt like a good idea.",
@@ -52,7 +52,7 @@
     "date": "2025-04-26",
     "title": "Devlog tab",
     "isPortfolioChange": true,
-    "tags": ["Portfolio"],
+    "tags": [],
     "description": "New tab with portfolio changelogs and a devlog of ongoing work",
     "paragraphs": [
       "I decided to add a new tab to my portfolio to share some updates on what I’ve been developing. This way, if someone wants to check it out, they can just go to that tab and get the info.",
@@ -65,7 +65,7 @@
     "date": "2025-04-17",
     "title": "Deploy & more",
     "isPortfolioChange": true,
-    "tags": ["Infrastructure", "Portfolio"],
+    "tags": ["Infrastructure"],
     "description": "Updated deploy method and not found page",
     "paragraphs": [
       "Previously, the deployment method involved accessing the server where the site is hosted, updating the local repository, and running the build there.",

@@ -32,6 +32,27 @@
 }
 [data-theme="dark"] .commit-dot { box-shadow: 0 0 6px rgba(188, 140, 255, 0.4); }
 
+.commit-dot--portfolio {
+    background: var(--primary-color);
+    box-shadow: 0 0 6px rgba(9, 105, 218, 0.4);
+}
+[data-theme="dark"] .commit-dot--portfolio { box-shadow: 0 0 6px rgba(88, 166, 255, 0.4); }
+
+.commit-portfolio-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--primary-color);
+    background: var(--glow);
+    border: 1px solid rgba(9, 105, 218, 0.25);
+    border-radius: 4px;
+    padding: 0.1rem 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    white-space: nowrap;
+}
+[data-theme="dark"] .commit-portfolio-badge { border-color: rgba(88, 166, 255, 0.25); }
+
 .commit-line {
     width: 2px;
     flex: 1;
