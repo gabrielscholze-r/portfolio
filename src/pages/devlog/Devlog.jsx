@@ -11,9 +11,12 @@ const filterOptions = [
     { value: "Academics",         label: "academics" },
 ]
 
+const ITEMS_PER_PAGE = 5;
+
 export default function Devlog() {
     const [anyOpen, setAny] = useState(false);
     const [filter, setFilter] = useState("");
+    const [page, setPage] = useState(0);
 
     const filteredData = filter
         ? filter === "portfolio-change"
@@ -21,12 +24,47 @@ export default function Devlog() {
             : data.filter(item => item.tags.includes(filter))
         : data;
 
+    const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
+    const visibleData = filteredData.slice(page * ITEMS_PER_PAGE, (page + 1) * ITEMS_PER_PAGE);
+
+    const handleFilter = (val) => {
+        setFilter(val);
+        setPage(0);
+    };
+
     return (
         <div className="devlog-page">
             <div className="devlog-header">
                 <div className="devlog-title-row">
                     <span className="devlog-icon"><i className="bi bi-journal-code"></i></span>
                     <h1 className="devlog-title">devlog</h1>
+                    {totalPages > 1 && (
+                        <div className="carousel-nav">
+                            <button
+                                className="carousel-btn"
+                                onClick={() => setPage(p => p - 1)}
+                                disabled={page === 0}
+                            >
+                                <i className="bi bi-chevron-left"></i>
+                            </button>
+                            <span className="carousel-dots">
+                                {Array.from({ length: totalPages }).map((_, i) => (
+                                    <button
+                                        key={i}
+                                        className={`carousel-dot${i === page ? " carousel-dot--active" : ""}`}
+                                        onClick={() => setPage(i)}
+                                    />
+                                ))}
+                            </span>
+                            <button
+                                className="carousel-btn"
+                                onClick={() => setPage(p => p + 1)}
+                                disabled={page === totalPages - 1}
+                            >
+                                <i className="bi bi-chevron-right"></i>
+                            </button>
+                        </div>
+                    )}
                 </div>
                 <p className="devlog-subtitle">Updates, experiments and ideas</p>
             </div>
@@ -46,7 +84,7 @@ export default function Devlog() {
                         <button
                             key={opt.value}
                             className={`filter-tab${filter === opt.value ? " active" : ""}`}
-                            onClick={() => setFilter(opt.value)}
+                            onClick={() => handleFilter(opt.value)}
                         >
                             {opt.label}
                         </button>
@@ -55,13 +93,13 @@ export default function Devlog() {
             </div>
 
             <div className="devlog-list">
-                {filteredData.map((v, i) => (
+                {visibleData.map((v, i) => (
                     <DevlogItem
-                        key={i}
+                        key={page * ITEMS_PER_PAGE + i}
                         data={v}
                         anyOpen={anyOpen}
                         setAny={setAny}
-                        isLast={i === filteredData.length - 1}
+                        isLast={i === visibleData.length - 1}
                     />
                 ))}
             </div>
