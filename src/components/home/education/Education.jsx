@@ -12,7 +12,7 @@ export default function Education() {
       <div className="education-list">
         <DetailItem
           title="Mobile Application Development"
-          date="In progress"
+          date="2024 – 2026"
           place="PUC-PR"
           description="Postgraduate Degree in Mobile Application Development"
         />

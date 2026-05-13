@@ -41,6 +41,7 @@ export default function Projects() {
           <ProjectItem
             data={item}
             key={index}
+            index={index}
             anyOpen={anyOpen}
             setAny={setAny}
           />

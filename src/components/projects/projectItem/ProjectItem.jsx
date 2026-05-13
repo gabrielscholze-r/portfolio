@@ -3,6 +3,7 @@ import { imageMapper } from '../../../util/util'
 import './ProjectItem.css'
 import ProjectDetails from '../projectDetails/ProjectDetails'
 
+
 const langMap = {
     "SpendZero":         { lang: "Go",          color: "#00acd7" },
     "AppNotas":          { lang: "React",        color: "#61dafb" },
@@ -14,10 +15,12 @@ const langMap = {
     "TapTake E-Sports":  { lang: "Java",         color: "#f89820" },
 }
 
-export default function ProjectItem({ data, anyOpen, setAny }) {
+export default function ProjectItem({ data, index, anyOpen, setAny }) {
     const [modal, setModal] = useState(false)
+    const [imgLoaded, setImgLoaded] = useState(false)
     const image = imageMapper(data.imgPath)
     const meta = langMap[data.title] || { lang: "Code", color: "#8b949e" }
+    const eager = index < 3
 
     const handleOpen = () => {
         if (!anyOpen) { setModal(true); setAny(true); }
@@ -34,7 +37,7 @@ export default function ProjectItem({ data, anyOpen, setAny }) {
                         <span className="idot idot-green"></span>
                     </div>
                     <span className="ide-filename">{data.title}</span>
-                    <span className="ide-lang-badge" style={{ color: meta.color }}>
+                    <span className="ide-lang-badge">
                         <span className="lang-dot" style={{ background: meta.color }}></span>
                         {meta.lang}
                     </span>
@@ -49,7 +52,16 @@ export default function ProjectItem({ data, anyOpen, setAny }) {
                         <span className="comment-line"><span className="comment-sym">&nbsp;*/</span></span>
                     </div>
                     <div className="ide-preview-wrap">
-                        <img src={image} alt={data.title} className="ide-preview" />
+                        {!imgLoaded && <div className="ide-img-skeleton" />}
+                        <img
+                            src={image}
+                            alt={data.title}
+                            className={`ide-preview${imgLoaded ? ' ide-preview--loaded' : ''}`}
+                            loading={eager ? 'eager' : 'lazy'}
+                            fetchpriority={eager ? 'high' : 'auto'}
+                            decoding="async"
+                            onLoad={() => setImgLoaded(true)}
+                        />
                     </div>
                     <div className="ide-footer">
                         <span className="ide-open-btn">

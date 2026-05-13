@@ -7,7 +7,7 @@ export default function Professional() {
         <section className="professional-section">
             <div className="section-cmd-header">
                 <span className="dollar">$</span>
-                <span className="cmd-text"> git log --author="gabriel" --format="fuller"</span>
+                <span className="cmd-text"> cat ~/.career/experience.log</span>
             </div>
             <div className="git-log-wrapper">
                 <DetailItem

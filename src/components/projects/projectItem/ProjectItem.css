@@ -55,6 +55,7 @@
     font-size: 0.72rem;
     white-space: nowrap;
     flex-shrink: 0;
+    color: var(--muted-color);
 }
 
 .lang-dot {
@@ -97,9 +98,23 @@
 }
 
 .ide-preview-wrap {
+    position: relative;
     border-radius: 4px;
     overflow: hidden;
     border: 1px solid var(--border-color);
+}
+
+.ide-img-skeleton {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: linear-gradient(90deg, var(--border-color) 25%, var(--surface-color) 50%, var(--border-color) 75%);
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.4s infinite;
+}
+
+@keyframes skeleton-shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
 }
 
 .ide-preview {
@@ -107,7 +122,12 @@
     aspect-ratio: 16/9;
     object-fit: cover;
     display: block;
-    transition: transform 0.3s;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s;
+}
+
+.ide-preview--loaded {
+    opacity: 1;
 }
 
 .ide-card:hover .ide-preview { transform: scale(1.03); }
