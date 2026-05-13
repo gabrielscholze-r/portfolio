@@ -9,22 +9,6 @@
         "advancedDescription": "WellFit is a mobile application for guided strength training, developed as a final graduation project at PUC-PR. The app addresses a common pain point in gym environments — crowded equipment forcing athletes to adapt their workout order on the fly — by allowing free exercise reordering mid-session without losing progress. WellFit guides users through each set with automatic rest countdowns, per-set weight logging, and session persistence in case the app is closed mid-workout. Users can create custom routines split across days of the week, browse ready-made programs, and filter exercises by muscle group, equipment, or difficulty. The stack combines React Native on the client, Spring Boot on the backend, and MongoDB as the database, with JWT-based authentication."
     },
     {
-        "title": "SpendZero",
-        "imgPath": "spendzero",
-        "videoPath": "https://youtu.be/khEkwbzHylA",
-        "initialDescription": "Web application for personal financial control with secure authentication and a modern interface, built with Go and React.js",
-        "github": "https://github.com/gabrielscholze-r/SpendZero",
-        "advancedDescription": "SpendZero is a web application for personal finance management, developed as a learning project using Golang and React.js. The app allows users to register and track their income and expenses easily and securely, providing an intuitive view of spending through both tables and various charts built with the Recharts library."
-    },
-    {
-        "title": "AppNotas",
-        "imgPath": "notes",
-        "videoPath": "",
-        "initialDescription": "Minimalist notes app with text editor, built with React (frontend), Node.js (backend), and MongoDB.",
-        "github": "https://github.com/gabrielscholze-r/AppNotas/tree/master",
-        "advancedDescription": "AppNotas is a full-stack notes management app that uses React on the frontend, Node.js with Express on the backend, and MongoDB for data storage. It offers features such as note creation, editing, and deletion, smart search, category organization, secure authentication, and an integrated text editor. It stands out for its RESTful API implementation, state management with Context API, modular architecture, and real-time updates. The project is available on GitHub for community contributions."
-    },
-    {
         "title": "CodeCracker (SwiftUI)",
         "imgPath": "codecracker",
         "videoPath": "https://youtu.be/CteMBizjayQ",
@@ -33,12 +17,28 @@
         "advancedDescription": "CodeCracker is an educational iOS application that combines trivia and hands-on programming challenges in an accessible format for beginners. Focused on teaching fundamental concepts in a fun way, the project includes basic exercises with operators, variables, and simple conditionals to introduce syntax intuitively. It features a scoring system with persistent ranking (via Core Data), an interactive map (using MapKit) showing the historical origins of programming languages, and a responsive interface built with SwiftUI."
     },
     {
+        "title": "SpendZero",
+        "imgPath": "spendzero",
+        "videoPath": "https://youtu.be/khEkwbzHylA",
+        "initialDescription": "Web application for personal financial control with secure authentication and a modern interface, built with Go and React.js",
+        "github": "https://github.com/gabrielscholze-r/SpendZero",
+        "advancedDescription": "SpendZero is a web application for personal finance management, developed as a learning project using Golang and React.js. The app allows users to register and track their income and expenses easily and securely, providing an intuitive view of spending through both tables and various charts built with the Recharts library."
+    },
+    {
         "title": "Exoplanet Finder",
         "imgPath": "exoplanet",
         "videoPath": "",
         "initialDescription": "Group project for completing the Bachelor's degree in Computer Science, developed with Angular (frontend) and Flask (backend) for analyzing potential exoplanet data.",
         "github": "https://github.com/gabrielscholze-r/Exoplanet-Finder-Web",
         "advancedDescription": "Capstone project for a Bachelor's degree in Computer Science. The project involved data analysis using information gathered by space satellites such as TESS, Kepler, and K2, analyzing light curves from stars to identify potential exoplanets. A data visualization platform was built in Angular, featuring a responsive interface with multilingual support, and a Flask API integrated with machine learning models to generate graphs based on predictions derived from the provided data."
+    },
+    {
+        "title": "TapTake E-Sports",
+        "imgPath": "taptake",
+        "videoPath": "",
+        "initialDescription": "Academic project developed to study encryption methods in Java, using a scoring system based on e-sports match results.",
+        "github": "https://github.com/gabrielscholze-r/TapTakeE-Sports",
+        "advancedDescription": "TapTake E-Sports is an academic project developed in Java to explore encryption techniques applied to scoring systems in e-sports competitions. The project includes a dashboard for ranking visualization and performance analysis, simulating a real environment where sensitive data from games like CS:GO or Valorant needs to be securely handled."
     },
     {
         "title": "Academic Management",
@@ -65,11 +65,11 @@
         "advancedDescription": "A complete administrative system for managing furniture stores, developed to optimize operations from product registration to sales analysis. It combines a modern and responsive interface (React.js) with a robust backend (Node.js + MongoDB) to provide essential features for furniture retail, ensuring scalability and ease of use."
     },
     {
-        "title": "TapTake E-Sports",
-        "imgPath": "taptake",
+        "title": "AppNotas",
+        "imgPath": "notes",
         "videoPath": "",
-        "initialDescription": "Academic project developed to study encryption methods in Java, using a scoring system based on e-sports match results.",
-        "github": "https://github.com/gabrielscholze-r/TapTakeE-Sports",
-        "advancedDescription": "TapTake E-Sports is an academic project developed in Java to explore encryption techniques applied to scoring systems in e-sports competitions. The project includes a dashboard for ranking visualization and performance analysis, simulating a real environment where sensitive data from games like CS:GO or Valorant needs to be securely handled."
+        "initialDescription": "Minimalist notes app with text editor, built with React (frontend), Node.js (backend), and MongoDB.",
+        "github": "https://github.com/gabrielscholze-r/AppNotas/tree/master",
+        "advancedDescription": "AppNotas is a full-stack notes management app that uses React on the frontend, Node.js with Express on the backend, and MongoDB for data storage. It offers features such as note creation, editing, and deletion, smart search, category organization, secure authentication, and an integrated text editor. It stands out for its RESTful API implementation, state management with Context API, modular architecture, and real-time updates. The project is available on GitHub for community contributions."
     }
 ]
