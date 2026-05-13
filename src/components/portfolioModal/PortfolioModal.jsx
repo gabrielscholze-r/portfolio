@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './PortfolioModal.css'
 
 export default function PortfolioModal({ info, close }) {
 
+    useEffect(() => {
+        document.body.style.overflow = info ? 'hidden' : ''
+        return () => { document.body.style.overflow = '' }
+    }, [info])
+
     return (
+        <>
+        <div className={`modal-backdrop ${info ? 'open' : ''}`} onClick={close} />
         <div className={`portfolio-modal ${info ? 'open' : ''}`}>
             <div onClick={close} className='close-modal ms-auto mx-4'>
                 <p>✕</p>
@@ -46,5 +53,6 @@ export default function PortfolioModal({ info, close }) {
                 </a>
             </div>
         </div>
+        </>
     )
 }

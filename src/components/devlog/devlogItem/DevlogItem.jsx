@@ -31,14 +31,18 @@ export default function DevlogItem({ data, anyOpen, setAny, isLast }) {
                 </div>
                 <div className="commit-content">
                     <div className="commit-meta">
-                        <span className="commit-hash">{hash}</span>
-                        <span className="commit-title-text">{data.title}</span>
-                        {data.isPortfolioChange && (
-                            <span className="commit-portfolio-badge">
-                                <i className="bi bi-globe2" /> portfolio
-                            </span>
-                        )}
-                        <DevlogTag tags={data.tags} />
+                        <div className="commit-meta-top">
+                            <span className="commit-hash">{hash}</span>
+                            <span className="commit-title-text">{data.title}</span>
+                        </div>
+                        <div className="commit-meta-bottom">
+                            <DevlogTag tags={data.tags} />
+                            {data.isPortfolioChange && (
+                                <span className="commit-portfolio-badge">
+                                    <i className="bi bi-globe2" /> portfolio
+                                </span>
+                            )}
+                        </div>
                         <span className="commit-date">{formatDates(data.date)}</span>
                     </div>
                     <p className="commit-desc">{data.description}</p>
