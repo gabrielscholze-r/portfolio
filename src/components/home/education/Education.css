@@ -1,14 +1,31 @@
-.sector {
-    color: var(--titles);
-    font-weight: bolder;
-    font-size: 2rem;
+.education-section {
+    padding: 2.5rem 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
 }
 
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.education-section .section-cmd-header {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--muted-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
+}
+
+.education-section .section-cmd-header .dollar   { color: var(--green);      font-weight: bold; }
+.education-section .section-cmd-header .cmd-text { color: var(--text-color); }
 
 @media (max-width: 800px) {
-    .sector {
-        font-size: 1.4rem;
-    }
+    .education-section { padding: 2rem 1.5rem; }
 }
-
-

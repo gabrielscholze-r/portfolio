@@ -1,48 +1,154 @@
-.item {
-    -webkit-box-shadow: 0px 0px 5px 0.2px var(--boxshadow);
-    -moz-box-shadow: 0px 0px 5px 0.2px var(--boxshadow);
-    box-shadow: 0px 0px 5px 0.2px var(--boxshadow);
+.ide-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
     cursor: pointer;
-    transition: 0.2s ease-in-out;
-    padding: 1rem;
-    height: 100%;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
     display: flex;
     flex-direction: column;
-    background-color: var(--background-color);
 }
 
-.item img {
+.ide-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 20px var(--glow);
+    transform: translateY(-3px);
+}
+
+.ide-tab-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background-color: var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.ide-dots { display: flex; gap: 5px; flex-shrink: 0; }
+
+.idot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.idot-red    { background: #ff5f57; }
+.idot-yellow { background: #febc2e; }
+.idot-green  { background: #28c840; }
+
+.ide-filename {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--text-color);
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ide-lang-badge {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    color: var(--muted-color);
+}
+
+.lang-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.ide-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0.75rem;
+    gap: 0.65rem;
+}
+
+.ide-comment {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+.comment-line { display: flex; flex-wrap: wrap; }
+
+.comment-sym {
+    color: var(--muted-color);
+    flex-shrink: 0;
+}
+
+.comment-text {
+    color: var(--muted-color);
+    font-style: italic;
+    word-break: break-word;
+}
+
+.ide-preview-wrap {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.ide-img-skeleton {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: linear-gradient(90deg, var(--border-color) 25%, var(--surface-color) 50%, var(--border-color) 75%);
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.4s infinite;
+}
+
+@keyframes skeleton-shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.ide-preview {
     width: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
-    border: 1px solid var(--boxshadow);
-    border-radius: 8px;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s;
 }
 
-
-.item:hover {
-    scale: 1.1;
+.ide-preview--loaded {
+    opacity: 1;
 }
 
-.title {
-    margin-top: 15px;
-    font-weight: bold;
-    padding: 0 10px;
-    flex-grow: 0; 
+.ide-card:hover .ide-preview { transform: scale(1.03); }
+
+.ide-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
 }
-.description {
-    font-size: 1rem;
-    padding: 1rem;
-    text-align: left;
-    color: var(--text-color);
-    flex-grow: 1;
+
+.ide-open-btn {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(9, 105, 218, 0.3);
+    transition: background-color 0.15s;
 }
-@media (max-width: 800px) {
-    .projectList {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-    
-    .item {
-        padding: 0.8rem;
-    }
+[data-theme="dark"] .ide-open-btn { border-color: rgba(88, 166, 255, 0.3); }
+.ide-card:hover .ide-open-btn {
+    background-color: var(--glow);
 }

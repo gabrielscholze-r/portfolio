@@ -1,15 +1,159 @@
-.devlog-item {
-    background-color: var(--background-color);
+.commit-row {
+    display: flex;
+    gap: 0;
     cursor: pointer;
-    transition: 0.2s;
-    width: 75%;
+    padding: 0;
 }
-.devlog-item:hover {
-    scale: 1.1;
 
+.commit-row:hover .commit-content {
+    background-color: rgba(128, 128, 128, 0.06);
+    border-color: var(--primary-color);
 }
-@media (min-width: 800px) {
-    .devlog-item {
-        width: 50%;
+
+.commit-gutter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    padding-top: 1.1rem;
+    margin-right: 1rem;
+    width: 20px;
+}
+
+.commit-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--purple);
+    border: 2px solid var(--background-color);
+    flex-shrink: 0;
+    z-index: 1;
+    box-shadow: 0 0 6px rgba(130, 80, 223, 0.4);
+}
+[data-theme="dark"] .commit-dot { box-shadow: 0 0 6px rgba(188, 140, 255, 0.4); }
+
+.commit-dot--portfolio {
+    background: var(--primary-color);
+    box-shadow: 0 0 6px rgba(9, 105, 218, 0.4);
+}
+[data-theme="dark"] .commit-dot--portfolio { box-shadow: 0 0 6px rgba(88, 166, 255, 0.4); }
+
+.commit-portfolio-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--primary-color);
+    background: var(--glow);
+    border: 1px solid rgba(9, 105, 218, 0.25);
+    border-radius: 4px;
+    padding: 0.1rem 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    white-space: nowrap;
+}
+[data-theme="dark"] .commit-portfolio-badge { border-color: rgba(88, 166, 255, 0.25); }
+
+.commit-line {
+    width: 2px;
+    flex: 1;
+    background: var(--border-color);
+    min-height: 1.5rem;
+    margin-top: 2px;
+}
+
+.commit-content {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.75rem;
+    background-color: var(--surface-color);
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.commit-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.4rem;
+}
+
+.commit-meta-top    { display: contents; }
+.commit-meta-bottom { display: contents; }
+
+.commit-hash {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--orange);
+    background: rgba(188, 76, 0, 0.1);
+    border: 1px solid rgba(188, 76, 0, 0.2);
+    border-radius: 3px;
+    padding: 0.1rem 0.4rem;
+    flex-shrink: 0;
+}
+[data-theme="dark"] .commit-hash {
+    color: var(--orange);
+    background: rgba(255, 166, 87, 0.1);
+    border-color: rgba(255, 166, 87, 0.2);
+}
+
+.commit-title-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--text-color);
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.commit-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--muted-color);
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+.commit-desc {
+    font-size: 0.875rem;
+    color: var(--muted-color);
+    margin: 0 0 0.5rem;
+    line-height: 1.5;
+}
+
+.commit-expand {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.commit-row:hover .commit-expand { opacity: 1; }
+
+@media (max-width: 800px) {
+    .commit-meta { gap: 0.25rem; flex-direction: column; align-items: flex-start; }
+    .commit-meta-top {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+        min-width: 0;
     }
+    .commit-meta-bottom {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+        flex-wrap: wrap;
+    }
+    .commit-title-text { font-size: 0.82rem; white-space: normal; }
+    .commit-date { margin-left: 0; }
 }

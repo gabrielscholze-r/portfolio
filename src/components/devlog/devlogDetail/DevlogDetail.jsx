@@ -1,40 +1,97 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./DevlogDetail.css";
 import DevlogTag from "../devlogTag/DevlogTag.jsx";
 
 export default function DevlogDetail({ data, open, onClose }) {
+    useEffect(() => {
+        const onKey = (e) => { if (e.key === "Escape") onClose(); };
+        window.addEventListener("keydown", onKey);
+        return () => window.removeEventListener("keydown", onKey);
+    }, [onClose]);
+
+    const slug = data.title.toLowerCase().replace(/\s+/g, "-");
+
+    const headerLines = [
+        { type: "heading", content: data.title },
+        { type: "blank" },
+        { type: "date",    content: data.date },
+        { type: "blank" },
+        { type: "tags" },
+        { type: "blank" },
+        { type: "divider" },
+        { type: "blank" },
+    ];
+
+    const paraLines = data.paragraphs.flatMap((p, i) => [
+        { type: "para", content: p },
+        ...(i < data.paragraphs.length - 1 ? [{ type: "blank" }] : []),
+    ]);
+
+    const lines = [...headerLines, ...paraLines];
+
     return (
-        <div
-            className={`devlog-detail-modal ${
-                open ? "open" : ""
-            } d-flex flex-column position-fixed top-50 start-50 translate-middle rounded overflow-auto overflow-x-hidden shadow-custom`}
-        >
-            <div onClick={onClose} className="text-color devlog-detail-close ms-auto mx-4 display-5">
-                <p>✕</p>
+        <>
+            <div
+                className={`dd-backdrop ${open ? "dd-backdrop--open" : ""}`}
+                onClick={onClose}
+            />
+            <div className={`dd-window ${open ? "dd-window--open" : ""}`}>
+
+                <div className="dd-titlebar">
+                    <div className="dd-dots">
+                        <span className="dd-dot dd-dot-red" onClick={onClose} />
+                        <span className="dd-dot dd-dot-yellow" />
+                        <span className="dd-dot dd-dot-green" />
+                    </div>
+                    <div className="dd-tabs">
+                        <span className="dd-tab-active">
+                            <i className="bi bi-markdown" />
+                            {slug}.md
+                        </span>
+                    </div>
+                    <span className="dd-close-x" onClick={onClose}>✕</span>
+                </div>
+
+                <div className="dd-body">
+                    {lines.map((line, i) => (
+                        <div key={i} className="dd-editor-line">
+                            <span className="dd-ln">{i + 1}</span>
+                            <span className="dd-line-content">
+                                {line.type === "heading" && (
+                                    <>
+                                        <span className="dd-kw">#</span>
+                                        {" "}
+                                        <span className="dd-heading">{line.content}</span>
+                                    </>
+                                )}
+                                {line.type === "date" && (
+                                    <span className="dd-cmt">{"// "}{line.content}</span>
+                                )}
+                                {line.type === "tags" && (
+                                    <DevlogTag tags={data.tags} />
+                                )}
+                                {line.type === "divider" && (
+                                    <span className="dd-op">---</span>
+                                )}
+                                {line.type === "para" && (
+                                    <span className="dd-para">{line.content}</span>
+                                )}
+                            </span>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="dd-statusbar">
+                    <span className="dd-status-item">
+                        <i className="bi bi-journal-code" />
+                        devlog
+                    </span>
+                    <span className="dd-status-item">
+                        <i className="bi bi-calendar3" />
+                        {data.date}
+                    </span>
+                </div>
             </div>
-
-            <h1 className="text-title-color mx-auto text-center fs-3 fs-md-4 fs-sm-5">
-                {data.title}
-            </h1>
-
-            <div className="w-100 justify-content-center align-items-center text-center mb-2">
-                <DevlogTag tags={data.tags} />
-            </div>
-
-            <p className="mx-auto text-color fs-6">
-                {data.date}
-            </p>
-
-            <div className="mt-3">
-                {data.paragraphs.map((item, index) => (
-                    <p
-                        key={index}
-                        className="text-left w-75 mx-auto my-3 text-color text devlog-paragraph fs-6"
-                    >
-                        {item}
-                    </p>
-                ))}
-            </div>
-        </div>
+        </>
     );
 }

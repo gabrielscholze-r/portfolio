@@ -1,75 +1,94 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useTheme } from "../../../context/Theme.jsx";
 import "./Header.css";
 import Cookie from "js-cookie";
+
 export default function Header() {
     const { theme, toggleTheme } = useTheme();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     useEffect(() => {
-        var current = Cookie.get("theme");
-        if (current) {
-            toggleTheme(current);
-        }
+        const current = Cookie.get("theme");
+        if (current) toggleTheme(current);
     }, [toggleTheme]);
-
-    return (
-        <div className="header px-5">
-            <div className="logo-section">
-                <NavLink className="navlink" to="/">
-                    <h3 className="logo-text">GABRIEL SCHOLZE</h3>
-                </NavLink>
-            </div>
-
-            <div className="desktop-nav">
-                <NavigationElements />
-            </div>
-            <button
-                className="burger-button"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-                {isMenuOpen ? '✕' : '☰'}
-            </button>
-            <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
-                <div className="mobile-nav">
-                    <NavigationElements closeMenu={() => setIsMenuOpen(false)} />
-                </div>
-            </div>
-        </div>
-    );
 
     function NavigationElements({ closeMenu }) {
         return (
             <>
+                <NavLink
+                    className={({ isActive }) => `navlink${isActive ? " active" : ""}`}
+                    to="/"
+                    end
+                    onClick={closeMenu}
+                >
+                    <span className="nav-arrow">&gt;&nbsp;</span>home
+                </NavLink>
+                <NavLink
+                    className={({ isActive }) => `navlink${isActive ? " active" : ""}`}
+                    to="projects"
+                    onClick={closeMenu}
+                >
+                    <span className="nav-arrow">&gt;&nbsp;</span>projects
+                </NavLink>
+                <NavLink
+                    className={({ isActive }) => `navlink${isActive ? " active" : ""}`}
+                    to="devlog"
+                    onClick={closeMenu}
+                >
+                    <span className="nav-arrow">&gt;&nbsp;</span>devlog
+                </NavLink>
                 <div className="theme-toggle">
-                    <div className="px-1">
-                        <i className="bi bi-sun-fill theme-icon" style={(theme === "dark") ? { opacity: 0.6, color: "white" } : { background: "linear-gradient(180deg, #FFD700, #FFA500, #FF8C00)", WebkitBackgroundClip: "text", color: "transparent" }}></i>
-                    </div>
-                    <div className="px-1">
-                        <label className="theme-switch">
-                            <input
-                                type="checkbox"
-                                id="theme-toggle"
-                                checked={theme === "dark"}
-                                onChange={toggleTheme}
-                            />
-                            <span className="slider"></span>
-                        </label>
-                    </div>
-                    <div className="px-1">
-                        <i className="bi bi-moon-fill theme-icon" style={(theme === "dark") ? { background: "linear-gradient(180deg, #b0b0b0, #8c8c8c, #6e6e6e)", WebkitBackgroundClip: "text", color: "transparent" } : { opacity: 0.6, color: "white" }}></i>
-                    </div>
+                    <i
+                        className="bi bi-sun-fill theme-icon"
+                        style={
+                            theme !== "dark"
+                                ? { color: "#e3a008" }
+                                : { color: "var(--muted-color)", opacity: 0.5 }
+                        }
+                    ></i>
+                    <label className="theme-switch">
+                        <input
+                            type="checkbox"
+                            checked={theme === "dark"}
+                            onChange={toggleTheme}
+                        />
+                        <span className="slider"></span>
+                    </label>
+                    <i
+                        className="bi bi-moon-fill theme-icon"
+                        style={
+                            theme === "dark"
+                                ? { color: "#8b949e" }
+                                : { color: "var(--muted-color)", opacity: 0.5 }
+                        }
+                    ></i>
                 </div>
-                <NavLink className="navlink" to="/" onClick={closeMenu}>
-                    Home
-                </NavLink>
-                <NavLink className="navlink" to="projects" onClick={closeMenu}>
-                    Projects
-                </NavLink>
-                <NavLink className="navlink" to="devlog" onClick={closeMenu}>
-                    Devlog
-                </NavLink>
             </>
         );
     }
+
+    return (
+        <header className="header">
+            <div className="header-inner">
+                <NavLink className="logo-link" to="/">
+                    <span className="logo-prompt">~/gabriel</span>
+                    <span className="logo-dollar">$</span>
+                </NavLink>
+                <div className="desktop-nav">
+                    <NavigationElements />
+                </div>
+                <button
+                    className="burger-button"
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    aria-label="Toggle menu"
+                >
+                    {isMenuOpen ? "✕" : "☰"}
+                </button>
+            </div>
+            <div className={`mobile-menu${isMenuOpen ? " active" : ""}`}>
+                <NavigationElements closeMenu={() => setIsMenuOpen(false)} />
+            </div>
+        </header>
+    );
 }

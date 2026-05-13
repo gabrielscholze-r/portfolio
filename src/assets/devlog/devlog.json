@@ -1,9 +1,46 @@
 [
   {
+    "date": "2026-05-13",
+    "title": "Design Renewal",
+    "isPortfolioChange": true,
+    "tags": ["Personal Projects"],
+    "description": "New all-in-one organizer app with notes, to-do lists, routines, and finance tracking",
+    "paragraphs": [
+      "I wasn't happy with how this website looked, so I decided to give it a new life. Hope you like it!"
+    ]
+  },
+  {
+    "date": "2026-05-10",
+    "title": "Personal Organizer App",
+    "isPortfolioChange": false,
+    "tags": ["Personal Projects"],
+    "description": "New all-in-one organizer app with notes, to-do lists, routines, and finance tracking",
+    "paragraphs": [
+      "Hello! So I've been working on a new project for a few weeks before I go on with WellFit. It's an all-in-one app for organizing yourself. I am testing it with Claude to see its capabilities.",
+      "For now the app has a few things it can do, like take notes, create to-do lists, create routines for medication or anything you want (the app notifies when the time comes) and finally a financial spreadsheet where you can add your expenses and put them in categories to know where your main expenses are coming from. I was trying to implement it using something called Open Finance to sync with the banks, but it is paid and I am not paying for something that has no return for now.",
+      "So in the future I will post about it here, but I intend to launch this app on Google Play Store soon."
+    ]
+  },
+  {
+    "date": "2026-05-09",
+    "title": "Post Graduate Degree",
+    "isPortfolioChange": true,
+    "tags": ["Academics"],
+    "description": "Final presentation of my post graduate degree",
+    "paragraphs": [
+      "It's been a while, huh? I've been spending some time focusing on my final post-graduation project, and now I can tell you I finally finalized and presented it! So I am going to tell you how I came up with the idea.",
+      "The funniest part about it is that it wasn't even my idea. I was discussing ideas for the final project with my girlfriend and she was like \"what if you do an app about the gym?\", and that's how WellFit was born. Even the name came from her. The problem is that I wasn't a fan of most of the methods to develop this app that we had seen throughout the course, like Flutter or Kotlin, and Swift was unfeasible. So I decided to take a step back and think about what I know. Well, I have been using React.js for a while now, what if I just do it on React Native?",
+      "That's when I decided to go with React Native. So I made a backend first to have a basis. Using Postgres as persistence, I started to program in Java Spring Boot and built a solid backend to start the app. When I was halfway through the app, the backend code was becoming more and more complicated because of the relationships I had to create for all of it to make sense to Postgres. Various new tables on the database were making my life hard, so I decided to change it to MongoDB, the best thing I did. What were many tables was then replaced with simple collections, very easy to read and manipulate.",
+      "The app was coming together bit by bit, but I still wasn't happy about the looks of it. Turns out I was underestimating the power of AI! I've been using Claude for some specific things at work to get unstuck, so I decided to try to renew my design on WellFit. It did its magic, the app changed from basic to modern and was nice to use.",
+      "I had to make an article about it too, that was a nightmare 'cause I hate anything to do with academic research, but thankfully it wasn't that bad. A big part of my article was about the market and other apps that tried to do what I was trying to do, so it was okay. When May 9th came, I was ready to present my results and my app to the professors. They didn't just like it, they loved it, especially the design (even mentioning that developers usually don't do design very well).",
+      "So I got a ton of congratulations and am still waiting on the results to come out, but I assume it's going to be good. I added the project on the projects part, so you can take a look at it."
+    ]
+  },
+  {
     "date": "2025-06-18",
     "title": "English Website",
     "isPortfolioChange": true,
-    "tags": ["Portfolio"],
+    "tags": [],
     "description": "Changing portfolio to English",
     "paragraphs": [
       "For a while, I had been thinking about creating an English version of my personal portfolio — mainly because of my job, where I work with English speakers who know nothing about me. Having a website they could visit to learn more about who’s talking to them felt like a good idea.",
@@ -15,7 +52,7 @@
     "date": "2025-04-26",
     "title": "Devlog tab",
     "isPortfolioChange": true,
-    "tags": ["Portfolio"],
+    "tags": [],
     "description": "New tab with portfolio changelogs and a devlog of ongoing work",
     "paragraphs": [
       "I decided to add a new tab to my portfolio to share some updates on what I’ve been developing. This way, if someone wants to check it out, they can just go to that tab and get the info.",
@@ -28,7 +65,7 @@
     "date": "2025-04-17",
     "title": "Deploy & more",
     "isPortfolioChange": true,
-    "tags": ["Infrastructure", "Portfolio"],
+    "tags": ["Infrastructure"],
     "description": "Updated deploy method and not found page",
     "paragraphs": [
       "Previously, the deployment method involved accessing the server where the site is hosted, updating the local repository, and running the build there.",

@@ -1,11 +1,12 @@
-import notes from "../assets/projects/img/appnotas.jpg";
-import codecracker from "../assets/projects/img/codecracker.jpg";
-import exoplanet from "../assets/projects/img/exoplanetFinder.jpg";
-import gamertag from "../assets/projects/img/gamertag.jpg";
-import imoveis from "../assets/projects/img/imoveis.jpg";
-import taptake from "../assets/projects/img/taptakee-sports.jpg";
-import backend from "../assets/projects/img/backend.jpg";
-import spendzero from "../assets/projects/img/spendzero.jpg";
+import notes from "../assets/projects/img/appnotas.avif";
+import codecracker from "../assets/projects/img/codecracker.avif";
+import exoplanet from "../assets/projects/img/exoplanetFinder.avif";
+import gamertag from "../assets/projects/img/gamertag.avif";
+import imoveis from "../assets/projects/img/imoveis.avif";
+import taptake from "../assets/projects/img/taptakee-sports.avif";
+import backend from "../assets/projects/img/backend.avif";
+import spendzero from "../assets/projects/img/spendzero.avif";
+import wellfit from "../assets/projects/img/wellfit.avif";
 
 const imageMap = {
   notes,
@@ -15,7 +16,8 @@ const imageMap = {
   imoveis,
   taptake,
   backend,
-  spendzero
+  spendzero,
+  wellfit
 };
 
 export const imageMapper = (imgPath) => {
@@ -35,12 +37,12 @@ export function formatDates(dataString) {
     "July", "August", "September", "October", "November", "December"
   ];
 
-  const data = new Date(dataString);
-  const dia = data.getDay()
+  const data = new Date(dataString + "T00:00:00");
+  const dia = data.getDate();
   const mes = meses[data.getMonth()];
   const ano = data.getFullYear();
 
-  return `${dia} de ${mes} de ${ano}`;
+  return `${mes} ${dia}, ${ano}`;
 }
 
 export function getTagClass(tag) {

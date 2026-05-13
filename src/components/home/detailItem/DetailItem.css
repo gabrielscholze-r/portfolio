@@ -1,108 +1,110 @@
-.title {
-    font-weight: bold;
-    color: var(--text-color);
-    font-size: 1.2rem;
+.detailitem {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--primary-color);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    width: 100%;
+    transition: border-color 0.15s, box-shadow 0.15s;
 }
+
+.detailitem:hover {
+    box-shadow: 0 2px 12px var(--boxshadow);
+    border-left-color: var(--green);
+}
+
 .text-date {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-}
-.place {
-    font-size: 0.7rem;
-    color: white;
-    font-weight: bolder;
-    background-color: var(--secondary-color);
-    width: fit-content;
-    padding: 0.4rem;
+    gap: 1rem;
+    margin-bottom: 0.25rem;
 }
 
-.description-detailitem {
-    text-align: left;
-    color: var(--text-color);
+.title-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-family: 'JetBrains Mono', monospace;
     font-weight: bold;
-    font-size: 1.3rem;
-}
-.job-description-list {
-    width: 100%;
-}
-
-.job-description {
-    width: 100%;
     color: var(--text-color);
     font-size: 1rem;
-    text-align: left;
+    margin: 0;
+}
+
+.place {
+    font-size: 0.72rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    background-color: rgba(9, 105, 218, 0.1);
+    border: 1px solid rgba(9, 105, 218, 0.25);
+    border-radius: 4px;
+    padding: 0.15rem 0.5rem;
+    white-space: nowrap;
+}
+
+[data-theme="dark"] .place {
+    color: var(--primary-color);
+    background-color: rgba(88, 166, 255, 0.1);
+    border-color: rgba(88, 166, 255, 0.25);
 }
 
 .date {
-    color: var(--text-color);
-    font-size: 0.9rem;
+    color: var(--muted-color);
+    font-size: 0.8rem;
+    font-family: 'JetBrains Mono', monospace;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
-.detailitem {
-    background-color: var(--background-color);
-    -webkit-box-shadow: 0px 0px 6px -3px var(--boxshadow);
-    -moz-box-shadow: 0px 0px 6px -3px var(--boxshadow);
-    box-shadow: 0px 0px 6px -3px var(--boxshadow);
-    width: 100%;
+.description-detailitem {
+    color: var(--muted-color);
+    font-size: 0.9rem;
+    margin: 0.35rem 0 0.75rem;
+    font-style: italic;
 }
-.title-detail-item{
-    display: flex;
-    justify-content: left;
-    text-align: left;
-    flex-direction: column;
+
+.job-description-list {
+    padding-left: 1.25rem;
+    margin: 0;
+}
+
+.job-description {
+    color: var(--text-color);
+    font-size: 0.875rem;
+    line-height: 1.65;
+    opacity: 0.85;
+    margin-bottom: 0.3rem;
+}
+
+.btn-outline-primary {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 5px;
+    padding: 0.3rem 0.75rem;
+    margin-top: 0.75rem;
+    transition: 0.15s;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--surface-color);
 }
 
 @media (max-width: 800px) {
-    .date {
-        font-size: 0.7rem;
-        margin-top: 0.5rem;
-    }
-
     .text-date {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        gap: 0.4rem;
     }
-
-    .title-detail-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .place {
-        margin: 0.3rem 0;
-        font-size: 0.6rem;
-        padding: 0.3rem 0.6rem;
-    }
-
-    .title {
-        font-size: 1rem;
-        text-align: center;
-    }
-
-    .description-detailitem {
-        margin: 0.5rem 0;
-        text-align: center!important;
-        font-size: 1rem;
-        padding: 0 0.2rem;
-    }
-
-    .job-description {
-        font-size: 0.75rem;
-        text-align: left;
-        padding: 0 0.5rem;
-    }
-
-    .job-description-list {
-        padding-left: 0;
-        list-style-position: inside;
-    }
-
-    .detailitem {
-        width: 100%;
-        max-width: 320px;
-        margin: 0 auto;
-    }
+    .title-detail-item { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+    .date { font-size: 0.75rem; }
+    .title { font-size: 0.95rem; }
+    .description-detailitem { font-size: 0.85rem; }
+    .job-description { font-size: 0.82rem; }
 }
