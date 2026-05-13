@@ -6,6 +6,7 @@ import imoveis from "../assets/projects/img/imoveis.avif";
 import taptake from "../assets/projects/img/taptakee-sports.avif";
 import backend from "../assets/projects/img/backend.avif";
 import spendzero from "../assets/projects/img/spendzero.avif";
+import wellfit from "../assets/projects/img/wellfit.avif";
 
 const imageMap = {
   notes,
@@ -15,7 +16,8 @@ const imageMap = {
   imoveis,
   taptake,
   backend,
-  spendzero
+  spendzero,
+  wellfit
 };
 
 export const imageMapper = (imgPath) => {

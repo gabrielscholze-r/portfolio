@@ -33,8 +33,12 @@ export default function ProjectDetails({ data, onClose, image, modal }) {
                     <a className='project-link' href={data.videoPath} target='_blank'>
                         <i className="bi bi-youtube youtube"></i>
                     </a>
-                )
-                }
+                )}
+                {data.articlePath && (
+                    <a className='project-link' href={data.articlePath} target='_blank'>
+                        <i className="bi bi-file-earmark-text"></i>
+                    </a>
+                )}
             </div>
         </div>
     )

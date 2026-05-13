@@ -13,6 +13,7 @@ const langMap = {
     "GamerTag":          { lang: "React",        color: "#61dafb" },
     "iMóveis":           { lang: "Node.js",      color: "#3fb950" },
     "TapTake E-Sports":  { lang: "Java",         color: "#f89820" },
+    "WellFit":           { lang: "React Native", color: "#61dafb" },
 }
 
 export default function ProjectItem({ data, index, anyOpen, setAny }) {

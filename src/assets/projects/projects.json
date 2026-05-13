@@ -1,5 +1,14 @@
 [
     {
+        "title": "WellFit",
+        "imgPath": "wellfit",
+        "videoPath": "https://youtu.be/8_BkNNrl52w",
+        "articlePath": "https://drive.google.com/file/d/1cYt1HlYvcXUHpASUFsXitqH5vh2bY7Au/view?usp=drive_link",
+        "initialDescription": "Mobile application for real-time guided strength training execution, with automatic rest timers, free exercise reordering, and session persistence, built with React Native and Spring Boot.",
+        "github": "",
+        "advancedDescription": "WellFit is a mobile application for guided strength training, developed as a final graduation project at PUC-PR. The app addresses a common pain point in gym environments — crowded equipment forcing athletes to adapt their workout order on the fly — by allowing free exercise reordering mid-session without losing progress. WellFit guides users through each set with automatic rest countdowns, per-set weight logging, and session persistence in case the app is closed mid-workout. Users can create custom routines split across days of the week, browse ready-made programs, and filter exercises by muscle group, equipment, or difficulty. The stack combines React Native on the client, Spring Boot on the backend, and MongoDB as the database, with JWT-based authentication."
+    },
+    {
         "title": "SpendZero",
         "imgPath": "spendzero",
         "videoPath": "https://youtu.be/khEkwbzHylA",
