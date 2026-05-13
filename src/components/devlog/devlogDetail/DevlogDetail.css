@@ -1,51 +1,159 @@
-.devlog-detail-modal {
-    width: 80vw;
-    max-width: 760px;
-    height: 80vh;
-    background-color: var(--surface-color);
+/* ── Backdrop ── */
+.dd-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s;
+}
+.dd-backdrop--open { opacity: 1; visibility: visible; }
+
+/* ── Window ── */
+.dd-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.93);
+    width: min(92vw, 760px);
+    height: min(86vh, 620px);
+    background: var(--surface-color);
     border: 1px solid var(--border-color);
     border-radius: 10px;
+    box-shadow: 0 24px 64px var(--boxshadow);
     z-index: 100000;
-    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.9);
+    visibility: hidden;
     transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
-    box-shadow: 0 16px 48px var(--boxshadow);
-    cursor: auto;
 }
-
-.devlog-detail-modal.open {
-    visibility: visible;
+.dd-window--open {
     opacity: 1;
+    visibility: visible;
     transform: translate(-50%, -50%) scale(1);
 }
 
-.devlog-detail-close {
-    cursor: pointer;
-    transition: 0.2s;
-    color: var(--muted-color);
-    font-size: 1.8rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 6px;
+/* ── Title bar ── */
+.dd-titlebar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.45rem 0.75rem;
+    background: var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    flex-shrink: 0;
 }
-.devlog-detail-close:hover { color: var(--text-color); background-color: var(--border-color); }
 
-.devlog-detail-modal h1 {
+.dd-dots { display: flex; gap: 5px; flex-shrink: 0; }
+
+.dd-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.dd-dot-red    { background: #ff5f57; cursor: pointer; }
+.dd-dot-yellow { background: #febc2e; }
+.dd-dot-green  { background: #28c840; }
+
+.dd-tabs { flex: 1; display: flex; }
+
+.dd-tab-active {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 1.25rem;
-    color: var(--titles);
-}
-
-.devlog-paragraph {
-    text-indent: 1.5rem;
-    font-size: 0.9rem;
-    line-height: 1.7;
+    font-size: 0.78rem;
     color: var(--text-color);
-    opacity: 0.88;
-    transition: font-size 0.3s ease;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-bottom-color: var(--surface-color);
+    padding: 0.2rem 0.75rem;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: -1px;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
-@media (max-width: 800px) {
-    .devlog-detail-modal { width: 92vw; height: 85vh; }
-    .devlog-paragraph { font-size: 0.82rem; }
+.dd-close-x {
+    color: var(--muted-color);
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 0.2rem 0.45rem;
+    border-radius: 4px;
+    transition: color 0.15s, background 0.15s;
+    line-height: 1;
+}
+.dd-close-x:hover { color: var(--text-color); background: rgba(128, 128, 128, 0.15); }
+
+/* ── Editor body ── */
+.dd-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.6rem 0;
+    background: var(--background-color);
+}
+
+.dd-editor-line {
+    display: flex;
+    align-items: flex-start;
+    min-height: 1.7rem;
+    line-height: 1.7;
+}
+
+.dd-ln {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--muted-color);
+    width: 3.2rem;
+    text-align: right;
+    padding-right: 1.25rem;
+    flex-shrink: 0;
+    user-select: none;
+    opacity: 0.4;
+    padding-top: 0.05rem;
+}
+
+.dd-line-content {
+    flex: 1;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--text-color);
+    word-break: break-word;
+    padding-right: 1.5rem;
+}
+
+/* ── Syntax tokens ── */
+.dd-kw      { color: var(--purple); }
+.dd-heading { color: var(--titles); font-size: 1rem; font-weight: 600; }
+.dd-cmt     { color: var(--muted-color); font-style: italic; }
+.dd-op      { color: var(--muted-color); }
+.dd-para    { color: var(--text-color); opacity: 0.88; line-height: 1.8; font-size: 0.82rem; }
+
+/* ── Status bar ── */
+.dd-statusbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.22rem 0.75rem;
+    background: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.dd-status-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: #fff;
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+    .dd-window { width: 92vw; height: min(92vh, 740px); }
+    .dd-para   { font-size: 0.78rem; }
 }

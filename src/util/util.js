@@ -37,12 +37,12 @@ export function formatDates(dataString) {
     "July", "August", "September", "October", "November", "December"
   ];
 
-  const data = new Date(dataString);
-  const dia = data.getDay()
+  const data = new Date(dataString + "T00:00:00");
+  const dia = data.getDate();
   const mes = meses[data.getMonth()];
   const ano = data.getFullYear();
 
-  return `${dia} de ${mes} de ${ano}`;
+  return `${mes} ${dia}, ${ano}`;
 }
 
 export function getTagClass(tag) {
