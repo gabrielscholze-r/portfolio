@@ -71,7 +71,7 @@ export default function ProjectItem({ data, index, anyOpen, setAny }) {
                     </div>
                 </div>
             </div>
-            <ProjectDetails data={data} image={image} onClose={handleClose} modal={modal} />
+            <ProjectDetails data={data} image={image} onClose={handleClose} modal={modal} meta={meta} />
         </>
     )
 }
