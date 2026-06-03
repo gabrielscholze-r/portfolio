@@ -1,5 +1,16 @@
 [
   {
+    "date": "2026-06-02",
+    "title": "Post Graduate Degree Done!",
+    "isPortfolioChange": false,
+    "tags": ["Academics"],
+    "description": "Received the results of my post-graduate degree and got a great grade!",
+    "paragraphs": [
+      "Hello everyone! Today i was at the gym when i got a VERY special message that made my day. I got a 9/10 on my final presentation! Since i was having a not so great day it was a really nice surprise, my day was saved.",
+      "Anyway, i have just added the project to the projects sections so i hope you like it!"
+    ]
+  },
+  {
     "date": "2026-05-13",
     "title": "Design Renewal",
     "isPortfolioChange": true,
