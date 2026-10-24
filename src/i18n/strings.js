@@ -9,6 +9,12 @@ const strings = {
     "nav.toggleMenu": "Toggle menu",
     "nav.language": "Language",
 
+    "title.home": "Gabriel Scholze Rosa — Fullstack Developer",
+    "title.projects": "Projects · Gabriel Scholze Rosa",
+    "title.sites": "Websites · Gabriel Scholze Rosa",
+    "title.devlog": "Devlog · Gabriel Scholze Rosa",
+    "title.notFound": "Page not found · Gabriel Scholze Rosa",
+
     "home.role": "// Fullstack Developer",
     "home.bio":
       "Welcome! I'm a Full Stack Developer with three years of experience, primarily working with C# (.NET) and React.js. In my current role, I'm deeply involved in a web-based loan management system for U.S. clients. I graduated in Computer Science (2024) and I'm pursuing a Postgraduate Degree in Mobile Application Development.",
@@ -80,6 +86,12 @@ const strings = {
     "nav.devlog": "devlog",
     "nav.toggleMenu": "Abrir menu",
     "nav.language": "Idioma",
+
+    "title.home": "Gabriel Scholze Rosa — Desenvolvedor Fullstack",
+    "title.projects": "Projetos · Gabriel Scholze Rosa",
+    "title.sites": "Sites · Gabriel Scholze Rosa",
+    "title.devlog": "Devlog · Gabriel Scholze Rosa",
+    "title.notFound": "Página não encontrada · Gabriel Scholze Rosa",
 
     "home.role": "// Desenvolvedor Fullstack",
     "home.bio":
