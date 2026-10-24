@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { imageMapper } from '../../../util/util'
+import { imageMapper, localize } from '../../../util/util'
+import { useLanguage } from '../../../context/Language.jsx'
 import './ProjectItem.css'
 import ProjectDetails from '../projectDetails/ProjectDetails'
 
@@ -16,7 +17,9 @@ const langMap = {
     "WellFit":           { lang: "React Native", color: "#61dafb" },
 }
 
-export default function ProjectItem({ data, index, anyOpen, setAny }) {
+export default function ProjectItem({ data: original, index, anyOpen, setAny }) {
+    const { lang, t } = useLanguage()
+    const data = localize(original, lang)
     const [modal, setModal] = useState(false)
     const [imgLoaded, setImgLoaded] = useState(false)
     const image = imageMapper(data.imgPath)
@@ -59,14 +62,14 @@ export default function ProjectItem({ data, index, anyOpen, setAny }) {
                             alt={data.title}
                             className={`ide-preview${imgLoaded ? ' ide-preview--loaded' : ''}`}
                             loading={eager ? 'eager' : 'lazy'}
-                            fetchpriority={eager ? 'high' : 'auto'}
+                            fetchPriority={eager ? 'high' : 'auto'}
                             decoding="async"
                             onLoad={() => setImgLoaded(true)}
                         />
                     </div>
                     <div className="ide-footer">
                         <span className="ide-open-btn">
-                            <i className="bi bi-play-fill"></i> open project
+                            <i className="bi bi-play-fill"></i> {t("projects.open")}
                         </span>
                     </div>
                 </div>

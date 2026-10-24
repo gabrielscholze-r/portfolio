@@ -1,0 +1,50 @@
+[
+    {
+        "slug": "clarakova",
+        "title": "Maria Clara Kovalhuk",
+        "niche": "Architecture & Urbanism portfolio",
+        "url": "https://mckarquitetura.com",
+        "github": "",
+        "year": 2026,
+        "stack": [
+            "React 19",
+            "Vite",
+            "React Router",
+            "sharp",
+            "GitHub Actions"
+        ],
+        "initialDescription": "Portfolio website for an architect and urban planner from Curitiba, rebuilt from an old static Bootstrap page into a fast, editorial React site.",
+        "advancedDescription": "Maria Clara needed a place to show her architecture, interiors and urban planning projects in a way that felt as carefully designed as the projects themselves. The old site was a single static Bootstrap page with no real structure for her work. I rebuilt it from scratch as a React + Vite single-page app with an editorial look: large serif typography, a blueprint-style grid and a city skyline drawn as a single line. Each of the fifteen projects has its own page, and the project index can be filtered by category and switched between grid and list views. Content lives in plain data files, so adding a new project only takes an image and a few lines.",
+        "highlights": [
+            "Image pipeline with sharp: originals are converted to 800px and 1600px WebP and served with srcset",
+            "Single-stroke skyline traced from a PNG with a Python script, reused in the hero, contact and 404",
+            "Lite mode that detects missing hardware acceleration or low frame rates and turns off expensive effects",
+            "Filterable project index with grid and list views, plus a dedicated page for every project",
+            "SEO and Open Graph tags, skip link, reduced-motion support and a WhatsApp contact button",
+            "GitHub Actions builds the site and deploys it with rsync to a self-hosted server on every push"
+        ],
+        "images": {
+            "cover": "clara-desktop",
+            "mobile": "clara-mobile",
+            "before": "clara-before",
+            "gallery": [
+                "clara-desktop",
+                "clara-projects",
+                "clara-detail"
+            ]
+        },
+        "pt": {
+            "niche": "Portfólio de Arquitetura e Urbanismo",
+            "initialDescription": "Site de portfólio para uma arquiteta e urbanista de Curitiba, refeito do zero: de uma página estática antiga em Bootstrap para um site em React rápido e com cara editorial.",
+            "advancedDescription": "A Maria Clara precisava de um lugar para mostrar seus projetos de arquitetura, interiores e urbanismo com o mesmo cuidado de design dos próprios projetos. O site antigo era uma única página estática em Bootstrap, sem uma estrutura de verdade para os trabalhos dela. Refiz tudo do zero como uma single-page app em React + Vite com visual editorial: tipografia serifada grande, um grid no estilo de planta e o skyline de uma cidade desenhado com uma única linha. Cada um dos quinze projetos tem sua própria página, e o índice de projetos pode ser filtrado por categoria e alternado entre grade e lista. O conteúdo fica em arquivos de dados simples, então adicionar um projeto novo leva só uma imagem e algumas linhas.",
+            "highlights": [
+                "Pipeline de imagens com sharp: as originais viram WebP em 800px e 1600px e são servidas com srcset",
+                "Skyline em traço único gerado a partir de um PNG com um script Python, usado no hero, no contato e no 404",
+                "Modo leve que detecta falta de aceleração de hardware ou taxa de quadros baixa e desliga os efeitos mais pesados",
+                "Índice de projetos com filtro e visualização em grade ou lista, além de uma página para cada projeto",
+                "Tags de SEO e Open Graph, skip link, suporte a movimento reduzido e botão de contato pelo WhatsApp",
+                "O GitHub Actions faz o build e o deploy com rsync para um servidor próprio a cada push"
+            ]
+        }
+    }
+]

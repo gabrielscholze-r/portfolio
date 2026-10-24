@@ -1,11 +1,14 @@
 import React from 'react'
 import './Footer.css'
 import { toast } from 'react-toastify';
+import { useLanguage } from '../../../context/Language.jsx';
 
 export default function Footer() {
+    const { t } = useLanguage();
+
     function copyMail() {
         navigator.clipboard.writeText("gabrielscholze24@gmail.com").then(() => {
-            toast.success('Email copied!', {
+            toast.success(t('footer.emailCopied'), {
                 position: "bottom-right",
                 className: "custom-toast",
                 autoClose: 2000,
@@ -39,7 +42,7 @@ export default function Footer() {
                     <button
                         className="footer-link footer-link-btn"
                         onClick={copyMail}
-                        title="Copy email"
+                        title={t("footer.copyEmail")}
                     >
                         <i className="bi bi-envelope-fill"></i>
                     </button>
@@ -47,7 +50,7 @@ export default function Footer() {
                         href="/assets/Cv.pdf"
                         download
                         className="footer-cv-btn"
-                        title="Download CV"
+                        title={t("footer.downloadCv")}
                     >
                         <i className="bi bi-file-earmark-arrow-down"></i>
                         <span>CV</span>

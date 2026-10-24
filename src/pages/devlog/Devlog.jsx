@@ -2,18 +2,20 @@ import React, { useState } from "react";
 import data from "../../assets/devlog/devlog.json";
 import './Devlog.css'
 import DevlogItem from "../../components/devlog/devlogItem/DevlogItem";
+import { useLanguage } from "../../context/Language.jsx";
 
 const filterOptions = [
-    { value: "",                  label: "all branches" },
-    { value: "portfolio-change",  label: "portfolio" },
-    { value: "Personal Projects", label: "personal-projects" },
-    { value: "Infrastructure",    label: "infrastructure" },
-    { value: "Academics",         label: "academics" },
+    { value: "",                  label: "devlog.all" },
+    { value: "portfolio-change",  label: "devlog.portfolio" },
+    { value: "Personal Projects", label: "devlog.personal" },
+    { value: "Infrastructure",    label: "devlog.infra" },
+    { value: "Academics",         label: "devlog.academics" },
 ]
 
 const ITEMS_PER_PAGE = 5;
 
 export default function Devlog() {
+    const { t } = useLanguage();
     const [anyOpen, setAny] = useState(false);
     const [filter, setFilter] = useState("");
     const [page, setPage] = useState(0);
@@ -66,19 +68,19 @@ export default function Devlog() {
                         </div>
                     )}
                 </div>
-                <p className="devlog-subtitle">Updates, experiments and ideas</p>
+                <p className="devlog-subtitle">{t("devlog.subtitle")}</p>
             </div>
 
             <div className="git-log-cmd">
                 <span className="dollar">$</span>
                 <span className="git-cmd-text"> git log --oneline --graph</span>
                 {filter && (
-                    <span className="git-branch-filter"> {filterOptions.find(o => o.value === filter)?.label}</span>
+                    <span className="git-branch-filter"> {t(filterOptions.find(o => o.value === filter)?.label)}</span>
                 )}
             </div>
 
             <div className="devlog-filter-row">
-                <span className="filter-label">branch:</span>
+                <span className="filter-label">{t("devlog.branch")}</span>
                 <div className="filter-tabs">
                     {filterOptions.map(opt => (
                         <button
@@ -86,7 +88,7 @@ export default function Devlog() {
                             className={`filter-tab${filter === opt.value ? " active" : ""}`}
                             onClick={() => handleFilter(opt.value)}
                         >
-                            {opt.label}
+                            {t(opt.label)}
                         </button>
                     ))}
                 </div>

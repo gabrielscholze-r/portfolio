@@ -5,12 +5,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from './context/Theme.jsx';
+import { LanguageProvider } from './context/Language.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <ThemeProvider>
-        <App />
+        <LanguageProvider>
+          <App />
+        </LanguageProvider>
       </ThemeProvider>
     </BrowserRouter>
   </StrictMode>,

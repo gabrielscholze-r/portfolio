@@ -1,7 +1,10 @@
 import React from 'react'
 import './Tooltip.css'
+import { useLanguage } from '../../../context/Language.jsx'
 
 export default function Tooltip({ hover, title, list, exp }) {
+    const { t } = useLanguage()
+
     return (
         <div className={`skill-tooltip ${hover ? 'skill-tooltip--show' : ''}`}>
             <div className="skill-tooltip__inner">
@@ -11,7 +14,7 @@ export default function Tooltip({ hover, title, list, exp }) {
                         <li key={index}>{text}</li>
                     ))}
                 </ul>
-                <p className="skill-tooltip__label">Experience:</p>
+                <p className="skill-tooltip__label">{t("home.experience")}</p>
                 <div className="skill-tooltip__track">
                     <div className="skill-tooltip__fill" style={{ width: `${exp}%` }}></div>
                 </div>

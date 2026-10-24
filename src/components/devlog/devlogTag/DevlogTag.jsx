@@ -1,4 +1,5 @@
 import './DevlogTag.css'
+import { useLanguage } from '../../../context/Language.jsx'
 
 const tagStyles = {
     "Personal Projects": { color: "#3fb950", bg: "rgba(63,185,80,0.12)",   border: "rgba(63,185,80,0.3)"   },
@@ -13,10 +14,12 @@ const lightTagStyles = {
 }
 
 export default function DevlogTag({ tags }) {
+    const { t } = useLanguage();
+
     return (
         <div className="devlog-tags">
             {tags.map((tag, idx) => {
-                const s = tagStyles[tag] || tagStyles["Portfolio"];
+                const s = tagStyles[tag] || tagStyles["Personal Projects"];
                 return (
                     <span
                         key={idx}
@@ -27,7 +30,7 @@ export default function DevlogTag({ tags }) {
                             '--tag-border': s.border,
                         }}
                     >
-                        {tag}
+                        {t(`tag.${tag}`)}
                     </span>
                 );
             })}

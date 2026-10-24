@@ -4,6 +4,7 @@ import Projects from '../pages/projects/Projects.jsx'
 import { Route, Routes } from 'react-router-dom'
 import NotFound from '../pages/notFound/NotFound.jsx'
 import Devlog from '../pages/devlog/Devlog.jsx'
+import Sites from '../pages/sites/Sites.jsx'
 
 export default function AppRoutes() {
     return (
@@ -12,6 +13,7 @@ export default function AppRoutes() {
                 <Route path='*' element={<NotFound />} />
                 <Route path='/' element={<Home />} />
                 <Route path='/projects' element={<Projects />} />
+                <Route path='/sites' element={<Sites />} />
                 <Route path='/devlog' element={<Devlog />} />
             </Routes>
         </div>

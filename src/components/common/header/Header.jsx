@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useTheme } from "../../../context/Theme.jsx";
+import { useLanguage } from "../../../context/Language.jsx";
+import { BrazilFlag, UsaFlag } from "../flags/Flags.jsx";
 import "./Header.css";
-import Cookie from "js-cookie";
+
+const languages = [
+    { code: "pt", label: "Português", Flag: BrazilFlag },
+    { code: "en", label: "English", Flag: UsaFlag },
+];
 
 export default function Header() {
     const { theme, toggleTheme } = useTheme();
+    const { lang, setLang, t } = useLanguage();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    useEffect(() => {
-        const current = Cookie.get("theme");
-        if (current) toggleTheme(current);
-    }, [toggleTheme]);
 
     function NavigationElements({ closeMenu }) {
         return (
@@ -22,22 +24,43 @@ export default function Header() {
                     end
                     onClick={closeMenu}
                 >
-                    <span className="nav-arrow">&gt;&nbsp;</span>home
+                    <span className="nav-arrow">&gt;&nbsp;</span>{t("nav.home")}
                 </NavLink>
                 <NavLink
                     className={({ isActive }) => `navlink${isActive ? " active" : ""}`}
                     to="projects"
                     onClick={closeMenu}
                 >
-                    <span className="nav-arrow">&gt;&nbsp;</span>projects
+                    <span className="nav-arrow">&gt;&nbsp;</span>{t("nav.projects")}
+                </NavLink>
+                <NavLink
+                    className={({ isActive }) => `navlink${isActive ? " active" : ""}`}
+                    to="sites"
+                    onClick={closeMenu}
+                >
+                    <span className="nav-arrow">&gt;&nbsp;</span>{t("nav.sites")}
                 </NavLink>
                 <NavLink
                     className={({ isActive }) => `navlink${isActive ? " active" : ""}`}
                     to="devlog"
                     onClick={closeMenu}
                 >
-                    <span className="nav-arrow">&gt;&nbsp;</span>devlog
+                    <span className="nav-arrow">&gt;&nbsp;</span>{t("nav.devlog")}
                 </NavLink>
+                <div className="lang-toggle" role="group" aria-label={t("nav.language")}>
+                    {languages.map(option => (
+                        <button
+                            key={option.code}
+                            className={`lang-btn${lang === option.code ? " lang-btn--active" : ""}`}
+                            onClick={() => setLang(option.code)}
+                            aria-pressed={lang === option.code}
+                            title={option.label}
+                        >
+                            <option.Flag />
+                            <span className="lang-label">{option.label}</span>
+                        </button>
+                    ))}
+                </div>
                 <div className="theme-toggle">
                     <i
                         className="bi bi-sun-fill theme-icon"
@@ -81,7 +104,7 @@ export default function Header() {
                 <button
                     className="burger-button"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    aria-label="Toggle menu"
+                    aria-label={t("nav.toggleMenu")}
                 >
                     {isMenuOpen ? "✕" : "☰"}
                 </button>

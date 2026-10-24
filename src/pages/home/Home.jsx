@@ -5,8 +5,11 @@ import Professional from '../../components/home/professional/Professional'
 import Education from '../../components/home/education/Education'
 import Certifications from '../../components/home/certifications/Certifications'
 import me from '../../assets/img/gabrielscholzerosa.avif'
+import { useLanguage } from '../../context/Language.jsx'
 
 export default function Home() {
+  const { t } = useLanguage()
+
   return (
     <div className="home-page">
 
@@ -36,13 +39,9 @@ export default function Home() {
                 <h1 className="hero-name">
                   Gabriel Scholze Rosa<span className="blink-cursor">_</span>
                 </h1>
-                <p className="hero-role">// Fullstack Developer</p>
+                <p className="hero-role">{t("home.role")}</p>
                 <p className="hero-bio">
-                  Welcome! I'm a Full Stack Developer with three years of experience,
-                  primarily working with C# (.NET) and React.js. In my current role,
-                  I'm deeply involved in a web-based loan management system for U.S.
-                  clients. I graduated in Computer Science (2024) and I'm pursuing a
-                  Postgraduate Degree in Mobile Application Development.
+                  {t("home.bio")}
                 </p>
                 <div className="hero-tags">
                   <span className="htag htag-blue">C# .NET</span>

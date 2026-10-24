@@ -14,6 +14,14 @@
   <link rel="icon" type="image/jpg" href="/src/assets/img/icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GS</title>
+  <!-- sets the theme before the first paint (saved choice, else the system's), so there is no light flash -->
+  <script>
+    (function () {
+      var saved = (document.cookie.match(/(?:^|; )theme=(light|dark)/) || [])[1];
+      var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', saved || (dark ? 'dark' : 'light'));
+    })();
+  </script>
 </head>
 
 <body>
