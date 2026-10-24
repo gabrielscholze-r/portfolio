@@ -14,6 +14,23 @@ const titles = {
     '/devlog': 'title.devlog',
 }
 
+const SITE_URL = 'https://gabrielscholze.tech'
+
+// creates, updates or (when the last attribute is null) removes a tag in <head>
+function setHeadTag(selector, tag, attrs) {
+    let el = document.head.querySelector(selector)
+    const values = Object.values(attrs)
+    if (values[values.length - 1] === null) {
+        el?.remove()
+        return
+    }
+    if (!el) {
+        el = document.createElement(tag)
+        document.head.appendChild(el)
+    }
+    Object.entries(attrs).forEach(([key, value]) => el.setAttribute(key, value))
+}
+
 export default function AppRoutes() {
     const { pathname } = useLocation()
     const { lang, t } = useLanguage()
@@ -22,6 +39,13 @@ export default function AppRoutes() {
     useEffect(() => {
         document.title = t(titles[pathname.replace(/\/$/, '') || '/'] ?? 'title.notFound')
     }, [pathname, lang]) // eslint-disable-line react-hooks/exhaustive-deps
+
+    // each page is its own canonical URL; unknown routes are kept out of search results
+    useEffect(() => {
+        const path = pathname.replace(/\/$/, '') || '/'
+        setHeadTag('link[rel="canonical"]', 'link', { rel: 'canonical', href: titles[path] ? SITE_URL + path : null })
+        setHeadTag('meta[name="robots"]', 'meta', { name: 'robots', content: titles[path] ? null : 'noindex' })
+    }, [pathname])
 
     return (
         <div>
