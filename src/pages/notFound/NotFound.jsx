@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Slide, toast } from 'react-toastify';
+import { useLanguage } from '../../context/Language.jsx';
 
 export default function NotFound() {
     const navigate = useNavigate()
+    const { t } = useLanguage()
 
     useEffect(() => {
-        toast.info('You are being redirected...', {
+        toast.info(t('notFound.redirect'), {
             position: "bottom-right",
             className: "custom-toast",
             autoClose: 3000,
@@ -21,6 +23,7 @@ export default function NotFound() {
         }, 3000);
 
         return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- the toast only shows once, on mount
     }, [navigate]);
       
       
@@ -37,7 +40,7 @@ export default function NotFound() {
                     Ops...
                 </h1>
                 <p className="h4 mb-4">
-                    Page not found
+                    {t('notFound.message')}
                 </p>
                 <i className="bi bi-question-lg display-3"></i>
             </div>

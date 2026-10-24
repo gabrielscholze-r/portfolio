@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import './ProjectDetails.css'
+import { useLanguage } from '../../../context/Language.jsx'
 
 export default function ProjectDetails({ data, onClose, image, modal, meta }) {
+    const { t } = useLanguage()
     const [lightbox, setLightbox] = useState(false)
 
     useEffect(() => {
@@ -11,7 +13,7 @@ export default function ProjectDetails({ data, onClose, image, modal, meta }) {
     }, [lightbox, onClose])
 
     const sentences = data.advancedDescription
-        .split(/\. (?=[A-Z])/)
+        .split(/\. (?=\p{Lu})/u)
         .map((s, i, arr) => (i < arr.length - 1 ? s + '.' : s))
 
     return (
@@ -85,8 +87,8 @@ export default function ProjectDetails({ data, onClose, image, modal, meta }) {
                     </div>
 
                     <div className="pd-preview-panel">
-                        <span className="pd-preview-label">{'// preview'}</span>
-                        <div className="pd-img-wrap" onClick={() => setLightbox(true)} title="Expand image">
+                        <span className="pd-preview-label">{t("projects.preview")}</span>
+                        <div className="pd-img-wrap" onClick={() => setLightbox(true)} title={t("projects.expand")}>
                             <img src={image} alt={data.title} className="pd-img" />
                             <div className="pd-img-overlay">
                                 <i className="bi bi-arrows-fullscreen" />
@@ -96,17 +98,17 @@ export default function ProjectDetails({ data, onClose, image, modal, meta }) {
                         <div className="pd-links">
                             {data.github && (
                                 <a href={data.github} target="_blank" rel="noreferrer" className="pd-link">
-                                    <i className="bi bi-github" /> repository
+                                    <i className="bi bi-github" /> {t("projects.repository")}
                                 </a>
                             )}
                             {data.videoPath && (
                                 <a href={data.videoPath} target="_blank" rel="noreferrer" className="pd-link pd-link--yt">
-                                    <i className="bi bi-youtube" /> demo
+                                    <i className="bi bi-youtube" /> {t("projects.demo")}
                                 </a>
                             )}
                             {data.articlePath && (
                                 <a href={data.articlePath} target="_blank" rel="noreferrer" className="pd-link">
-                                    <i className="bi bi-file-earmark-text" /> article
+                                    <i className="bi bi-file-earmark-text" /> {t("projects.article")}
                                 </a>
                             )}
                         </div>

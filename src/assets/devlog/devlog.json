@@ -1,42 +1,95 @@
 [
   {
+    "date": "2026-10-24",
+    "title": "New Section: Sites",
+    "isPortfolioChange": true,
+    "tags": [
+      "Personal Projects"
+    ],
+    "description": "A new section for the websites I build for clients, starting with an architecture portfolio",
+    "paragraphs": [
+      "Hello! Besides apps and systems, I've been building websites for people, so they finally got a home here. The new sites section shows each one with desktop and mobile screenshots, a short case study and a link to the live site.",
+      "The first one is the portfolio of Maria Clara Kovalhuk, an architect and urban planner. I rebuilt her old static page from scratch in React, and you can even drag a slider to compare the old site with the new one. More sites are coming soon!"
+    ],
+    "pt": {
+      "title": "Nova seção: Sites",
+      "description": "Uma seção nova para os sites que eu faço para clientes, começando por um portfólio de arquitetura",
+      "paragraphs": [
+        "Olá! Além de apps e sistemas, eu tenho feito sites para outras pessoas, e eles finalmente ganharam um lugar aqui. A nova seção de sites mostra cada um com prints do desktop e do celular, um pequeno estudo de caso e o link para o site no ar.",
+        "O primeiro é o portfólio da Maria Clara Kovalhuk, arquiteta e urbanista. Refiz do zero em React a página estática antiga dela, e dá até para arrastar um slider e comparar o site antigo com o novo. Mais sites em breve!"
+      ]
+    }
+  },
+  {
     "date": "2026-06-02",
     "title": "Post Graduate Degree Done!",
     "isPortfolioChange": false,
-    "tags": ["Academics"],
+    "tags": [
+      "Academics"
+    ],
     "description": "Received the results of my post-graduate degree and got a great grade!",
     "paragraphs": [
       "Hello everyone! Today i was at the gym when i got a VERY special message that made my day. I got a 9/10 on my final presentation! Since i was having a not so great day it was a really nice surprise, my day was saved.",
       "Anyway, i have just added the project to the projects sections so i hope you like it!"
-    ]
+    ],
+    "pt": {
+      "title": "Pós-graduação concluída!",
+      "description": "Saiu o resultado da minha pós-graduação, e a nota foi ótima!",
+      "paragraphs": [
+        "Olá, pessoal! Hoje eu estava na academia quando recebi uma mensagem MUITO especial que fez o meu dia. Tirei 9/10 na apresentação final! Como eu não estava num dia muito bom, foi uma surpresa ótima, salvou o meu dia.",
+        "Enfim, acabei de adicionar o projeto na seção de projetos, espero que gostem!"
+      ]
+    }
   },
   {
     "date": "2026-05-13",
     "title": "Design Renewal",
     "isPortfolioChange": true,
-    "tags": ["Personal Projects"],
+    "tags": [
+      "Personal Projects"
+    ],
     "description": "New all-in-one organizer app with notes, to-do lists, routines, and finance tracking",
     "paragraphs": [
       "I wasn't happy with how this website looked, so I decided to give it a new life. Hope you like it!"
-    ]
+    ],
+    "pt": {
+      "title": "Visual novo",
+      "description": "O portfólio ganhou um design novo",
+      "paragraphs": [
+        "Eu não estava feliz com a cara deste site, então resolvi dar uma vida nova para ele. Espero que gostem!"
+      ]
+    }
   },
   {
     "date": "2026-05-10",
     "title": "Personal Organizer App",
     "isPortfolioChange": false,
-    "tags": ["Personal Projects"],
+    "tags": [
+      "Personal Projects"
+    ],
     "description": "New all-in-one organizer app with notes, to-do lists, routines, and finance tracking",
     "paragraphs": [
       "Hello! So I've been working on a new project for a few weeks before I go on with WellFit. It's an all-in-one app for organizing yourself. I am testing it with Claude to see its capabilities.",
       "For now the app has a few things it can do, like take notes, create to-do lists, create routines for medication or anything you want (the app notifies when the time comes) and finally a financial spreadsheet where you can add your expenses and put them in categories to know where your main expenses are coming from. I was trying to implement it using something called Open Finance to sync with the banks, but it is paid and I am not paying for something that has no return for now.",
       "So in the future I will post about it here, but I intend to launch this app on Google Play Store soon."
-    ]
+    ],
+    "pt": {
+      "title": "App de organização pessoal",
+      "description": "Novo app tudo-em-um de organização, com notas, listas de tarefas, rotinas e controle financeiro",
+      "paragraphs": [
+        "Olá! Estou há algumas semanas trabalhando num projeto novo antes de seguir com o WellFit. É um app tudo-em-um para se organizar. Estou testando ele com o Claude para ver do que ele é capaz.",
+        "Por enquanto o app faz algumas coisas: anotar, criar listas de tarefas, criar rotinas para remédios ou o que você quiser (o app avisa quando chega a hora) e, por fim, uma planilha financeira onde você adiciona seus gastos e separa por categorias para saber de onde vêm as maiores despesas. Eu estava tentando implementar com o Open Finance para sincronizar com os bancos, mas é pago, e não vou pagar por algo que ainda não dá retorno.",
+        "Então no futuro eu posto sobre ele aqui, mas pretendo lançar o app na Google Play Store em breve."
+      ]
+    }
   },
   {
     "date": "2026-05-09",
     "title": "Post Graduate Degree",
     "isPortfolioChange": true,
-    "tags": ["Academics"],
+    "tags": [
+      "Academics"
+    ],
     "description": "Final presentation of my post graduate degree",
     "paragraphs": [
       "It's been a while, huh? I've been spending some time focusing on my final post-graduation project, and now I can tell you I finally finalized and presented it! So I am going to tell you how I came up with the idea.",
@@ -45,7 +98,19 @@
       "The app was coming together bit by bit, but I still wasn't happy about the looks of it. Turns out I was underestimating the power of AI! I've been using Claude for some specific things at work to get unstuck, so I decided to try to renew my design on WellFit. It did its magic, the app changed from basic to modern and was nice to use.",
       "I had to make an article about it too, that was a nightmare 'cause I hate anything to do with academic research, but thankfully it wasn't that bad. A big part of my article was about the market and other apps that tried to do what I was trying to do, so it was okay. When May 9th came, I was ready to present my results and my app to the professors. They didn't just like it, they loved it, especially the design (even mentioning that developers usually don't do design very well).",
       "So I got a ton of congratulations and am still waiting on the results to come out, but I assume it's going to be good. I added the project on the projects part, so you can take a look at it."
-    ]
+    ],
+    "pt": {
+      "title": "Pós-graduação",
+      "description": "Apresentação final da minha pós-graduação",
+      "paragraphs": [
+        "Faz um tempinho, né? Passei um tempo focado no trabalho final da pós-graduação, e agora posso contar que finalmente terminei e apresentei! Então vou contar como surgiu a ideia.",
+        "O mais engraçado é que a ideia nem foi minha. Eu estava discutindo ideias para o trabalho final com a minha namorada e ela falou \"e se você fizer um app de academia?\", e foi assim que nasceu o WellFit. Até o nome veio dela. O problema é que eu não curtia a maioria das formas de desenvolver esse app que vimos durante o curso, como Flutter ou Kotlin, e Swift era inviável. Então dei um passo atrás e pensei no que eu já sei. Bom, eu uso React.js há um tempo, e se eu fizesse em React Native?",
+        "Foi aí que decidi ir de React Native. Fiz primeiro um backend para ter uma base. Usando Postgres para persistência, comecei a programar em Java com Spring Boot e montei um backend sólido para começar o app. Quando eu estava na metade do app, o código do backend estava ficando cada vez mais complicado por causa dos relacionamentos que eu precisava criar para tudo fazer sentido no Postgres. Várias tabelas novas no banco estavam dificultando a minha vida, então decidi trocar para MongoDB, a melhor coisa que eu fiz. O que eram várias tabelas virou coleções simples, muito fáceis de ler e manipular.",
+        "O app foi tomando forma aos poucos, mas eu ainda não estava feliz com o visual. Acontece que eu estava subestimando o poder da IA! Eu já usava o Claude para algumas coisas específicas no trabalho quando travava, então resolvi tentar renovar o design do WellFit com ele. Ele fez a mágica: o app passou de básico para moderno e ficou gostoso de usar.",
+        "Eu também tive que escrever um artigo sobre ele, o que foi um pesadelo, porque eu odeio qualquer coisa ligada a pesquisa acadêmica, mas felizmente não foi tão ruim. Boa parte do artigo era sobre o mercado e outros apps que tentaram fazer o que eu estava tentando, então deu certo. Quando chegou o dia 9 de maio, eu estava pronto para apresentar os resultados e o app para os professores. Eles não só gostaram, eles amaram, principalmente o design (até comentaram que desenvolvedores normalmente não mandam muito bem em design).",
+        "Recebi um monte de parabéns e ainda estou esperando o resultado sair, mas imagino que vai ser bom. Adicionei o projeto na parte de projetos, então dá uma olhada lá."
+      ]
+    }
   },
   {
     "date": "2025-06-18",
@@ -57,7 +122,16 @@
       "For a while, I had been thinking about creating an English version of my personal portfolio — mainly because of my job, where I work with English speakers who know nothing about me. Having a website they could visit to learn more about who’s talking to them felt like a good idea.",
       "I considered several ways to implement this change, including adding a language selection menu. But then I realized: most companies expect their employees to have at least some level of English proficiency, whether basic or advanced. So why not just make the entire website in English?",
       "That’s exactly what I did. I started with my résumé, writing out every aspect of my professional background in English. I have to say — it’s been a really valuable experience. I do use translation tools sometimes, since I’m not fully used to writing in English yet, but I’ve definitely noticed improvements in my writing since I started."
-    ]
+    ],
+    "pt": {
+      "title": "Site em inglês",
+      "description": "Mudando o portfólio para inglês",
+      "paragraphs": [
+        "Fazia um tempo que eu pensava em criar uma versão em inglês do meu portfólio — principalmente por causa do meu trabalho, onde converso com pessoas que falam inglês e não sabem nada sobre mim. Ter um site onde elas pudessem saber mais sobre quem está falando com elas pareceu uma boa ideia.",
+        "Pensei em várias formas de fazer essa mudança, inclusive um menu para escolher o idioma. Mas aí percebi: a maioria das empresas espera que os funcionários tenham pelo menos algum nível de inglês, básico ou avançado. Então por que não fazer o site inteiro em inglês?",
+        "Foi exatamente o que eu fiz. Comecei pelo currículo, escrevendo cada parte da minha trajetória profissional em inglês. Preciso dizer que tem sido uma experiência muito valiosa. Às vezes eu uso ferramentas de tradução, porque ainda não estou totalmente acostumado a escrever em inglês, mas notei uma melhora na minha escrita desde que comecei."
+      ]
+    }
   },
   {
     "date": "2025-04-26",
@@ -70,41 +144,83 @@
       "Initially, the plan was to create a backend in Go and pull publication data from a MongoDB, along with authentication within the portfolio to allow myself to post updates easily. That way, it would be simple to add more devlog events.",
       "However, after implementing the backend and authentication, I ran out of time. So for now, I’ve gone with a simpler approach — using a .json file to store the data.",
       "In addition, I changed the dark mode implementation. Previously, it used only React context, but now it also uses cookies to preserve the user’s preference."
-    ]
+    ],
+    "pt": {
+      "title": "Aba de devlog",
+      "description": "Nova aba com o histórico de mudanças do portfólio e um devlog do que estou fazendo",
+      "paragraphs": [
+        "Resolvi adicionar uma aba nova no meu portfólio para compartilhar novidades sobre o que ando desenvolvendo. Assim, se alguém quiser acompanhar, é só entrar nessa aba.",
+        "A ideia inicial era criar um backend em Go e buscar os dados das publicações num MongoDB, junto com uma autenticação dentro do portfólio para eu mesmo postar as novidades com facilidade. Assim seria simples adicionar novos eventos no devlog.",
+        "Porém, depois de implementar o backend e a autenticação, acabou o meu tempo. Então, por enquanto, fui por um caminho mais simples — um arquivo .json para guardar os dados.",
+        "Além disso, mudei a implementação do modo escuro. Antes ele usava só o contexto do React, e agora também usa cookies para guardar a preferência do usuário."
+      ]
+    }
   },
   {
     "date": "2025-04-17",
     "title": "Deploy & more",
     "isPortfolioChange": true,
-    "tags": ["Infrastructure"],
+    "tags": [
+      "Infrastructure"
+    ],
     "description": "Updated deploy method and not found page",
     "paragraphs": [
       "Previously, the deployment method involved accessing the server where the site is hosted, updating the local repository, and running the build there.",
       "To optimize this and avoid using server processing power for builds, I updated the deployment process. Now, the build is done via GitHub Actions and copied using rsync to the correct folder on the server, replacing the previous project files with the updated ones.",
       "Additionally, I created a page for unknown routes called NotFound.jsx. This file displays a 'page not found' message and redirects the user to the homepage after a few seconds."
-    ]
+    ],
+    "pt": {
+      "title": "Deploy e mais",
+      "description": "Novo método de deploy e página de não encontrado",
+      "paragraphs": [
+        "Antes, o deploy era feito acessando o servidor onde o site está hospedado, atualizando o repositório local e rodando o build lá.",
+        "Para otimizar isso e não gastar processamento do servidor com builds, mudei o processo de deploy. Agora o build é feito pelo GitHub Actions e copiado com rsync para a pasta certa no servidor, substituindo os arquivos antigos do projeto pelos atualizados.",
+        "Também criei uma página para rotas desconhecidas, a NotFound.jsx. Ela mostra uma mensagem de 'página não encontrada' e redireciona o usuário para a página inicial depois de alguns segundos."
+      ]
+    }
   },
   {
     "date": "2025-04-08",
     "title": "GastoZero - Backend",
     "isPortfolioChange": false,
-    "tags": ["Personal Projects"],
+    "tags": [
+      "Personal Projects"
+    ],
     "description": "GastoZero backend completed",
     "paragraphs": [
       "I finished implementing the backend for my GastoZero app. I really liked how Go works — I used a library called Bun that makes working with the database very interactive.",
       "I implemented authentication using JWT, as that's the approach I'm used to for handling this part in the systems I develop outside of work.",
       "One part I particularly enjoyed was setting up a kind of dependency injection to keep the code cleaner. Everything is working fine — now it’s time for the frontend."
-    ]
+    ],
+    "pt": {
+      "title": "GastoZero - Backend",
+      "description": "Backend do GastoZero concluído",
+      "paragraphs": [
+        "Terminei de implementar o backend do meu app GastoZero. Gostei muito de como o Go funciona — usei uma biblioteca chamada Bun, que deixa o trabalho com o banco de dados bem interativo.",
+        "Implementei a autenticação com JWT, que é a abordagem que eu costumo usar nessa parte nos sistemas que desenvolvo fora do trabalho.",
+        "Uma parte que eu curti muito foi montar uma espécie de injeção de dependência para deixar o código mais limpo. Está tudo funcionando — agora é a vez do frontend."
+      ]
+    }
   },
   {
     "date": "2025-04-01",
     "title": "GastoZero - Getting started",
     "isPortfolioChange": false,
-    "tags": ["Personal Projects"],
+    "tags": [
+      "Personal Projects"
+    ],
     "description": "Starting a new project - Go + React.js",
     "paragraphs": [
       "I wanted to start a new project to deepen my knowledge of Go by building a backend and to explore styling a React.js app using Tailwind for the first time. My motivation came from my struggle to keep an Excel spreadsheet updated with my expenses — I wanted to build something more solid and interactive to manage my finances better.",
       "The implementation will be done using Go and React.js, with data persistence handled by a PostgreSQL database."
-    ]
+    ],
+    "pt": {
+      "title": "GastoZero - Começando",
+      "description": "Começando um projeto novo - Go + React.js",
+      "paragraphs": [
+        "Eu queria começar um projeto novo para aprofundar meu conhecimento em Go construindo um backend, e para experimentar pela primeira vez estilizar um app React.js com Tailwind. A motivação veio da minha dificuldade em manter uma planilha do Excel atualizada com meus gastos — eu queria algo mais sólido e interativo para cuidar melhor das minhas finanças.",
+        "A implementação vai ser feita com Go e React.js, com os dados guardados num banco PostgreSQL."
+      ]
+    }
   }
 ]

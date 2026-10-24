@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./DevlogItem.css";
 import DevlogDetail from "../devlogDetail/DevlogDetail";
 import DevlogTag from "../devlogTag/DevlogTag.jsx";
-import { formatDates } from "../../../util/util.js";
+import { formatDates, localize } from "../../../util/util.js";
+import { useLanguage } from "../../../context/Language.jsx";
 
 function fakeHash(str) {
     let h = 0;
@@ -12,7 +13,9 @@ function fakeHash(str) {
     return Math.abs(h).toString(16).padStart(7, '0').slice(0, 7);
 }
 
-export default function DevlogItem({ data, anyOpen, setAny, isLast }) {
+export default function DevlogItem({ data: original, anyOpen, setAny, isLast }) {
+    const { lang, t } = useLanguage();
+    const data = localize(original, lang);
     const [open, setOpen] = useState(false);
 
     const handleOpen = () => {
@@ -20,7 +23,7 @@ export default function DevlogItem({ data, anyOpen, setAny, isLast }) {
     };
     const handleClose = () => { setAny(false); setOpen(false); };
 
-    const hash = fakeHash(data.title);
+    const hash = fakeHash(original.title);
 
     return (
         <>
@@ -43,11 +46,11 @@ export default function DevlogItem({ data, anyOpen, setAny, isLast }) {
                                 </span>
                             )}
                         </div>
-                        <span className="commit-date">{formatDates(data.date)}</span>
+                        <span className="commit-date">{formatDates(data.date, lang)}</span>
                     </div>
                     <p className="commit-desc">{data.description}</p>
                     <span className="commit-expand">
-                        <i className="bi bi-chevron-right"></i> read more
+                        <i className="bi bi-chevron-right"></i> {t("devlog.readMore")}
                     </span>
                 </div>
             </div>

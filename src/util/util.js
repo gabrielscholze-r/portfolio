@@ -31,18 +31,34 @@ export const imageMapper = (imgPath) => {
   return image;
 };
 
-export function formatDates(dataString) {
-  const meses = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-  ];
+const siteImages = import.meta.glob("../assets/sites/img/*.avif", {
+  eager: true,
+  import: "default",
+});
 
+export const siteImageMapper = (name) => {
+  const image = siteImages[`../assets/sites/img/${name}.avif`];
+
+  if (!image) {
+    console.error(`Site image not found: ${name}`);
+    return null;
+  }
+
+  return image;
+};
+
+// merges an item's translation (its `pt` object, for example) over the original
+export const localize = (item, lang) =>
+  item[lang] ? { ...item, ...item[lang] } : item;
+
+export function formatDates(dataString, lang = "en") {
   const data = new Date(dataString + "T00:00:00");
-  const dia = data.getDate();
-  const mes = meses[data.getMonth()];
-  const ano = data.getFullYear();
 
-  return `${mes} ${dia}, ${ano}`;
+  return new Intl.DateTimeFormat(lang === "pt" ? "pt-BR" : "en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  }).format(data);
 }
 
 export function getTagClass(tag) {

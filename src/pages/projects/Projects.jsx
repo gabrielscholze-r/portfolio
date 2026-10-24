@@ -3,11 +3,13 @@ import data from "../../assets/projects/projects.json";
 import ProjectItem from "../../components/projects/projectItem/ProjectItem";
 import "./Projects.css";
 import PortfolioModal from "../../components/portfolioModal/PortfolioModal";
+import { useLanguage } from "../../context/Language.jsx";
 
 const CARDS_PER_PAGE = 6;
 const TOTAL_PAGES = Math.ceil(data.length / CARDS_PER_PAGE);
 
 export default function Projects() {
+  const { t } = useLanguage();
   const [anyOpen, setAny] = useState(false);
   const [openInfo, setInfo] = useState(false);
   const [page, setPage] = useState(0);
@@ -59,7 +61,7 @@ export default function Projects() {
               <i className="bi bi-chevron-right"></i>
             </button>
           </div>
-          <button onClick={handleInfoOpen} className="info-btn" title="About this portfolio">
+          <button onClick={handleInfoOpen} className="info-btn" title={t("projects.about")}>
             <i className="bi bi-info-circle"></i>
           </button>
         </div>

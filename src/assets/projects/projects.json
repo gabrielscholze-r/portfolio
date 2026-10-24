@@ -6,7 +6,11 @@
         "articlePath": "https://drive.google.com/file/d/1cYt1HlYvcXUHpASUFsXitqH5vh2bY7Au/view?usp=drive_link",
         "initialDescription": "Mobile application for real-time guided strength training execution, with automatic rest timers, free exercise reordering, and session persistence, built with React Native and Spring Boot.",
         "github": "",
-        "advancedDescription": "WellFit is a mobile application for guided strength training, developed as a final graduation project at PUC-PR. The app addresses a common pain point in gym environments — crowded equipment forcing athletes to adapt their workout order on the fly — by allowing free exercise reordering mid-session without losing progress. WellFit guides users through each set with automatic rest countdowns, per-set weight logging, and session persistence in case the app is closed mid-workout. Users can create custom routines split across days of the week, browse ready-made programs, and filter exercises by muscle group, equipment, or difficulty. The stack combines React Native on the client, Spring Boot on the backend, and MongoDB as the database, with JWT-based authentication."
+        "advancedDescription": "WellFit is a mobile application for guided strength training, developed as a final graduation project at PUC-PR. The app addresses a common pain point in gym environments — crowded equipment forcing athletes to adapt their workout order on the fly — by allowing free exercise reordering mid-session without losing progress. WellFit guides users through each set with automatic rest countdowns, per-set weight logging, and session persistence in case the app is closed mid-workout. Users can create custom routines split across days of the week, browse ready-made programs, and filter exercises by muscle group, equipment, or difficulty. The stack combines React Native on the client, Spring Boot on the backend, and MongoDB as the database, with JWT-based authentication.",
+        "pt": {
+            "initialDescription": "Aplicativo mobile para execução guiada de treinos de musculação em tempo real, com timers de descanso automáticos, reordenação livre de exercícios e persistência da sessão, feito com React Native e Spring Boot.",
+            "advancedDescription": "WellFit é um aplicativo mobile de treino de musculação guiado, desenvolvido como trabalho de conclusão da pós-graduação na PUC-PR. O app resolve um problema comum nas academias — aparelhos ocupados que obrigam a pessoa a mudar a ordem do treino na hora — permitindo reordenar os exercícios livremente no meio da sessão sem perder o progresso. O WellFit guia cada série com contagem regressiva automática do descanso, registro de carga por série e persistência da sessão caso o app seja fechado no meio do treino. Dá para criar rotinas personalizadas divididas pelos dias da semana, ver programas prontos e filtrar exercícios por grupo muscular, equipamento ou dificuldade. A stack combina React Native no cliente, Spring Boot no backend e MongoDB como banco de dados, com autenticação via JWT."
+        }
     },
     {
         "title": "CodeCracker (SwiftUI)",
@@ -14,7 +18,11 @@
         "videoPath": "https://youtu.be/CteMBizjayQ",
         "initialDescription": "Trivia game for iOS aimed at programming beginners, developed in SwiftUI using a reactive approach.",
         "github": "https://github.com/gabrielscholze-r/Codecracker-SwiftUI/tree/master",
-        "advancedDescription": "CodeCracker is an educational iOS application that combines trivia and hands-on programming challenges in an accessible format for beginners. Focused on teaching fundamental concepts in a fun way, the project includes basic exercises with operators, variables, and simple conditionals to introduce syntax intuitively. It features a scoring system with persistent ranking (via Core Data), an interactive map (using MapKit) showing the historical origins of programming languages, and a responsive interface built with SwiftUI."
+        "advancedDescription": "CodeCracker is an educational iOS application that combines trivia and hands-on programming challenges in an accessible format for beginners. Focused on teaching fundamental concepts in a fun way, the project includes basic exercises with operators, variables, and simple conditionals to introduce syntax intuitively. It features a scoring system with persistent ranking (via Core Data), an interactive map (using MapKit) showing the historical origins of programming languages, and a responsive interface built with SwiftUI.",
+        "pt": {
+            "initialDescription": "Jogo de perguntas para iOS voltado a quem está começando a programar, desenvolvido em SwiftUI com uma abordagem reativa.",
+            "advancedDescription": "CodeCracker é um aplicativo educativo para iOS que combina perguntas e desafios práticos de programação num formato acessível para iniciantes. Com foco em ensinar conceitos fundamentais de um jeito divertido, o projeto traz exercícios básicos com operadores, variáveis e condicionais simples para apresentar a sintaxe de forma intuitiva. Ele tem um sistema de pontuação com ranking persistente (via Core Data), um mapa interativo (com MapKit) mostrando a origem histórica das linguagens de programação e uma interface responsiva feita em SwiftUI."
+        }
     },
     {
         "title": "SpendZero",
@@ -22,7 +30,11 @@
         "videoPath": "https://youtu.be/khEkwbzHylA",
         "initialDescription": "Web application for personal financial control with secure authentication and a modern interface, built with Go and React.js",
         "github": "https://github.com/gabrielscholze-r/SpendZero",
-        "advancedDescription": "SpendZero is a web application for personal finance management, developed as a learning project using Golang and React.js. The app allows users to register and track their income and expenses easily and securely, providing an intuitive view of spending through both tables and various charts built with the Recharts library."
+        "advancedDescription": "SpendZero is a web application for personal finance management, developed as a learning project using Golang and React.js. The app allows users to register and track their income and expenses easily and securely, providing an intuitive view of spending through both tables and various charts built with the Recharts library.",
+        "pt": {
+            "initialDescription": "Aplicação web de controle financeiro pessoal com autenticação segura e interface moderna, feita com Go e React.js",
+            "advancedDescription": "SpendZero é uma aplicação web de gestão de finanças pessoais, desenvolvida como projeto de estudo com Golang e React.js. O app permite cadastrar e acompanhar receitas e despesas de forma fácil e segura, com uma visão intuitiva dos gastos em tabelas e em vários gráficos feitos com a biblioteca Recharts."
+        }
     },
     {
         "title": "Exoplanet Finder",
@@ -30,7 +42,11 @@
         "videoPath": "",
         "initialDescription": "Group project for completing the Bachelor's degree in Computer Science, developed with Angular (frontend) and Flask (backend) for analyzing potential exoplanet data.",
         "github": "https://github.com/gabrielscholze-r/Exoplanet-Finder-Web",
-        "advancedDescription": "Capstone project for a Bachelor's degree in Computer Science. The project involved data analysis using information gathered by space satellites such as TESS, Kepler, and K2, analyzing light curves from stars to identify potential exoplanets. A data visualization platform was built in Angular, featuring a responsive interface with multilingual support, and a Flask API integrated with machine learning models to generate graphs based on predictions derived from the provided data."
+        "advancedDescription": "Capstone project for a Bachelor's degree in Computer Science. The project involved data analysis using information gathered by space satellites such as TESS, Kepler, and K2, analyzing light curves from stars to identify potential exoplanets. A data visualization platform was built in Angular, featuring a responsive interface with multilingual support, and a Flask API integrated with machine learning models to generate graphs based on predictions derived from the provided data.",
+        "pt": {
+            "initialDescription": "Projeto em grupo de conclusão do Bacharelado em Ciência da Computação, desenvolvido com Angular (frontend) e Flask (backend) para analisar dados de possíveis exoplanetas.",
+            "advancedDescription": "Trabalho de conclusão do Bacharelado em Ciência da Computação. O projeto envolveu análise de dados coletados por satélites espaciais como TESS, Kepler e K2, analisando curvas de luz de estrelas para identificar possíveis exoplanetas. Foi construída uma plataforma de visualização de dados em Angular, com interface responsiva e suporte a vários idiomas, e uma API em Flask integrada a modelos de machine learning para gerar gráficos a partir das previsões feitas sobre os dados."
+        }
     },
     {
         "title": "TapTake E-Sports",
@@ -38,7 +54,11 @@
         "videoPath": "",
         "initialDescription": "Academic project developed to study encryption methods in Java, using a scoring system based on e-sports match results.",
         "github": "https://github.com/gabrielscholze-r/TapTakeE-Sports",
-        "advancedDescription": "TapTake E-Sports is an academic project developed in Java to explore encryption techniques applied to scoring systems in e-sports competitions. The project includes a dashboard for ranking visualization and performance analysis, simulating a real environment where sensitive data from games like CS:GO or Valorant needs to be securely handled."
+        "advancedDescription": "TapTake E-Sports is an academic project developed in Java to explore encryption techniques applied to scoring systems in e-sports competitions. The project includes a dashboard for ranking visualization and performance analysis, simulating a real environment where sensitive data from games like CS:GO or Valorant needs to be securely handled.",
+        "pt": {
+            "initialDescription": "Projeto acadêmico desenvolvido para estudar métodos de criptografia em Java, usando um sistema de pontuação baseado em resultados de partidas de e-sports.",
+            "advancedDescription": "TapTake E-Sports é um projeto acadêmico desenvolvido em Java para explorar técnicas de criptografia aplicadas a sistemas de pontuação em competições de e-sports. O projeto inclui um painel de ranking e análise de desempenho, simulando um ambiente real em que dados sensíveis de jogos como CS:GO ou Valorant precisam ser tratados com segurança."
+        }
     },
     {
         "title": "Academic Management",
@@ -46,7 +66,11 @@
         "videoPath": "https://youtu.be/RrrRUrWD8e8",
         "initialDescription": "Academic system in Kotlin (Spring Boot/JWT) with admin/user roles and course CRUD functionality",
         "github": "https://github.com/gabrielscholze-r/AuthserverKotlinSpring",
-        "advancedDescription": "This project is a Kotlin backend for academic management, developed with Spring Boot and JWT authentication for a Backend Development course during my Postgraduate program. Its main goal is to manage courses, classes, and users securely and scalably, following clean architecture principles. The API provides full CRUD operations, entity relationships, and flexible filtering. The system includes strong security using JWT tokens, SHA-256 encryption, and role-based access control (admin for full access and user for basic operations). The layered architecture (controller, service, repository) ensures easy maintenance and extensibility. Highlights include custom exception handling, real-time data validation, and clear API documentation."
+        "advancedDescription": "This project is a Kotlin backend for academic management, developed with Spring Boot and JWT authentication for a Backend Development course during my Postgraduate program. Its main goal is to manage courses, classes, and users securely and scalably, following clean architecture principles. The API provides full CRUD operations, entity relationships, and flexible filtering. The system includes strong security using JWT tokens, SHA-256 encryption, and role-based access control (admin for full access and user for basic operations). The layered architecture (controller, service, repository) ensures easy maintenance and extensibility. Highlights include custom exception handling, real-time data validation, and clear API documentation.",
+        "pt": {
+            "initialDescription": "Sistema acadêmico em Kotlin (Spring Boot/JWT) com perfis de administrador e usuário e CRUD de cursos",
+            "advancedDescription": "Este projeto é um backend em Kotlin para gestão acadêmica, desenvolvido com Spring Boot e autenticação JWT para a disciplina de Desenvolvimento Backend da minha pós-graduação. O objetivo principal é gerenciar cursos, turmas e usuários de forma segura e escalável, seguindo princípios de arquitetura limpa. A API oferece CRUD completo, relacionamento entre entidades e filtros flexíveis. O sistema tem segurança reforçada com tokens JWT, criptografia SHA-256 e controle de acesso por perfil (administrador com acesso total e usuário para operações básicas). A arquitetura em camadas (controller, service, repository) facilita a manutenção e a evolução. Os destaques incluem tratamento de exceções personalizado, validação de dados em tempo real e documentação clara da API."
+        }
     },
     {
         "title": "GamerTag",
@@ -54,7 +78,11 @@
         "videoPath": "",
         "initialDescription": "Gamer social network with filters by game genre, friend system, and real-time feed, developed in React + Firebase.",
         "github": "https://github.com/gabrielscholze-r/gamertag-React-/tree/master",
-        "advancedDescription": "Class project for a Web Programming course, where I was introduced to React.js. The project is a social network where users can talk about their interests in the gaming world. The app integrates with Firebase for authentication and persistence. Users can add friends, select their favorite game genres, create posts, like and comment, and filter the timeline by genre (e.g., FPS, RPG)."
+        "advancedDescription": "Class project for a Web Programming course, where I was introduced to React.js. The project is a social network where users can talk about their interests in the gaming world. The app integrates with Firebase for authentication and persistence. Users can add friends, select their favorite game genres, create posts, like and comment, and filter the timeline by genre (e.g., FPS, RPG).",
+        "pt": {
+            "initialDescription": "Rede social gamer com filtros por gênero de jogo, sistema de amizades e feed em tempo real, desenvolvida em React + Firebase.",
+            "advancedDescription": "Projeto da disciplina de Programação Web, onde tive meu primeiro contato com React.js. O projeto é uma rede social em que os usuários conversam sobre seus interesses no mundo dos games. O app é integrado ao Firebase para autenticação e persistência. É possível adicionar amigos, escolher os gêneros de jogo favoritos, criar posts, curtir e comentar, e filtrar a timeline por gênero (por exemplo, FPS, RPG)."
+        }
     },
     {
         "title": "iMóveis",
@@ -62,7 +90,11 @@
         "videoPath": "",
         "initialDescription": "Administrative system for furniture stores with catalog, shopping cart, and real-time reports, developed in React (frontend), Node.js (backend), and MongoDB",
         "github": "https://github.com/gabrielscholze-r/FurnitureAdministrationSystem/tree/master",
-        "advancedDescription": "A complete administrative system for managing furniture stores, developed to optimize operations from product registration to sales analysis. It combines a modern and responsive interface (React.js) with a robust backend (Node.js + MongoDB) to provide essential features for furniture retail, ensuring scalability and ease of use."
+        "advancedDescription": "A complete administrative system for managing furniture stores, developed to optimize operations from product registration to sales analysis. It combines a modern and responsive interface (React.js) with a robust backend (Node.js + MongoDB) to provide essential features for furniture retail, ensuring scalability and ease of use.",
+        "pt": {
+            "initialDescription": "Sistema administrativo para lojas de móveis com catálogo, carrinho de compras e relatórios em tempo real, desenvolvido em React (frontend), Node.js (backend) e MongoDB",
+            "advancedDescription": "Um sistema administrativo completo para gestão de lojas de móveis, desenvolvido para otimizar a operação desde o cadastro de produtos até a análise de vendas. Ele combina uma interface moderna e responsiva (React.js) com um backend robusto (Node.js + MongoDB) para oferecer as funcionalidades essenciais do varejo de móveis, com escalabilidade e facilidade de uso."
+        }
     },
     {
         "title": "AppNotas",
@@ -70,6 +102,10 @@
         "videoPath": "",
         "initialDescription": "Minimalist notes app with text editor, built with React (frontend), Node.js (backend), and MongoDB.",
         "github": "https://github.com/gabrielscholze-r/AppNotas/tree/master",
-        "advancedDescription": "AppNotas is a full-stack notes management app that uses React on the frontend, Node.js with Express on the backend, and MongoDB for data storage. It offers features such as note creation, editing, and deletion, smart search, category organization, secure authentication, and an integrated text editor. It stands out for its RESTful API implementation, state management with Context API, modular architecture, and real-time updates. The project is available on GitHub for community contributions."
+        "advancedDescription": "AppNotas is a full-stack notes management app that uses React on the frontend, Node.js with Express on the backend, and MongoDB for data storage. It offers features such as note creation, editing, and deletion, smart search, category organization, secure authentication, and an integrated text editor. It stands out for its RESTful API implementation, state management with Context API, modular architecture, and real-time updates. The project is available on GitHub for community contributions.",
+        "pt": {
+            "initialDescription": "App de notas minimalista com editor de texto, feito com React (frontend), Node.js (backend) e MongoDB.",
+            "advancedDescription": "AppNotas é um app full-stack de gestão de notas que usa React no frontend, Node.js com Express no backend e MongoDB para guardar os dados. Ele permite criar, editar e excluir notas, tem busca inteligente, organização por categorias, autenticação segura e um editor de texto integrado. Os destaques são a API RESTful, o gerenciamento de estado com Context API, a arquitetura modular e as atualizações em tempo real. O projeto está no GitHub e aceita contribuições da comunidade."
+        }
     }
 ]

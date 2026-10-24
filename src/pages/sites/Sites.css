@@ -1,0 +1,91 @@
+.sites-page {
+    padding: 2.5rem 2rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.sites-header {
+    margin-bottom: 1.75rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+.sites-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.4rem;
+}
+
+.sites-icon {
+    font-size: 1.4rem;
+    color: var(--green);
+}
+
+.sites-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 0;
+    flex: 1;
+}
+
+.sites-count {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--green);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 0.15rem 0.65rem;
+}
+.sites-count::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: sites-pulse 2s ease-in-out infinite;
+}
+
+@keyframes sites-pulse {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.3; }
+}
+
+.sites-subtitle {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--muted-color);
+    margin: 0 0 0.5rem;
+    overflow-wrap: anywhere;
+}
+.sites-subtitle .dollar { color: var(--green); font-weight: bold; }
+
+.sites-intro {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--text-color);
+    margin: 0;
+    max-width: 640px;
+    line-height: 1.6;
+}
+
+.siteList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    .sites-page { padding: 1.5rem 1rem 2rem; }
+    .sites-title { font-size: 1.2rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sites-count::before { animation: none; }
+}

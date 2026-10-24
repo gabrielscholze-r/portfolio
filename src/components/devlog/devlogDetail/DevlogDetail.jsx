@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
 import "./DevlogDetail.css";
 import DevlogTag from "../devlogTag/DevlogTag.jsx";
+import { formatDates } from "../../../util/util.js";
+import { useLanguage } from "../../../context/Language.jsx";
 
 export default function DevlogDetail({ data, open, onClose }) {
+    const { lang } = useLanguage();
     useEffect(() => {
         const onKey = (e) => { if (e.key === "Escape") onClose(); };
         window.addEventListener("keydown", onKey);
@@ -14,7 +17,7 @@ export default function DevlogDetail({ data, open, onClose }) {
     const headerLines = [
         { type: "heading", content: data.title },
         { type: "blank" },
-        { type: "date",    content: data.date },
+        { type: "date",    content: formatDates(data.date, lang) },
         { type: "blank" },
         { type: "tags" },
         { type: "blank" },
